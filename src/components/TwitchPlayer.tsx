@@ -29,7 +29,7 @@ interface TwitchPlayerInstance {
 }
 
 interface TwitchPlayerProps {
-  selectedVod: { vod: VOD; creator: Creator } | null;
+  selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
 }
 
 export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
@@ -60,12 +60,20 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
       try {
         playerRef.current = new window.Twitch.Player('twitch-player', options);
         playerInitialized.current = true;
+
+        // If we have a timestamp, seek to it after player is ready
+        if (selectedVod && selectedVod.timestamp > 0) {
+          // Twitch player needs a moment to initialize before seeking
+          setTimeout(() => {
+            playerRef.current?.seek(selectedVod.timestamp);
+          }, 1000);
+        }
       } catch (error) {
         console.error('Failed to create Twitch player:', error);
       }
     } else if (selectedVod && playerRef.current) {
-      // Player exists, change the video
-      playerRef.current.setVideo(selectedVod.vod.id);
+      // Player exists, change the video and seek to timestamp
+      playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
     }
   }, [selectedVod]);
 

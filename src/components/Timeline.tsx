@@ -8,7 +8,7 @@ import vodData from '@/data/vods.json';
 interface TimelineProps {
   selectedDate: Date;
   onDateSelect: (date: Date) => void;
-  onVodClick?: (vod: VOD, creator: Creator) => void;
+  onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
 }
 
 export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelineProps) {

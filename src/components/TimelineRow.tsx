@@ -8,7 +8,7 @@ interface TimelineRowProps {
   startMinute: number;
   endMinute: number;
   teamColor: string;
-  onVodClick?: (vod: VOD, creator: Creator) => void;
+  onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
 }
 
 export function TimelineRow({
@@ -56,6 +56,20 @@ export function TimelineRow({
             return null;
           }
 
+          const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+            if (!onVodClick) return;
+
+            // Calculate where in the VOD the user clicked
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickPercent = clickX / rect.width;
+
+            // Calculate the timestamp in seconds from the start of the VOD
+            const clickTimestamp = Math.floor(vodDurationSeconds * clickPercent);
+
+            onVodClick(vod, creator, clickTimestamp);
+          };
+
           return (
             <div
               key={vod.id}
@@ -64,7 +78,7 @@ export function TimelineRow({
                 left: `${Math.max(0, leftPercent)}%`,
                 width: `${Math.min(widthPercent, 100 - leftPercent)}%`,
               }}
-              onClick={() => onVodClick?.(vod, creator)}
+              onClick={handleClick}
               title={`${vod.title}\n${format(vodStartDate, 'HH:mm')} - ${Math.floor(vodDurationMinutes / 60)}h ${Math.floor(vodDurationMinutes % 60)}m`}
             >
               <div className="h-full px-1.5 flex items-center text-[10px] text-muted-foreground/80 truncate">

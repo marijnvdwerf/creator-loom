@@ -15,10 +15,10 @@ function App() {
   const defaultDate = today >= eventStart ? today : eventStart;
 
   const [selectedDate, setSelectedDate] = useState<Date>(defaultDate);
-  const [selectedVod, setSelectedVod] = useState<{ vod: VOD; creator: Creator } | null>(null);
+  const [selectedVod, setSelectedVod] = useState<{ vod: VOD; creator: Creator; timestamp: number } | null>(null);
 
-  const handleVodClick = (vod: VOD, creator: Creator) => {
-    setSelectedVod({ vod, creator });
+  const handleVodClick = (vod: VOD, creator: Creator, clickTimestamp: number) => {
+    setSelectedVod({ vod, creator, timestamp: clickTimestamp });
   };
 
   return (
