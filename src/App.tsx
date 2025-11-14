@@ -16,6 +16,7 @@ function App() {
 
   const [selectedDate, setSelectedDate] = useState<Date>(defaultDate);
   const [selectedVod, setSelectedVod] = useState<{ vod: VOD; creator: Creator; timestamp: number } | null>(null);
+  const [playerCurrentTime, setPlayerCurrentTime] = useState<number>(0);
 
   const handleVodClick = (vod: VOD, creator: Creator, clickTimestamp: number) => {
     setSelectedVod({ vod, creator, timestamp: clickTimestamp });
@@ -28,13 +29,14 @@ function App() {
           selectedDate={selectedDate}
           onDateSelect={setSelectedDate}
           onVodClick={handleVodClick}
+          playerCurrentTime={playerCurrentTime}
         />
       </ResizablePanel>
 
       <ResizableHandle withHandle />
 
       <ResizablePanel defaultSize={50} minSize={30}>
-        <TwitchPlayer selectedVod={selectedVod} />
+        <TwitchPlayer selectedVod={selectedVod} onTimeUpdate={setPlayerCurrentTime} />
       </ResizablePanel>
     </ResizablePanelGroup>
   )

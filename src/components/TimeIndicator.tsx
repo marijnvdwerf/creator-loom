@@ -1,48 +1,32 @@
-import { useEffect, useState } from 'react';
-import { getMinutesSinceMidnight } from '@/utils/time';
-import { isSameDay } from 'date-fns';
+import { useMemo } from 'react';
 
 interface TimeIndicatorProps {
   selectedDate: Date;
   startMinute: number;
   endMinute: number;
+  playerCurrentTime: number;
 }
 
-export function TimeIndicator({ selectedDate, startMinute, endMinute }: TimeIndicatorProps) {
-  const [currentMinute, setCurrentMinute] = useState<number | null>(null);
+export function TimeIndicator({ selectedDate, startMinute, endMinute, playerCurrentTime }: TimeIndicatorProps) {
+  // Convert player current time (seconds since start of VOD) to minutes
+  const playerCurrentMinute = useMemo(() => {
+    return startMinute + playerCurrentTime / 60;
+  }, [playerCurrentTime, startMinute]);
 
-  useEffect(() => {
-    // Update every second
-    const interval = setInterval(() => {
-      const now = new Date();
-      const nowAmsDate = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
-
-      // Only show indicator if it's the selected date
-      if (isSameDay(nowAmsDate, selectedDate)) {
-        const minute = getMinutesSinceMidnight(now);
-        setCurrentMinute(minute);
-      } else {
-        setCurrentMinute(null);
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [selectedDate]);
-
-  // Don't show if current time is outside the range or not today
-  if (currentMinute === null || currentMinute < startMinute || currentMinute > endMinute) {
+  // Don't show if current time is outside the range
+  if (playerCurrentMinute < startMinute || playerCurrentMinute > endMinute) {
     return null;
   }
 
   const totalMinutes = endMinute - startMinute;
-  const leftPercent = ((currentMinute - startMinute) / totalMinutes) * 100;
+  const leftPercent = ((playerCurrentMinute - startMinute) / totalMinutes) * 100;
 
   return (
     <div
-      className="absolute top-0 bottom-0 w-0.5 bg-green-500/80 pointer-events-none z-30"
+      className="absolute top-0 bottom-0 w-0.5 bg-cyan-500/80 pointer-events-none z-30"
       style={{
         left: `${leftPercent}%`,
-        boxShadow: '0 0 10px rgba(34, 197, 94, 0.6)',
+        boxShadow: '0 0 10px rgba(6, 182, 212, 0.6)',
       }}
     />
   );

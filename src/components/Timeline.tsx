@@ -10,9 +10,10 @@ interface TimelineProps {
   selectedDate: Date;
   onDateSelect: (date: Date) => void;
   onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
+  playerCurrentTime: number;
 }
 
-export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelineProps) {
+export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTime }: TimelineProps) {
   const data = vodData as VODData;
 
   // Server opens 13:00, closes 00:00 (next day)
@@ -57,7 +58,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
       {/* Scrollable timeline */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden relative">
         {/* Time indicator */}
-        <TimeIndicator selectedDate={selectedDate} startMinute={startMinute} endMinute={endMinute} />
+        <TimeIndicator selectedDate={selectedDate} startMinute={startMinute} endMinute={endMinute} playerCurrentTime={playerCurrentTime} />
 
         {/* Time ruler */}
         <div className="sticky top-0 z-20">

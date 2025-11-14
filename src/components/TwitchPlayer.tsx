@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { VOD, Creator } from '@/types/vod';
-import { format } from 'date-fns';
 
 // TypeScript declarations for Twitch embed API
 declare global {
@@ -26,15 +25,18 @@ interface TwitchPlayerInstance {
   pause: () => void;
   getCurrentTime: () => number;
   getDuration: () => number;
+  addEventListener: (event: string, callback: () => void) => void;
 }
 
 interface TwitchPlayerProps {
   selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
+  onTimeUpdate?: (currentTime: number) => void;
 }
 
-export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
+export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
   const playerRef = useRef<TwitchPlayerInstance | null>(null);
   const playerInitialized = useRef(false);
+  const timeUpdateInterval = useRef<number | null>(null);
 
   useEffect(() => {
     // Wait for Twitch embed script to load
@@ -61,6 +63,23 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
         playerRef.current = new window.Twitch.Player('twitch-player', options);
         playerInitialized.current = true;
 
+        // Add event listeners to track playback
+        const updateTime = () => {
+          if (playerRef.current && onTimeUpdate) {
+            onTimeUpdate(playerRef.current.getCurrentTime());
+          }
+        };
+
+        playerRef.current.addEventListener('Twitch.Player.PLAYING', updateTime);
+        playerRef.current.addEventListener('Twitch.Player.SEEK', updateTime);
+
+        // Start polling current time while playing
+        timeUpdateInterval.current = window.setInterval(() => {
+          if (playerRef.current && onTimeUpdate) {
+            onTimeUpdate(playerRef.current.getCurrentTime());
+          }
+        }, 250);
+
         // If we have a timestamp, seek to it after player is ready
         if (selectedVod && selectedVod.timestamp > 0) {
           // Twitch player needs a moment to initialize before seeking
@@ -75,7 +94,13 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
       // Player exists, change the video and seek to timestamp
       playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
     }
-  }, [selectedVod]);
+
+    return () => {
+      if (timeUpdateInterval.current) {
+        clearInterval(timeUpdateInterval.current);
+      }
+    };
+  }, [selectedVod, onTimeUpdate]);
 
   return (
     <div className="h-full bg-black flex items-center justify-center overflow-hidden">
