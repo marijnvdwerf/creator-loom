@@ -1,11 +1,74 @@
+import { useEffect, useRef } from 'react';
 import { VOD, Creator } from '@/types/vod';
 import { format } from 'date-fns';
+
+// TypeScript declarations for Twitch embed API
+declare global {
+  interface Window {
+    Twitch?: {
+      Player: new (elementId: string, options: TwitchPlayerOptions) => TwitchPlayerInstance;
+    };
+  }
+}
+
+interface TwitchPlayerOptions {
+  video?: string;
+  width?: string | number;
+  height?: string | number;
+  parent: string[];
+  autoplay?: boolean;
+}
+
+interface TwitchPlayerInstance {
+  setVideo: (videoId: string, timestamp?: number) => void;
+  seek: (timestamp: number) => void;
+  play: () => void;
+  pause: () => void;
+  getCurrentTime: () => number;
+  getDuration: () => number;
+}
 
 interface TwitchPlayerProps {
   selectedVod: { vod: VOD; creator: Creator } | null;
 }
 
 export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
+  const playerRef = useRef<TwitchPlayerInstance | null>(null);
+  const playerInitialized = useRef(false);
+
+  useEffect(() => {
+    // Wait for Twitch embed script to load
+    if (!window.Twitch) {
+      console.warn('Twitch embed script not loaded yet');
+      return;
+    }
+
+    // Initialize player once on mount
+    if (!playerInitialized.current) {
+      const options: TwitchPlayerOptions = {
+        width: '100%',
+        height: '100%',
+        parent: ['localhost'], // Add your production domain here when deploying
+        autoplay: true,
+      };
+
+      // Set initial video if available
+      if (selectedVod) {
+        options.video = selectedVod.vod.id;
+      }
+
+      try {
+        playerRef.current = new window.Twitch.Player('twitch-player', options);
+        playerInitialized.current = true;
+      } catch (error) {
+        console.error('Failed to create Twitch player:', error);
+      }
+    } else if (selectedVod && playerRef.current) {
+      // Player exists, change the video
+      playerRef.current.setVideo(selectedVod.vod.id);
+    }
+  }, [selectedVod]);
+
   return (
     <div className="h-full bg-background text-foreground flex flex-col overflow-hidden">
       <div className="px-4 py-3 border-b border-border">
@@ -20,22 +83,15 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
         )}
       </div>
 
-      {/* Player placeholder */}
-      <div className="flex-1 bg-muted/30 flex items-center justify-center overflow-auto">
-        {selectedVod ? (
-          <div className="text-center p-8">
-            <div className="text-6xl mb-4">▶️</div>
-            <p className="text-muted-foreground mb-2">Twitch Player Placeholder</p>
-            <p className="text-xs text-muted-foreground">VOD ID: {selectedVod.vod.id}</p>
-            <p className="text-xs text-muted-foreground">
-              Started: {format(new Date(selectedVod.vod.createdAt), 'MMM d, HH:mm')}
-            </p>
-            <p className="text-xs text-muted-foreground">Views: {selectedVod.vod.viewCount.toLocaleString()}</p>
-          </div>
-        ) : (
-          <div className="text-center">
-            <div className="text-6xl mb-4">▶️</div>
-            <p className="text-muted-foreground">No VOD selected</p>
+      {/* Twitch player container */}
+      <div className="flex-1 bg-black overflow-hidden relative">
+        <div id="twitch-player" className="w-full h-full" />
+        {!selectedVod && (
+          <div className="absolute inset-0 flex items-center justify-center bg-background/95">
+            <div className="text-center">
+              <div className="text-6xl mb-4">▶️</div>
+              <p className="text-muted-foreground">No VOD selected</p>
+            </div>
           </div>
         )}
       </div>
