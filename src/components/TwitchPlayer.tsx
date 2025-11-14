@@ -30,13 +30,32 @@ interface TwitchPlayerInstance {
 
 interface TwitchPlayerProps {
   selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
-  onTimeUpdate?: (currentTime: number) => void;
+  onTimeUpdate?: (realWorldTimeMinutes: number) => void;
 }
 
 export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
   const playerRef = useRef<TwitchPlayerInstance | null>(null);
   const playerInitialized = useRef(false);
   const timeUpdateInterval = useRef<number | null>(null);
+
+  // Helper to calculate real world time in minutes
+  const getRealWorldTime = (playerCurrentSeconds: number): number | null => {
+    if (!selectedVod) return null;
+
+    // Get VOD start time and convert to minutes since midnight
+    const vodStartDate = new Date(selectedVod.vod.createdAt);
+    const vodStartMinutes = Math.floor(
+      vodStartDate.getTime() / 1000 / 60 + // Convert to minutes since epoch
+      (new Date().getTimezoneOffset() - 60) // Amsterdam is UTC+1, so adjust
+    );
+
+    // Actually, simpler approach: get the createdAt date and extract minutes
+    const vodStartDateAms = new Date(vodStartDate.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
+    const vodStartMinuteOfDay = vodStartDateAms.getHours() * 60 + vodStartDateAms.getMinutes();
+
+    // Real world time = when VOD started + how far into it we are
+    return vodStartMinuteOfDay + playerCurrentSeconds / 60;
+  };
 
   useEffect(() => {
     // Wait for Twitch embed script to load
@@ -66,25 +85,35 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         // Add event listeners to track playback
         const updateTime = () => {
           if (playerRef.current && onTimeUpdate) {
-            onTimeUpdate(playerRef.current.getCurrentTime());
+            const playerTime = playerRef.current.getCurrentTime();
+            const realWorldTime = getRealWorldTime(playerTime);
+            if (realWorldTime !== null) {
+              onTimeUpdate(realWorldTime);
+            }
           }
         };
 
         playerRef.current.addEventListener('Twitch.Player.PLAYING', updateTime);
         playerRef.current.addEventListener('Twitch.Player.SEEK', updateTime);
+        playerRef.current.addEventListener('Twitch.Player.PAUSE', updateTime);
 
-        // Start polling current time while playing
+        // Start polling current time frequently (100ms for responsive scrubbing)
         timeUpdateInterval.current = window.setInterval(() => {
           if (playerRef.current && onTimeUpdate) {
-            onTimeUpdate(playerRef.current.getCurrentTime());
+            const playerTime = playerRef.current.getCurrentTime();
+            const realWorldTime = getRealWorldTime(playerTime);
+            if (realWorldTime !== null) {
+              onTimeUpdate(realWorldTime);
+            }
           }
-        }, 250);
+        }, 100);
 
         // If we have a timestamp, seek to it after player is ready
         if (selectedVod && selectedVod.timestamp > 0) {
           // Twitch player needs a moment to initialize before seeking
           setTimeout(() => {
             playerRef.current?.seek(selectedVod.timestamp);
+            updateTime();
           }, 1000);
         }
       } catch (error) {

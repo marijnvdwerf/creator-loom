@@ -9,6 +9,7 @@ interface TimelineRowProps {
   endMinute: number;
   teamColor: string;
   onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
+  selectedVod?: { vod: VOD; creator: Creator; timestamp: number } | null;
 }
 
 export function TimelineRow({
@@ -18,6 +19,7 @@ export function TimelineRow({
   endMinute,
   teamColor,
   onVodClick,
+  selectedVod,
 }: TimelineRowProps) {
   const totalMinutes = endMinute - startMinute;
 
@@ -70,10 +72,16 @@ export function TimelineRow({
             onVodClick(vod, creator, clickTimestamp);
           };
 
+          const isSelected = selectedVod?.vod.id === vod.id && selectedVod?.creator.twitchUsername === creator.twitchUsername;
+          const baseClasses = "absolute top-0.5 bottom-0.5 border rounded-sm cursor-pointer transition-all overflow-hidden";
+          const selectedClasses = isSelected
+            ? "bg-primary/80 border-primary/80 shadow-lg shadow-primary/40"
+            : "bg-gradient-to-b from-muted to-muted/80 border-border/40 hover:from-accent hover:to-accent/80 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20";
+
           return (
             <div
               key={vod.id}
-              className="absolute top-0.5 bottom-0.5 bg-gradient-to-b from-muted to-muted/80 border border-border/40 rounded-sm cursor-pointer hover:from-accent hover:to-accent/80 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20 transition-all overflow-hidden"
+              className={`${baseClasses} ${selectedClasses}`}
               style={{
                 left: `${Math.max(0, leftPercent)}%`,
                 width: `${Math.min(widthPercent, 100 - leftPercent)}%`,
