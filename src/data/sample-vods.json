@@ -1,0 +1,71 @@
+{
+  "creators": [
+    {
+      "name": "Izza",
+      "team": 0,
+      "alive": true,
+      "deathDate": null,
+      "vods": [
+        {
+          "id": "2318472634",
+          "title": "CreatorSMP Day 1",
+          "createdAt": "2024-11-11T13:15:00Z",
+          "duration": "PT6H30M",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/placeholder.jpg"
+        },
+        {
+          "id": "2319584721",
+          "title": "CreatorSMP Day 2 - Building Base",
+          "createdAt": "2024-11-12T14:00:00Z",
+          "duration": "PT5H45M",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/placeholder.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Player2",
+      "team": 0,
+      "alive": true,
+      "deathDate": null,
+      "vods": [
+        {
+          "id": "2318495123",
+          "title": "SMP Adventures",
+          "createdAt": "2024-11-11T15:00:00Z",
+          "duration": "PT4H15M",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/placeholder.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Deadplyr",
+      "team": 0,
+      "alive": false,
+      "deathDate": "2024-11-13T18:30:00Z",
+      "vods": [
+        {
+          "id": "2318512345",
+          "title": "Final Stream",
+          "createdAt": "2024-11-11T16:00:00Z",
+          "duration": "PT3H20M",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/placeholder.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Streamer5",
+      "team": 1,
+      "alive": true,
+      "deathDate": null,
+      "vods": [
+        {
+          "id": "2318534567",
+          "title": "Team 1 POV",
+          "createdAt": "2024-11-11T13:30:00Z",
+          "duration": "PT7H10M",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/placeholder.jpg"
+        }
+      ]
+    }
+  ]
+}
