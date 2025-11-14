@@ -1,8 +1,12 @@
 import { useState } from 'react'
-import { ResizablePanels } from './components/ResizablePanels'
 import { Timeline } from './components/Timeline'
 import { TwitchPlayer } from './components/TwitchPlayer'
 import { VOD, Creator } from './types/vod'
+import {
+  ResizablePanelGroup,
+  ResizablePanel,
+  ResizableHandle,
+} from '@/components/ui/resizable'
 
 function App() {
   // Default to today, or Nov 9 if before event
@@ -18,17 +22,21 @@ function App() {
   };
 
   return (
-    <ResizablePanels
-      left={
+    <ResizablePanelGroup direction="horizontal" className="h-screen w-full">
+      <ResizablePanel defaultSize={50} minSize={30}>
         <Timeline
           selectedDate={selectedDate}
           onDateSelect={setSelectedDate}
           onVodClick={handleVodClick}
         />
-      }
-      right={<TwitchPlayer selectedVod={selectedVod} />}
-      defaultLeftWidth={50}
-    />
+      </ResizablePanel>
+
+      <ResizableHandle withHandle />
+
+      <ResizablePanel defaultSize={50} minSize={30}>
+        <TwitchPlayer selectedVod={selectedVod} />
+      </ResizablePanel>
+    </ResizablePanelGroup>
   )
 }
 

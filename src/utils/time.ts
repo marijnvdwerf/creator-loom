@@ -1,6 +1,13 @@
-// Parse ISO 8601 duration like "PT6H30M15S" to seconds
+// Parse duration like "1h34m9s" or "PT1H34M9S" to seconds
 export function parseDuration(duration: string): number {
-  const matches = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  // Try lowercase format first (1h34m9s)
+  let matches = duration.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?/i);
+
+  // If no match, try ISO 8601 format (PT1H34M9S)
+  if (!matches || !matches[0]) {
+    matches = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/i);
+  }
+
   if (!matches) return 0;
 
   const hours = parseInt(matches[1] || '0', 10);
