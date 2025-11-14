@@ -103,7 +103,7 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
   }, [selectedVod, onTimeUpdate]);
 
   return (
-    <div className="h-full bg-black flex items-center justify-center overflow-hidden">
+    <div className="h-full bg-black relative overflow-hidden">
       <div id="twitch-player" className="w-full h-full" />
       {!selectedVod && (
         <div className="absolute inset-0 flex items-center justify-center bg-background">

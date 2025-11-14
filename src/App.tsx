@@ -30,6 +30,7 @@ function App() {
           onDateSelect={setSelectedDate}
           onVodClick={handleVodClick}
           playerCurrentTime={playerCurrentTime}
+          selectedVod={selectedVod}
         />
       </ResizablePanel>
 

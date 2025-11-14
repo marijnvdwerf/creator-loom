@@ -1,20 +1,30 @@
 import { useMemo } from 'react';
+import { VOD, Creator } from '@/types/vod';
+import { getMinutesSinceMidnight } from '@/utils/time';
 
 interface TimeIndicatorProps {
   selectedDate: Date;
   startMinute: number;
   endMinute: number;
   playerCurrentTime: number;
+  selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
 }
 
-export function TimeIndicator({ selectedDate, startMinute, endMinute, playerCurrentTime }: TimeIndicatorProps) {
-  // Convert player current time (seconds since start of VOD) to minutes
+export function TimeIndicator({ selectedDate, startMinute, endMinute, playerCurrentTime, selectedVod }: TimeIndicatorProps) {
+  // Calculate the position on the timeline based on the playing VOD's start time
   const playerCurrentMinute = useMemo(() => {
-    return startMinute + playerCurrentTime / 60;
-  }, [playerCurrentTime, startMinute]);
+    if (!selectedVod) return null;
 
-  // Don't show if current time is outside the range
-  if (playerCurrentMinute < startMinute || playerCurrentMinute > endMinute) {
+    // Get the start time of the VOD in Amsterdam timezone
+    const vodStartDate = new Date(selectedVod.vod.createdAt);
+    const vodStartMinute = getMinutesSinceMidnight(vodStartDate);
+
+    // Player current time is in seconds, convert to minutes and add to VOD start
+    return vodStartMinute + playerCurrentTime / 60;
+  }, [playerCurrentTime, selectedVod]);
+
+  // Don't show if we don't have position info or if it's outside the range
+  if (playerCurrentMinute === null || playerCurrentMinute < startMinute || playerCurrentMinute > endMinute) {
     return null;
   }
 
