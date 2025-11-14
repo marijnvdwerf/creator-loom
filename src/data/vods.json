@@ -1,0 +1,2233 @@
+{
+  "lastUpdated": "2025-11-14T16:16:06.684Z",
+  "creators": [
+    {
+      "name": "AlexKleinYT",
+      "twitchUsername": "alexkleinyt",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617344008",
+          "title": "CreatorSMP Dag 2",
+          "createdAt": "2025-11-13T14:54:55Z",
+          "duration": "1h34m9s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b5af4e0557034b6947cd_alexkleinyt_314871823443_1763045689//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 591
+        }
+      ]
+    },
+    {
+      "name": "Alissarella",
+      "twitchUsername": "alissarella",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617322188",
+          "title": "Creator SMP grind & psychologenpraktijk? ❄️ TEAM NOORD",
+          "createdAt": "2025-11-13T14:11:40Z",
+          "duration": "5h18m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8412974029ae5ac44de2_alissarella_314831347665_1763043094//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9624
+        },
+        {
+          "id": "2616656120",
+          "title": "Creator SMP AVOND GRIND ❄️ TEAM NOORD",
+          "createdAt": "2025-11-12T18:33:00Z",
+          "duration": "2h51m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/fbf2785ddacd418dd1fa_alissarella_315294489445_1762972373//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1282
+        },
+        {
+          "id": "2616431951",
+          "title": "Creator SMP MIDDAG GRIND❄️ TEAM NOORD",
+          "createdAt": "2025-11-12T12:56:57Z",
+          "duration": "3h22m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5ee80aa91549ae3c2540_alissarella_314844547922_1762952211//thumb/thumb1-%{width}x%{height}.jpg",
+          "viewCount": 3511
+        },
+        {
+          "id": "2615568246",
+          "title": "Creator SMP ❄️ TEAM NOORD",
+          "createdAt": "2025-11-11T14:00:14Z",
+          "duration": "7h1m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc10c0c8994d07e51e75_alissarella_314813881937_1762869608//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5822
+        }
+      ]
+    },
+    {
+      "name": "AlmostNormal",
+      "twitchUsername": "almostnormal",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2616435308",
+          "title": "💥CREATOR SMP: DAG 3... #Noord",
+          "createdAt": "2025-11-12T13:02:02Z",
+          "duration": "2h44m33s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3708361e45717e9a7e4b_almostnormal_314844577106_1762952516//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 10183
+        },
+        {
+          "id": "2615778849",
+          "title": "💥CREATOR SMP: DAG 3... #Noord",
+          "createdAt": "2025-11-11T19:03:47Z",
+          "duration": "4h14m57s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a7e273f098267a4777e7_almostnormal_314856259027_1762887821//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2938
+        }
+      ]
+    },
+    {
+      "name": "AltijdMelvin",
+      "twitchUsername": "altijdmelvin",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617281842",
+          "title": "CREATOR SMP NOORD GRIND SESSIE | !cs2",
+          "createdAt": "2025-11-13T12:51:41Z",
+          "duration": "5h47m24s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3dc1b7147b625d429fba_altijdmelvin_314852759634_1763038291//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 12994
+        },
+        {
+          "id": "2616626939",
+          "title": "CREATOR SMP NOORD (wall of holy tieten comeback) | !cs2",
+          "createdAt": "2025-11-12T17:57:46Z",
+          "duration": "4h33m8s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a1497431894e5f634fe7_altijdmelvin_314846806226_1762970255//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6072
+        }
+      ]
+    },
+    {
+      "name": "AwesomeDaddyGaming",
+      "twitchUsername": "awesomedaddygaming",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617328600",
+          "title": "Creator SMP Dag5 Team Zuid OORLOG! 🧠💥 !yourbuild !Schilderij !discord !dono !clip",
+          "createdAt": "2025-11-13T14:24:29Z",
+          "duration": "7h55m15s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/4e83b3ce3565ca43dd4e_awesomedaddygaming_315299658597_1763043863//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8178
+        },
+        {
+          "id": "2616427951",
+          "title": "Arc eerst, daarna:💪 Creator SMP Dag3 Team Zuid TRAINING 🧠💥 !yourbuild !Schilderij !discord !dono !clip",
+          "createdAt": "2025-11-12T12:49:03Z",
+          "duration": "9h0m17s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/371d1e04a92ca6f55cda_awesomedaddygaming_314844499282_1762951737//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 14771
+        },
+        {
+          "id": "2616333471",
+          "title": "Arc eerst, daarna:💪 Creator SMP Dag2 Team Zuid TRAINING 🧠💥 !yourbuild !Schilderij !discord !dono !clip",
+          "createdAt": "2025-11-12T08:58:56Z",
+          "duration": "3h49m45s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/52e8e6bc15c867dba9d6_awesomedaddygaming_314843384402_1762937930//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6060
+        }
+      ]
+    },
+    {
+      "name": "AYV3E",
+      "twitchUsername": "ayv3e",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618159190",
+          "title": "HARDCORE CREATOR SMP",
+          "createdAt": "2025-11-14T13:57:43Z",
+          "duration": "2h18m22s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 12
+        },
+        {
+          "id": "2617451589",
+          "title": "HARDCORE CREATOR SMP",
+          "createdAt": "2025-11-13T17:43:42Z",
+          "duration": "5h23m38s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8a5570c383360704fc5c_ayv3e_314854808274_1763055811//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17668
+        },
+        {
+          "id": "2616458668",
+          "title": "HARDCORE CREATOR SMP",
+          "createdAt": "2025-11-12T13:45:29Z",
+          "duration": "2h50m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6c8ef048f46ddf3eb70b_ayv3e_314844813394_1762955119//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 21509
+        }
+      ]
+    },
+    {
+      "name": "Bardo Ellens",
+      "twitchUsername": "bardo",
+      "team": 0,
+      "vods": []
+    },
+    {
+      "name": "BASR",
+      "twitchUsername": "basr",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618163266",
+          "title": "MINECRAFT CREATOR SMP HARDCORE SURVIVAL DAG 6 - Kamp Noord!",
+          "createdAt": "2025-11-14T14:03:59Z",
+          "duration": "2h11m35s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 0
+        },
+        {
+          "id": "2616708280",
+          "title": "MINECRAFT CREATOR SMP HARDCORE SURVIVAL DAG 4 - Kamp Noord!",
+          "createdAt": "2025-11-12T19:37:25Z",
+          "duration": "5h5m42s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6324eadd324a5bb255dc_basr_314847924178_1762976235//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5747
+        },
+        {
+          "id": "2615606227",
+          "title": "LIVE OP CREATOR SMP! DAG 3 - KAMP NOORD!",
+          "createdAt": "2025-11-11T15:01:50Z",
+          "duration": "8h25m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a2993a0479d83243b5fb_basr_314814336209_1762873299//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2476
+        }
+      ]
+    },
+    {
+      "name": "Bintjeeeh",
+      "twitchUsername": "bintjeeeh",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618240323",
+          "title": "CreatorSMP NOORD ❄️🧊| er is ZOVEEL gebeurd.. | !meta #109 IG: Bintjeeeh",
+          "createdAt": "2025-11-14T16:12:24Z",
+          "duration": "3m40s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 0
+        },
+        {
+          "id": "2618128213",
+          "title": "CreatorSMP NOORD ❄️🧊| er is ZOVEEL gebeurd.. | !meta #109 IG: Bintjeeeh",
+          "createdAt": "2025-11-14T12:57:52Z",
+          "duration": "2h3m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9d33bcceeceecb209d8d_bintjeeeh_314839426769_1763125066//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 15
+        },
+        {
+          "id": "2615544377",
+          "title": "CreatorSMP NOORD ❄️🧊| CASINO WORDT GEBOUWD! (18:00 IRL eten maken) | !meta #107 IG: Bintjeeeh",
+          "createdAt": "2025-11-11T13:17:18Z",
+          "duration": "9h43m59s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e16a805a45a9ece85a70_bintjeeeh_314853194323_1762867031//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17454
+        }
+      ]
+    },
+    {
+      "name": "Bokado",
+      "twitchUsername": "bokado",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617319837",
+          "title": "Bouwen, plannen maken, en trial chamber? - Dag 4 🔥",
+          "createdAt": "2025-11-13T14:06:52Z",
+          "duration": "2h31m46s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4c46b88717c06612f516_bokado_314831318993_1763042806//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3745
+        },
+        {
+          "id": "2615755194",
+          "title": "Nieuwe dag, nieuwe CreatorSMP! - Dag 3 🔥",
+          "createdAt": "2025-11-11T18:35:32Z",
+          "duration": "2h50m46s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9899ffbbd6f5ecf6c72b_bokado_314838485714_1762886126//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 4362
+        }
+      ]
+    },
+    {
+      "name": "Brolsen",
+      "twitchUsername": "brolsen",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2615813744",
+          "title": "🔴 #120 ✨ CREATOR SMP 3 - #2 ✨ OUD ZUID ✨ !meta ✨ !clip om te clippen ✨",
+          "createdAt": "2025-11-11T19:46:18Z",
+          "duration": "3h50m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c58ff6f1a37b927c5a11_brolsen_314856724563_1762890372//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1342
+        }
+      ]
+    },
+    {
+      "name": "chatmoyt",
+      "twitchUsername": "chatmo",
+      "team": 0,
+      "vods": []
+    },
+    {
+      "name": "ClownPierce",
+      "twitchUsername": "clownpiercenl",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617345616",
+          "title": "CreatorSMP!!",
+          "createdAt": "2025-11-13T14:57:42Z",
+          "duration": "8h12m39s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/94b91dd76a005eff744c_clownpiercenl_315139137383_1763045856//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 249919
+        },
+        {
+          "id": "2616643492",
+          "title": "CreatorSMP!!",
+          "createdAt": "2025-11-12T18:16:29Z",
+          "duration": "5h32m13s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ea35f9ad5bc7e2e7047f_clownpiercenl_315294309349_1762971383//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 153570
+        },
+        {
+          "id": "2615592783",
+          "title": "CreatorSMP!!",
+          "createdAt": "2025-11-11T14:40:54Z",
+          "duration": "8h24m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ea942aa963e5aee5d255_clownpiercenl_315386407270_1762872048//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 279634
+        }
+      ]
+    },
+    {
+      "name": "Dante",
+      "twitchUsername": "clonnylive",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617398946",
+          "title": "CreatorSMP | !discord !merch",
+          "createdAt": "2025-11-13T16:26:29Z",
+          "duration": "6h6m18s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/df3b77952e201be2e115_clonnylive_316024034650_1763051183//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3882
+        },
+        {
+          "id": "2615675755",
+          "title": "CreatorSMP | !discord !merch",
+          "createdAt": "2025-11-11T16:51:25Z",
+          "duration": "3h48m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/5d6530bf46b122b674c3_clonnylive_316035475931_1762879879//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3294
+        }
+      ]
+    },
+    {
+      "name": "DavincstyleGames",
+      "twitchUsername": "davincstylegames",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617446905",
+          "title": "Totem of Undying zoeken! - Creator SMP Livestream #5 !smp",
+          "createdAt": "2025-11-13T17:36:36Z",
+          "duration": "2h58m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/71cfb66c8d6445d2be38_davincstylegames_314832917841_1763055390//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5911
+        },
+        {
+          "id": "2616610060",
+          "title": "Spoed overleg vanavond! - Creator SMP Livestream #4 !smp",
+          "createdAt": "2025-11-12T17:36:02Z",
+          "duration": "1h57m22s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/01e0910fdde0587efb39_davincstylegames_314824663121_1762968956//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3731
+        },
+        {
+          "id": "2616426142",
+          "title": "Voorbereiden op OORLOG! - Creator SMP Livestream #3 !smp",
+          "createdAt": "2025-11-12T12:45:33Z",
+          "duration": "2h59m21s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/22fa0dc8dc03571083af_davincstylegames_314844479314_1762951527//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17649
+        },
+        {
+          "id": "2615703097",
+          "title": "TOP idee in Creator SMP! - Livestream #2 !smp",
+          "createdAt": "2025-11-11T17:27:21Z",
+          "duration": "3h46m29s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/62125ffc48a6bd6419b4_davincstylegames_314815628881_1762882036//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6281
+        }
+      ]
+    },
+    {
+      "name": "Deem_i",
+      "twitchUsername": "deem_i",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618118306",
+          "title": "[Noord] SMP Tijd voor traps en enchantments!",
+          "createdAt": "2025-11-14T12:36:18Z",
+          "duration": "3h39m13s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 2
+        },
+        {
+          "id": "2616333665",
+          "title": "Eerst SMG daarna SMP dag1! !Nintendo #SuperMarioGalaxy #NintendoSwitch (Ad)",
+          "createdAt": "2025-11-12T08:59:28Z",
+          "duration": "8h13m14s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/635f86b6e75fbfc24e35_deem_i_314843386194_1762937962//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 18765
+        }
+      ]
+    },
+    {
+      "name": "Dennus",
+      "twitchUsername": "dennusyt",
+      "team": 0,
+      "vods": []
+    },
+    {
+      "name": "DionTVG",
+      "twitchUsername": "diontvg",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618110350",
+          "title": "KLAARMAKEN VOOR OORLOG TEGEN NOORD🔥- CREATOR SMP DAG 5 (NIEUWE ALERT))",
+          "createdAt": "2025-11-14T12:18:25Z",
+          "duration": "3h57m14s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 6
+        },
+        {
+          "id": "2617263208",
+          "title": "TRAPS MAKEN & TRIAL DOEN?!🔥- CREATOR SMP DAG 5",
+          "createdAt": "2025-11-13T12:08:42Z",
+          "duration": "4h8m25s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f5a4c7c5fa3344adcd41_diontvg_314852562386_1763035713//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13280
+        },
+        {
+          "id": "2616406685",
+          "title": "ALLES MOET BRANDEN! 🔥- CREATOR SMP DAG 4",
+          "createdAt": "2025-11-12T12:05:20Z",
+          "duration": "5h1m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3f4af3aff712f2ee423c_diontvg_314862257491_1762949113//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 26094
+        },
+        {
+          "id": "2615511438",
+          "title": "PURE CHAOS OP EILAND ZUID 🔥- CREATOR SMP DAG 3",
+          "createdAt": "2025-11-11T12:15:18Z",
+          "duration": "4h6m57s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e27aa4ca8870070576b4_diontvg_314813227601_1762863311//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 38489
+        }
+      ]
+    },
+    {
+      "name": "Don Kaaklijn",
+      "twitchUsername": "donkaaklijn",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618071227",
+          "title": "[DROPS] BLACK OPS 7 RELEASE AAA !cod #ad    (daarna mc)",
+          "createdAt": "2025-11-14T10:42:08Z",
+          "duration": "4h32m53s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2f19f0a7d25039af05b8_donkaaklijn_314838767697_1763116922//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 790
+        },
+        {
+          "id": "2617340163",
+          "title": "(dag 4) SMP 3 EILAND ZUID.(CHAOS POV) CHAOS CHAOS CHAOS CHAOS !smp",
+          "createdAt": "2025-11-13T14:47:46Z",
+          "duration": "7h7m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/99a5a4838220212b5a41_donkaaklijn_314871776595_1763045260//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 238343
+        },
+        {
+          "id": "2616600984",
+          "title": "(dag 4) SMP 3 EILAND ZUID.(CHAOS POV) !smp",
+          "createdAt": "2025-11-12T17:23:56Z",
+          "duration": "5h42m4s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3d09ce29d2034af0d78b_donkaaklijn_314864748371_1762968230//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 189759
+        },
+        {
+          "id": "2615894082",
+          "title": "(dag 3) SMP 3 EILAND ZUID.(CHAOS POV) !smp",
+          "createdAt": "2025-11-11T21:24:44Z",
+          "duration": "1h28m8s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3109d6b2bf76f039d69f_donkaaklijn_314840281426_1762896278//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 52316
+        },
+        {
+          "id": "2615591825",
+          "title": "(dag 3) SMP 3 EILAND ZUID.(CHAOS POV) !smp",
+          "createdAt": "2025-11-11T14:39:13Z",
+          "duration": "6h43m48s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ec5825377c92aa6b0e23_donkaaklijn_314836353874_1762871947//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 230008
+        }
+      ]
+    },
+    {
+      "name": "Duncan",
+      "twitchUsername": "duncan",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618187384",
+          "title": "Dag 6 CreatorSMP Hardcore S3 🔥❄️ | Zuid POV",
+          "createdAt": "2025-11-14T14:49:09Z",
+          "duration": "1h26m42s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 14
+        },
+        {
+          "id": "2617326943",
+          "title": "Dag 5 CreatorSMP Hardcore S3 🔥❄️ | Zuid POV",
+          "createdAt": "2025-11-13T14:21:03Z",
+          "duration": "8h38m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/5b8ed6123bd7db3afff3_duncan_315401257446_1763043654//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 77992
+        },
+        {
+          "id": "2616421544",
+          "title": "Dag 4 CreatorSMP Hardcore S3 🔥❄️ | Zuid POV",
+          "createdAt": "2025-11-12T12:35:52Z",
+          "duration": "10h30m12s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ac38fd43715b1a74ddc2_duncan_315291518053_1762950943//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 130485
+        },
+        {
+          "id": "2615710710",
+          "title": "Dag 3 CreatorSMP Hardcore S3 🔥❄️ | Zuid POV",
+          "createdAt": "2025-11-11T17:37:47Z",
+          "duration": "5h33m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ad3d846c339b11f0568b_duncan_315122149479_1762882660//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 40357
+        }
+      ]
+    },
+    {
+      "name": "EnzoKnol",
+      "twitchUsername": "enzoknol",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617485864",
+          "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 5",
+          "createdAt": "2025-11-13T18:29:31Z",
+          "duration": "4h39m41s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ff50223129b9a2a0306d_enzoknol_314873706195_1763058565//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 174364
+        },
+        {
+          "id": "2616684885",
+          "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 4",
+          "createdAt": "2025-11-12T19:06:54Z",
+          "duration": "3h54m48s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c68fecd72a4c4a55e3de_enzoknol_314847584082_1762974408//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 78587
+        },
+        {
+          "id": "2616522671",
+          "title": "PHANTASMAL FLAMES OPENMAKEN!! - NIEUWSTE POKEMON SET! - CHARIZARD HUNT!!",
+          "createdAt": "2025-11-12T15:33:13Z",
+          "duration": "1h24m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5080431b085f32a27ce6_enzoknol_314863693395_1762961587//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 18663
+        },
+        {
+          "id": "2615728240",
+          "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 3 - WIE KAN IK VERTROUWEN?",
+          "createdAt": "2025-11-11T18:00:48Z",
+          "duration": "5h9m27s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/aa98ab368fa33b6d58ed_enzoknol_314838113746_1762884042//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 110527
+        }
+      ]
+    },
+    {
+      "name": "Fems",
+      "twitchUsername": "fems",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2616385729",
+          "title": "Fems (bijna niet meer) op Reis: 📍Tokyo, Japan | Donki, Gaming Bar en eten!",
+          "createdAt": "2025-11-12T11:18:29Z",
+          "duration": "3h31m48s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/16fec2638e27ca0cae44_fems_314862000979_1762946303//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7393
+        }
+      ]
+    },
+    {
+      "name": "Gamemeneer",
+      "twitchUsername": "GameMeneer",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617464149",
+          "title": "Klappen uitdelen tegen @Sejecem, @Roedie & @GeorgeFaralley | !ad !anno |@GameMeneer (#ad #anno117)",
+          "createdAt": "2025-11-13T18:00:33Z",
+          "duration": "3h43m31s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e290e06be4e942d55b5_gamemeneer_314833166929_1763056827//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 10169
+        },
+        {
+          "id": "2616680103",
+          "title": "Tijd voor Enchants en samenhorigheid op ZUID - CreatorSMP S3 | @GameMeneer",
+          "createdAt": "2025-11-12T19:01:37Z",
+          "duration": "4h1m25s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b92d73ce3165f8b77a52_gamemeneer_314825634385_1762974090//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13409
+        },
+        {
+          "id": "2615776869",
+          "title": "Bietsen op ZUID - CreatorSMP S3 | @GameMeneer",
+          "createdAt": "2025-11-11T19:01:50Z",
+          "duration": "4h1m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd309b3dccb891cdc312_gamemeneer_314816673233_1762887704//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 21898
+        }
+      ]
+    },
+    {
+      "name": "GeorgeFaralley",
+      "twitchUsername": "georgefaralley",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617452771",
+          "title": "🏛️Kan er maar één de beste zijn...🏛️!giveaway 🏛️| #ad #anno117 @sejecem @roedie @gamemeneer",
+          "createdAt": "2025-11-13T17:45:30Z",
+          "duration": "3h58m17s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/de3be2454bd8f1492b14_georgefaralley_315402717286_1763055921//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2546
+        },
+        {
+          "id": "2615556420",
+          "title": "[SMP LOSER EILAND] Mijn eerlijke reactie nu dan echt... | !lenovo",
+          "createdAt": "2025-11-11T13:39:37Z",
+          "duration": "4h49m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/70cbb53a40743f3c8f30_georgefaralley_315386032614_1762868368//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7762
+        }
+      ]
+    },
+    {
+      "name": "Harm",
+      "twitchUsername": "harm_live",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617459463",
+          "title": "KOM MAAR OP MET DIE MACE - CreatorSMP Hardcore (DAG 5)",
+          "createdAt": "2025-11-13T17:55:10Z",
+          "duration": "3h8m18s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f95d3f768583f787a0c6_harm_live_314833097169_1763056500//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2077
+        },
+        {
+          "id": "2616653989",
+          "title": "(DAG 4) Harm - CreatorSMP Hardcore",
+          "createdAt": "2025-11-12T18:30:20Z",
+          "duration": "4h31m2s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bfcfcb9f165bb817009c_harm_live_314865526099_1762972209//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1996
+        }
+      ]
+    },
+    {
+      "name": "HenRYANand",
+      "twitchUsername": "henRYANand",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617514459",
+          "title": "Creator SMP 🔴 ZUID! 🔥 Brug afmaken en .. totem enz halen?!",
+          "createdAt": "2025-11-13T19:06:08Z",
+          "duration": "2h33m9s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0f0d415bf88c586a0285_henryanand_314855755858_1763060762//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 939
+        },
+        {
+          "id": "2617337617",
+          "title": "AD | Help me met deze game! => MARIOOO GALAXYY -- #SuperMarioGalaxy #NintendoSwitch !mario",
+          "createdAt": "2025-11-13T14:42:35Z",
+          "duration": "3h53m43s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/846330ccd4621b33a66a_henryanand_314853345490_1763044949//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1133
+        },
+        {
+          "id": "2616624410",
+          "title": "🔴 CREATOR SMP 🔴 Team Zuid 🔥 DOEL: BRUG naar Noord + MEGA KAMPVUUR + xp level up",
+          "createdAt": "2025-11-12T17:54:54Z",
+          "duration": "5h19m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c0ee71d6a7a839a31230_henryanand_314824860113_1762970088//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3964
+        }
+      ]
+    },
+    {
+      "name": "Igortjuh",
+      "twitchUsername": "igortjuh",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617498989",
+          "title": "[DAG 5] TOTEMS FIXEN VANDAAG JONGENS!🔥",
+          "createdAt": "2025-11-13T18:48:08Z",
+          "duration": "4h24m5s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2bfe096da7ee973c5fe4_igortjuh_315301929189_1763059682//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 48333
+        },
+        {
+          "id": "2617315817",
+          "title": "[DAG 5] DE GROOTSTE SMP GRIND VOOR HET VALLEN VAN DE MUUR!🔥",
+          "createdAt": "2025-11-13T14:00:15Z",
+          "duration": "3h12m12s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/61d6aa20105c8e986c36_igortjuh_314831276753_1763042409//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 32432
+        },
+        {
+          "id": "2616544400",
+          "title": "VANDAAG WORDT CHAOS!!🔥- CreatorSMP Dag 4",
+          "createdAt": "2025-11-12T16:05:18Z",
+          "duration": "7h46m23s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4c0fd6682fec4431711b_igortjuh_314863982163_1762963512//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 86778
+        },
+        {
+          "id": "2615568388",
+          "title": "BOSSEN AFBRANDEN, LEVEL 30 STACKEN EN TEAM ZUID DINGEN DOEN!🔥- CreatorSMP Dag 3",
+          "createdAt": "2025-11-11T14:00:23Z",
+          "duration": "3h30m54s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/496254438cbff6567cfe_igortjuh_314836080210_1762869617//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 53721
+        }
+      ]
+    },
+    {
+      "name": "Imkefleur",
+      "twitchUsername": "imkefleur",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617251478",
+          "title": "Hardcore training met @spacingunicorn & PVP training van een PRO | !200 !Socials",
+          "createdAt": "2025-11-13T11:42:53Z",
+          "duration": "4h55m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f6afff94b70d1b6bc5bc_imkefleur_314852431570_1763034167//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11623
+        }
+      ]
+    },
+    {
+      "name": "IngmarMol",
+      "twitchUsername": "ingmarmol",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617457757",
+          "title": "❄️ CreatorSMP hardcore dag 5 stream3 ❄️ eindelijk beginnen aan me armor ❄️ !Discord ❄️",
+          "createdAt": "2025-11-13T17:52:40Z",
+          "duration": "3h36m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7188e95f40354ac7f497_ingmarmol_314833067601_1763056355//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 710
+        }
+      ]
+    },
+    {
+      "name": "Its_Ankie",
+      "twitchUsername": "its_ankie",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618136797",
+          "title": "ziek maar we moeten GRINDEN! CREATOR SMP HARDCORE 3! DAG 4💜 !meta - !spotify -  !discord - !youtube 💜",
+          "createdAt": "2025-11-14T13:12:52Z",
+          "duration": "3h2m38s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 8
+        },
+        {
+          "id": "2615734041",
+          "title": "DAG 2 VAN DE CREATOR SMP HARDCORE 3! 💜 !meta - !spotify -  !discord - !youtube 💜",
+          "createdAt": "2025-11-11T18:07:19Z",
+          "duration": "3h41m56s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e571813eeb63e129bad_its_ankie_314855635667_1762884432//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6047
+        }
+      ]
+    },
+    {
+      "name": "Izza",
+      "twitchUsername": "izza",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618175202",
+          "title": "🔴DAG 4 CREATOR SMP - VANDAAG EEN RAID DOEN?! | !csmp !dood",
+          "createdAt": "2025-11-14T14:26:10Z",
+          "duration": "1h49m20s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 4
+        },
+        {
+          "id": "2616434104",
+          "title": "🔴DAG 3 CREATOR SMP - SERIEUZE GRIND | !csmp !dood",
+          "createdAt": "2025-11-12T13:00:24Z",
+          "duration": "7h45m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d80fe2354725dabdeb6a_izza_314822612945_1762952418//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17062
+        }
+      ]
+    },
+    {
+      "name": "jactha__",
+      "twitchUsername": "jactha__",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617498451",
+          "title": "🔥 CREATOR SMP DAG 5 🔥 EILAND NOORD 🔥 SUPERMAN KOSTUUM 🔥 !discord !subgoal !prime",
+          "createdAt": "2025-11-13T18:47:19Z",
+          "duration": "4h21m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/629d674595b8b25a6295_jactha___314873894867_1763059632//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 45483
+        },
+        {
+          "id": "2615766799",
+          "title": "💀 CREATOR SMP DAG 3 💀 EILAND NOORD 💀 FLASH KOSTUUM 💀 !discord !subgoal !prime",
+          "createdAt": "2025-11-11T18:51:02Z",
+          "duration": "4h24m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bafb306e5b585fc46089_jactha___314856102227_1762887056//thumb/thumb1-%{width}x%{height}.jpg",
+          "viewCount": 38368
+        }
+      ]
+    },
+    {
+      "name": "JavierosTV",
+      "twitchUsername": "javierostv",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617297263",
+          "title": "CreatorSMP DAG 5! 🔥 | Onze Geheime base maken | TEAM ZUID! 💙",
+          "createdAt": "2025-11-13T13:22:05Z",
+          "duration": "6h39m1s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/27e85c04bf094c49a0e6_javierostv_314831076689_1763040119//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7816
+        },
+        {
+          "id": "2616503748",
+          "title": "CreatorSMP DAG 4! 🔥 | Laten we een spelletje spelen... | TEAM ZUID! |  💙",
+          "createdAt": "2025-11-12T15:02:22Z",
+          "duration": "9h27m47s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b70669ec888c80c890ad_javierostv_314823384017_1762959736//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13328
+        },
+        {
+          "id": "2615581195",
+          "title": "CreatorSMP DAG 3! 🔥 | BASE & GEAR MAKEN | TEAM ZUID! |  💙",
+          "createdAt": "2025-11-11T14:21:19Z",
+          "duration": "10h44m28s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c0b33d3ee1bfe59ab09d_javierostv_314814032465_1762870873//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13204
+        }
+      ]
+    },
+    {
+      "name": "JeremyFrieser",
+      "twitchUsername": "jeremyfrieser",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618193151",
+          "title": "MORGEN SMELT DE IJSMUUR!!❄️CreatorSMP S3❄️DAG 6 ❄️",
+          "createdAt": "2025-11-14T14:58:56Z",
+          "duration": "1h16m59s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 34
+        },
+        {
+          "id": "2617415307",
+          "title": "NOORD OP DE KAART ZETTEN VANDAAG!❄️CreatorSMP S3❄️DAG 5 ❄️",
+          "createdAt": "2025-11-13T16:52:42Z",
+          "duration": "6h10m47s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6b9bead2bf7a8258382d_jeremyfrieser_314872727635_1763052753//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 128604
+        },
+        {
+          "id": "2616517257",
+          "title": "EILAND NOORD KLAARMAKEN!❄️CreatorSMP S3❄️DAG 4 ❄️",
+          "createdAt": "2025-11-12T15:24:12Z",
+          "duration": "7h16m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9c513f842d4b91b9872c_jeremyfrieser_314863611731_1762961043//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 190303
+        },
+        {
+          "id": "2615629459",
+          "title": "❄️CreatorSMP S3❄️EILAND NOORD!❄️DAG 3 ❄️",
+          "createdAt": "2025-11-11T15:41:02Z",
+          "duration": "7h24m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9927d7b7392fd3f9861d_jeremyfrieser_314854227411_1762875655//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 147380
+        }
+      ]
+    },
+    {
+      "name": "Jilleke",
+      "twitchUsername": "jilleke",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2615740687",
+          "title": "MINECRAFT SMP 3! TEAM ZUID! 🔥!sparen",
+          "createdAt": "2025-11-11T18:16:12Z",
+          "duration": "2h34m38s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/bf9ca8183d3c3b9ffd87_jilleke_314855726675_1762884966/thumb/custom-a5dd1869-71a4-4313-9829-8aa397682493-%{width}x%{height}.jpeg",
+          "viewCount": 2213
+        }
+      ]
+    },
+    {
+      "name": "kantje",
+      "twitchUsername": "its_kantje",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618150390",
+          "title": "Creator SMP: Claimen wat van mij is / Claiming what is mine. | Stream 109 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T13:40:03Z",
+          "duration": "2h35m56s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 1
+        },
+        {
+          "id": "2617502788",
+          "title": "Creator SMP: Achterstand / Disadvantage | Stream 108 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-13T18:53:25Z",
+          "duration": "4h23m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7dbd4e992a86d36b3dbd_its_kantje_314833760209_1763059999//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6015
+        },
+        {
+          "id": "2617288363",
+          "title": "Creator SMP: Achterstand / Disadvantage | Stream 107 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-13T13:03:52Z",
+          "duration": "5h27m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0d5effa83ea059ac710c_its_kantje_314830986577_1763039026//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11193
+        },
+        {
+          "id": "2616614100",
+          "title": "Creator SMP: Verstekeling / Stowaway| Stream 106 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-12T17:41:23Z",
+          "duration": "5h32m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/760f4d3e6fa03f476a1f_its_kantje_314846624594_1762969278//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8411
+        }
+      ]
+    },
+    {
+      "name": "KingKontent",
+      "twitchUsername": "kingkontent",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617442202",
+          "title": "SMP3 ZUID",
+          "createdAt": "2025-11-13T17:29:51Z",
+          "duration": "7h28m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b664fd11e44b2715c9b6_kingkontent_315140325991_1763054982//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 28427
+        },
+        {
+          "id": "2615690700",
+          "title": "SMP3 ZUID CONTENTINENT",
+          "createdAt": "2025-11-11T17:09:31Z",
+          "duration": "8h36m47s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/902f14dd9a06c3e7cdb2_kingkontent_315284895589_1762880964//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 36968
+        }
+      ]
+    },
+    {
+      "name": "Laagvliet",
+      "twitchUsername": "laagvliet",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618200811",
+          "title": "BLACK OPS 7 TESTEN - MINECRAFT ERNA!🔥 !500 SUB GOAL | FNATIC Laagvliet 🧡",
+          "createdAt": "2025-11-14T15:10:09Z",
+          "duration": "1h5m18s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 0
+        },
+        {
+          "id": "2617320191",
+          "title": "VERLIEZERSEILAND - HARDCORE CREATOR SMP 🔥 !500 SUB GOAL | FNATIC Laagvliet 🧡",
+          "createdAt": "2025-11-13T14:07:33Z",
+          "duration": "4h3m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/db1c1047a023c0a4ce45_laagvliet_315154241764_1763042847//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3805
+        },
+        {
+          "id": "2617316254",
+          "title": "VERLIEZERSEILAND - HARDCORE CREATOR SMP 🔥 !500 SUB GOAL | FNATIC Laagvliet 🧡",
+          "createdAt": "2025-11-13T14:00:45Z",
+          "duration": "3m29s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9b755cdaa1736693505b_laagvliet_315154197604_1763042437//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 65
+        },
+        {
+          "id": "2615557354",
+          "title": "ZUID - CREATOR SMP (DAG 2) 🔥| FNATIC Laagvliet 🧡",
+          "createdAt": "2025-11-11T13:41:08Z",
+          "duration": "3h7m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/04f6990a235c66f24da6_laagvliet_315107377506_1762868462//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7293
+        }
+      ]
+    },
+    {
+      "name": "LinkTijger",
+      "twitchUsername": "linktijger",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617285760",
+          "title": "AD | Is dit ECHT de BESTE Mario game? - !Nintendo #SuperMarioGalaxy #NintendoSwitch",
+          "createdAt": "2025-11-13T12:59:55Z",
+          "duration": "11h2m54s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/d0205288f192495ad973_linktijger_315400830310_1763038789//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 71418
+        },
+        {
+          "id": "2616618928",
+          "title": "VANDAAG GAAT ER IEMAND DOOD! 🔥👑CreatorSMP Hardcore Seizoen 3👑🔥 - Dag 4",
+          "createdAt": "2025-11-12T17:47:59Z",
+          "duration": "5h27m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a3d290e54bb12165f44d_linktijger_314846696146_1762969673//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 36245
+        },
+        {
+          "id": "2615673675",
+          "title": "STERKSTE TEAM VAN ZUID! 🔥👑CreatorSMP Hardcore Seizoen 3👑🔥 - Dag 3",
+          "createdAt": "2025-11-11T16:48:23Z",
+          "duration": "6h28m42s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e693e4cb9539646e5835_linktijger_314815232209_1762879696//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 44802
+        }
+      ]
+    },
+    {
+      "name": "Ljoeb",
+      "twitchUsername": "ljoeb",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2616421833",
+          "title": "CREATOR SMP 3 - DAG 4 || !YO !eiland !team !smp",
+          "createdAt": "2025-11-12T12:36:33Z",
+          "duration": "2h30m55s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cd8b9e927e820980bac9_ljoeb_315291522021_1762950986//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2543
+        },
+        {
+          "id": "2615526575",
+          "title": "CREATOR SMP 3 - DAG 3 || !YO !eiland !team !smp",
+          "createdAt": "2025-11-11T12:46:06Z",
+          "duration": "9h56m8s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e99770e50d289b9221f9_ljoeb_314813401809_1762865160//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 10136
+        }
+      ]
+    },
+    {
+      "name": "Lotje",
+      "twitchUsername": "lotje",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617516274",
+          "title": "[NL] is het kasteel tijd?! Lore cooking!! | ZUID",
+          "createdAt": "2025-11-13T19:08:17Z",
+          "duration": "4h30m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4d2a9e23f50b81608098_lotje_314874162771_1763060891//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8039
+        },
+        {
+          "id": "2616696185",
+          "title": "[NL] ik wil bouwen | ZUID",
+          "createdAt": "2025-11-12T19:21:46Z",
+          "duration": "4h15m37s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0944ceb8179c99ba4031_lotje_314866153299_1762975300//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5934
+        }
+      ]
+    },
+    {
+      "name": "MaicoBeukers",
+      "twitchUsername": "maicobeukers",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617357203",
+          "title": "🔥CREATORSMP DAG 5 - Bouwen 🔥",
+          "createdAt": "2025-11-13T15:16:40Z",
+          "duration": "7h53m23s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fbbaa8c7c59064514c8d_maicobeukers_314871982163_1763046994//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 23977
+        },
+        {
+          "id": "2616665274",
+          "title": "🔥creatorsmp dag 4, muffe dingen doen. 🔥",
+          "createdAt": "2025-11-12T18:45:23Z",
+          "duration": "4h10m22s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ad86f1f38ff1e404f3f9_maicobeukers_314825431633_1762973117//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8980
+        },
+        {
+          "id": "2616638965",
+          "title": "🔥creatorsmp dag 3, muffe dingen doen. 🔥",
+          "createdAt": "2025-11-12T18:10:29Z",
+          "duration": "31m46s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/954bc370ec5cce58771d_maicobeukers_314846967890_1762971023//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1370
+        },
+        {
+          "id": "2615695380",
+          "title": "🔥CREATORSMP DAG 3 (PURE ELLENDE OP ZUID) 🔥",
+          "createdAt": "2025-11-11T17:15:59Z",
+          "duration": "5h23m49s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/bd918aac3d5a94b1f9ea_maicobeukers_315387619046_1762881352//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 15181
+        }
+      ]
+    },
+    {
+      "name": "Manoontje",
+      "twitchUsername": "manoontje",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2616628605",
+          "title": "🔥CreatorSMP S3🔥 | Wilde plannen🫢 !discord !csmp",
+          "createdAt": "2025-11-12T17:59:39Z",
+          "duration": "4h49m29s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0180adf510670c3fffd9_manoontje_314865155539_1762970373//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1365
+        }
+      ]
+    },
+    {
+      "name": "MarnixWesthuis",
+      "twitchUsername": "marnixwesthuis",
+      "team": 1,
+      "vods": []
+    },
+    {
+      "name": "MaysieLive",
+      "twitchUsername": "maysielive",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618128943",
+          "title": "CreatorSMP Dag 6! Het hele eiland stacken!",
+          "createdAt": "2025-11-14T12:59:10Z",
+          "duration": "3h16m51s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 19
+        },
+        {
+          "id": "2617647311",
+          "title": "CreatorSMP Dag 5! De Kerstman Uithangen!",
+          "createdAt": "2025-11-13T22:06:49Z",
+          "duration": "1h35m24s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/26cef313c1e5c625bde6_maysielive_314876113619_1763071603//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6624
+        },
+        {
+          "id": "2617631896",
+          "title": "CreatorSMP Dag 5! De Kerstman Uithangen!",
+          "createdAt": "2025-11-13T21:45:29Z",
+          "duration": "17m13s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a340043203f90b39b13a_maysielive_314875927891_1763070323//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1225
+        },
+        {
+          "id": "2617327409",
+          "title": "CreatorSMP Dag 5! De Kerstman Uithangen!",
+          "createdAt": "2025-11-13T14:21:59Z",
+          "duration": "7h22m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5b715031ab452c1966db_maysielive_314871622739_1763043713//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 20127
+        },
+        {
+          "id": "2616738000",
+          "title": "CreatorSMP Dag 4! Chaos Veroorzaken en Rijk Worden!",
+          "createdAt": "2025-11-12T20:14:32Z",
+          "duration": "3h26m56s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ce4f5789b04e78ebf2ab_maysielive_314866749011_1762978466//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13317
+        },
+        {
+          "id": "2616472982",
+          "title": "CreatorSMP Dag 4! Chaos Veroorzaken en Rijk Worden!",
+          "createdAt": "2025-11-12T14:09:56Z",
+          "duration": "4h5m45s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1d0094ba4703400770e5_maysielive_314823028305_1762956589//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 30356
+        },
+        {
+          "id": "2615846853",
+          "title": "CreatorSMP Dag 3! Chaos Veroorzaken!",
+          "createdAt": "2025-11-11T20:25:06Z",
+          "duration": "3h32m14s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2e76fc647342a3c451b7_maysielive_314839706066_1762892700//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6472
+        },
+        {
+          "id": "2615590704",
+          "title": "CreatorSMP Dag 3! Chaos Veroorzaken!",
+          "createdAt": "2025-11-11T14:37:14Z",
+          "duration": "5h43m59s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/258ed5bc876431c22615_maysielive_314836339026_1762871828//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11655
+        }
+      ]
+    },
+    {
+      "name": "Merretje",
+      "twitchUsername": "merretje",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618192207",
+          "title": "🔥CREATOR SMP🔥|!meta !schema !discord !socials",
+          "createdAt": "2025-11-14T14:57:28Z",
+          "duration": "1h18m3s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 1
+        },
+        {
+          "id": "2616418834",
+          "title": "🔥CREATOR SMP🔥|!meta !schema !discord !socials",
+          "createdAt": "2025-11-12T12:30:44Z",
+          "duration": "8h15m29s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1120fdfb134bf1ef4007_merretje_314844398290_1762950638//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 22392
+        }
+      ]
+    },
+    {
+      "name": "Mokka",
+      "twitchUsername": "mokka",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2616323330",
+          "title": "Wakker worden met Arc en @jpa1r",
+          "createdAt": "2025-11-12T08:30:05Z",
+          "duration": "7h23m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/25a9da271b3db6d96f8d_mokka_314861075411_1762936194//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11769
+        },
+        {
+          "id": "2615408431",
+          "title": "Arc heeft me nogsteeds..",
+          "createdAt": "2025-11-11T07:51:12Z",
+          "duration": "4h52m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ee0ac46a4f256ddaf73a_mokka_314834362578_1762847462//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6745
+        }
+      ]
+    },
+    {
+      "name": "Morrog",
+      "twitchUsername": "Morrog",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618095884",
+          "title": "[DROPS] UUUUUF.. Nieuwe Map in Arc lets gooo! - !boegbeeld",
+          "createdAt": "2025-11-14T11:46:24Z",
+          "duration": "3h6m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/71b613126619a87e5612_morrog_314860926802_1763120778//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 241
+        },
+        {
+          "id": "2617260333",
+          "title": "[DAG 5] SMP met Morrog en zijn chaotische avonturen..",
+          "createdAt": "2025-11-13T12:02:38Z",
+          "duration": "4h11m56s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/171f72e5c8bcede651ce_morrog_314870901203_1763035352//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 43864
+        },
+        {
+          "id": "2616671394",
+          "title": "[DAG 4] SMP ZUID - Wie gaan we 1vs1? - 35% korting op subs",
+          "createdAt": "2025-11-12T18:52:41Z",
+          "duration": "4h7m26s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b7eb33476dc70bff68fa_morrog_314865802195_1762973555//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 32402
+        },
+        {
+          "id": "2616422820",
+          "title": "[DAG 4] SMP ZUID - ENGE ENCHANTS REGELEN - 35% korting op subs",
+          "createdAt": "2025-11-12T12:38:35Z",
+          "duration": "2h13m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d0068289e11122d41e7c_morrog_314822481617_1762951109//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 32107
+        },
+        {
+          "id": "2615754637",
+          "title": "[DAG 3] SMP ZUID - Morrog blaast iedereen zijn basis op.",
+          "createdAt": "2025-11-11T18:34:51Z",
+          "duration": "4h54m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/979f219ac7a7050bbf1c_morrog_314855934163_1762886085//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 45544
+        }
+      ]
+    },
+    {
+      "name": "Natvlees",
+      "twitchUsername": "natvlees",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617355446",
+          "title": "NATTE KRANT MAN - CREATOR SMP HC 3 NOORD - DAG 5 !nattekrant",
+          "createdAt": "2025-11-13T15:13:41Z",
+          "duration": "7h49m38s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/28777af36a1357d3dbe8_natvlees_314853564114_1763046812//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 15943
+        },
+        {
+          "id": "2616505247",
+          "title": "NATTE KRANT POV - CREATOR SMP HARDCORE 3 NOORD - DAG 4",
+          "createdAt": "2025-11-12T15:04:34Z",
+          "duration": "7h58m3s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2dea873cc76c73c9ba84_natvlees_314845334482_1762959863//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 23201
+        },
+        {
+          "id": "2615552310",
+          "title": "DE NATTE KRANT PUBLICEREN - CREATOR SMP HARDCORE 3 NOORD - DAG 3",
+          "createdAt": "2025-11-11T13:31:52Z",
+          "duration": "1h28m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e11342eaa24520563143_natvlees_314835899474_1762867897//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13001
+        }
+      ]
+    },
+    {
+      "name": "NoaNoella",
+      "twitchUsername": "noanoella",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618078087",
+          "title": "12 UUR SPECIAL: HARDCORE CREATOR SMP | DAG 6 💖| TEAM NOORD | !discord",
+          "createdAt": "2025-11-14T11:00:40Z",
+          "duration": "5h15m2s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 16
+        },
+        {
+          "id": "2617255733",
+          "title": "HARDCORE CREATOR SMP | DAG 4 💖| TEAM NOORD | !discord",
+          "createdAt": "2025-11-13T11:53:36Z",
+          "duration": "6h37m9s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f30787f93967865ac41c_noanoella_314830638289_1763034810//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 20944
+        },
+        {
+          "id": "2616392743",
+          "title": "HARDCORE CREATOR SMP | DAG 4 💖| TEAM NOORD | !discord",
+          "createdAt": "2025-11-12T11:35:52Z",
+          "duration": "5h25m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/66a3f3fe796f4f39eb43_noanoella_314862092371_1762947346//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 29547
+        },
+        {
+          "id": "2615505706",
+          "title": "HARDCORE CREATOR SMP | DAG 3 💖| TEAM NOORD | !discord",
+          "createdAt": "2025-11-11T12:03:46Z",
+          "duration": "6h54m53s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ccfea9dff043646d2ae2_noanoella_314852774995_1762862620//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 35157
+        },
+        {
+          "id": "2615503813",
+          "title": "HARDCORE CREATOR SMP | DAG 3 💖| TEAM NOORD | !discord",
+          "createdAt": "2025-11-11T12:00:40Z",
+          "duration": "2m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3bafad7055b74a2207af_noanoella_314852761171_1762862433//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 94
+        }
+      ]
+    },
+    {
+      "name": "NoelDekkers",
+      "twitchUsername": "noeldekkers",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2615715134",
+          "title": "CREATORSMP 3 EILAND NOORD! DAG 3 | !smp !meta",
+          "createdAt": "2025-11-11T17:44:19Z",
+          "duration": "5h47m8s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7d039a425418d4acd9f0_noeldekkers_314815817681_1762883053//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7980
+        }
+      ]
+    },
+    {
+      "name": "Pangi",
+      "twitchUsername": "pangi",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618141415",
+          "title": "[NL] DOOMSDAY BUNKER BOUWEN, KEIZER WORDEN lol 😈 - Creator SMP",
+          "createdAt": "2025-11-14T13:22:10Z",
+          "duration": "2h53m52s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 104
+        },
+        {
+          "id": "2617315948",
+          "title": "[NL] Geheime Villager Base, We Worden IMMORTAL 😈 - Creator SMP",
+          "createdAt": "2025-11-13T14:00:22Z",
+          "duration": "9h18m35s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3c939876ea29fc4b1387_pangi_314831277905_1763042417//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 116897
+        },
+        {
+          "id": "2616673074",
+          "title": "😈 Lifesteal Would I Lie To You 😈 JOIN NOW 😈 - Lifesteal SMP ***",
+          "createdAt": "2025-11-12T18:54:22Z",
+          "duration": "2h56m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a587986bd29f46a1f630_pangi_314847429586_1762973656//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 23192
+        },
+        {
+          "id": "2615584834",
+          "title": "[NL] De Trial Chamber Looten & Secret Base Afmaken 🔥- Creator SMP",
+          "createdAt": "2025-11-11T14:27:37Z",
+          "duration": "8h45m5s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/37e56ee765ad0a2e205a_pangi_314853645011_1762871250//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 89258
+        }
+      ]
+    },
+    {
+      "name": "Papaneus",
+      "twitchUsername": "papaneus",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617395752",
+          "title": "SMP SEIZOEN 3 DAG ELKE DAG TEAM UNCIE SIDEQUESTS DOEN",
+          "createdAt": "2025-11-13T16:21:11Z",
+          "duration": "4h30m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e6bdfb57700c4ee39086_papaneus_314872479315_1763050865//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7358
+        },
+        {
+          "id": "2616448900",
+          "title": "MINECRAFT PAK IS BESTELD TIJD OM TE ENCHANTEN MET UNC TEAM LETSGO GANGY",
+          "createdAt": "2025-11-12T13:27:19Z",
+          "duration": "8h28m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/76aa83eb090387e1e577_papaneus_314844719570_1762954032//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 15569
+        },
+        {
+          "id": "2615587322",
+          "title": "CreatorSMP Hardcore | Eiland Zuid | Dag 3 | Seizoen 3 - !creatorSMP TEAMUNC",
+          "createdAt": "2025-11-11T14:31:34Z",
+          "duration": "8h41m57s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/310838e6a467a4093cf5_papaneus_314853671507_1762871487//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8826
+        }
+      ]
+    },
+    {
+      "name": "Paraduze",
+      "twitchUsername": "paraduze",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2615744351",
+          "title": "🔴CHILL AVOND (kom checken)",
+          "createdAt": "2025-11-11T18:21:13Z",
+          "duration": "1h53m22s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2ded2ee9f8659f249a35_paraduze_315122763751_1762885268//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 707
+        },
+        {
+          "id": "2615742427",
+          "title": "DAG 2 in de Creator SMP Hardcore 3! (Noord❄️)",
+          "createdAt": "2025-11-11T18:18:42Z",
+          "duration": "18s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8a72a0226aafbc8b2d2f_paraduze_314816192721_1762885111//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 31
+        },
+        {
+          "id": "2615740989",
+          "title": "DAG 2 in de Creator SMP Hardcore 3! (Noord❄️)",
+          "createdAt": "2025-11-11T18:16:37Z",
+          "duration": "27s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/e82931e0e65b2f24605b_paraduze_315388318310_1762884991//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 21
+        },
+        {
+          "id": "2615739243",
+          "title": "DAG 2 in de Creator SMP Hardcore 3! (Noord❄️)",
+          "createdAt": "2025-11-11T18:14:13Z",
+          "duration": "55s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/3ed935acb2eca3103ab6_paraduze_315388292710_1762884847//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 47
+        }
+      ]
+    },
+    {
+      "name": "Peerkie",
+      "twitchUsername": "peerkietv",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2615749393",
+          "title": "CREATORSMP S3 🔥 DAG 3 🔥 !noord !meta !server",
+          "createdAt": "2025-11-11T18:28:02Z",
+          "duration": "2h14m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/de378d46f5ce7b5015ae_peerkietv_314855854419_1762885676//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1160
+        }
+      ]
+    },
+    {
+      "name": "PeezyNL",
+      "twitchUsername": "peezynl",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617505597",
+          "title": "🟢 CREATOR SMP 🟢 MORGEN LIVE I.P.V. ZATERDAG 🟢 35% KORTING OP 5 SUBS OF MEER GIFTEN 🟢 GEEN !META 🟢 !TANGIA 🟢 !DISCORD 🟢",
+          "createdAt": "2025-11-13T18:56:58Z",
+          "duration": "5h41m24s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e433b19510eb30c8d551_peezynl_314855637970_1763060210//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2698
+        },
+        {
+          "id": "2615775143",
+          "title": "🟢 SOUTH SIDE IN DE SMP 🟢 TIJDELIJK 35% KORTING OP 5 SUBS (OF MEER) GIFTEN 🟢 GAAN WE STERVEN? 🟢 GEEN !META 🟢 !TANGIA 🟢 !DISCORD 🟢",
+          "createdAt": "2025-11-11T19:00:25Z",
+          "duration": "4h23m46s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/97e39531104fbeaed88d_peezynl_314838760530_1762887618//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1161
+        }
+      ]
+    },
+    {
+      "name": "Puddingb00m",
+      "twitchUsername": "puddingb00m",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617400237",
+          "title": "🟡SMP3 - TRAPS & PREPS 🟡",
+          "createdAt": "2025-11-13T16:28:35Z",
+          "duration": "6h36m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/895773efcaed3a9a85ed_puddingb00m_314872536403_1763051309//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 21248
+        },
+        {
+          "id": "2615740270",
+          "title": "🟡SMP3 - Chaos in gang zetten.. 🟡",
+          "createdAt": "2025-11-11T18:15:38Z",
+          "duration": "5h31m28s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4e3ed29f67503d04cfb5_puddingb00m_314816160081_1762884932//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 19821
+        }
+      ]
+    },
+    {
+      "name": "PuqLive",
+      "twitchUsername": "puqlive",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617452428",
+          "title": "Lore voorbereidingen zijn aan... 🔴 CreatorSMP S3 NOORD DAG 5 ❄️ 🔴 stream #153 🔴 !socials",
+          "createdAt": "2025-11-13T17:45:00Z",
+          "duration": "6h26m26s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6e3a1a78f02f23b1a983_puqlive_314854821714_1763055894//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9905
+        },
+        {
+          "id": "2615755937",
+          "title": "GRIND TIJD 🔴 CreatorSMP S3 NOORD DAG 3 ❄️ 🔴 stream #152  🔴 !socials",
+          "createdAt": "2025-11-11T18:36:33Z",
+          "duration": "5h24m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d90755221dafb7637eb3_puqlive_314855950675_1762886187//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9268
+        }
+      ]
+    },
+    {
+      "name": "Puxque",
+      "twitchUsername": "puxque",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617233624",
+          "title": "Je gelooft het niet, maar ik ben er nog steeds",
+          "createdAt": "2025-11-13T10:59:30Z",
+          "duration": "6h22m47s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/02c5b892123189b63649_puxque_314852222290_1763031564//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 14847
+        },
+        {
+          "id": "2616404765",
+          "title": "Ik zie overal blokken in..",
+          "createdAt": "2025-11-12T12:02:00Z",
+          "duration": "5h50m26s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/965e702a5c92ab4974ec_puxque_315393514854_1762948914//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 18428
+        },
+        {
+          "id": "2615477775",
+          "title": "De oppernoob leeft nog steeds",
+          "createdAt": "2025-11-11T11:01:33Z",
+          "duration": "7h20m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b5722fd16d28f20f597b_puxque_315385287398_1762858887//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 23427
+        }
+      ]
+    },
+    {
+      "name": "Qucee",
+      "twitchUsername": "qucee",
+      "team": 1,
+      "vods": []
+    },
+    {
+      "name": "QuintenVms",
+      "twitchUsername": "quintenvms",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617595977",
+          "title": "🔴 RUZIE MAKEN MET NOORD | DAG 5 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-13T20:53:45Z",
+          "duration": "2h18m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/680b040dde96e7e6d8b7_quintenvms_314835231697_1763067219//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1731
+        },
+        {
+          "id": "2617472985",
+          "title": "🔴 DAG 5 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-13T18:11:08Z",
+          "duration": "2h26m2s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/079479bf9f90daee2112_quintenvms_314833304145_1763057462//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 823
+        },
+        {
+          "id": "2617336396",
+          "title": "🔴 DAG 5 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-13T14:40:08Z",
+          "duration": "1h15m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f1ff58c0ae528b07af80_quintenvms_314831515985_1763044802//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 578
+        },
+        {
+          "id": "2616605107",
+          "title": "🔴 DAG 4 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-12T17:29:30Z",
+          "duration": "4h37m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c7cf29662b7cf8262b4e_quintenvms_314864804563_1762968564//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1942
+        },
+        {
+          "id": "2615714685",
+          "title": "🔴 DAG 2 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-11T17:43:34Z",
+          "duration": "5h27m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/494049589931167da6bd_quintenvms_314837945682_1762883008//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2431
+        },
+        {
+          "id": "2615638563",
+          "title": "(teststream youtube) 🔴 DAG 2 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭",
+          "createdAt": "2025-11-11T15:56:15Z",
+          "duration": "58m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0b5e0b16da525b2caa39_quintenvms_314836945106_1762876569//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1048
+        }
+      ]
+    },
+    {
+      "name": "Roedie",
+      "twitchUsername": "roedie",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617459033",
+          "title": "ANNO 117 STRIJD TEGEN @gamemeneer @georgefaralley @sejecem !ad #anno117  | !merch",
+          "createdAt": "2025-11-13T17:54:36Z",
+          "duration": "3h56m57s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6f3f96f537537dbcc2b9_roedie_314833091665_1763056469//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5638
+        },
+        {
+          "id": "2616610256",
+          "title": "kamp zuid vermijden 🔥 CREATOR SMP 3 🔥 Dag 3 | !merch",
+          "createdAt": "2025-11-12T17:36:16Z",
+          "duration": "5h24m13s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/aeb93c62230c841aee0d_roedie_316056917851_1762968970//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11933
+        },
+        {
+          "id": "2615593405",
+          "title": "kamp zuid pov🔥 CREATOR SMP 3  Dag 3 | !merch",
+          "createdAt": "2025-11-11T14:41:59Z",
+          "duration": "5h57m9s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f3429c72b412a7e45fc0_roedie_314853747795_1762872114//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 16725
+        }
+      ]
+    },
+    {
+      "name": "Ronald",
+      "twitchUsername": "ronald",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618196676",
+          "title": "CREATOR SMP SEIZOEN 3: DAG 6 - RONALD (meldingen werken eindelijk!!!!)",
+          "createdAt": "2025-11-14T15:03:24Z",
+          "duration": "1h12m22s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 0
+        },
+        {
+          "id": "2617463719",
+          "title": "CREATOR SMP SEIZOEN 3: DAG 4 - RONALD (meldingen werken eindelijk!!!!)",
+          "createdAt": "2025-11-13T18:00:15Z",
+          "duration": "2h37m35s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/793f9be40b2f6b0d459e_ronald_314833157841_1763056808//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2127
+        },
+        {
+          "id": "2615727420",
+          "title": "CREATOR SMP SEIZOEN 3: DAG 3 - Ronald",
+          "createdAt": "2025-11-11T18:00:12Z",
+          "duration": "2h42m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/85632976bae3bc2027de_ronald_314838104530_1762884006//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1883
+        }
+      ]
+    },
+    {
+      "name": "Royalistiq",
+      "twitchUsername": "royalistiq",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618160364",
+          "title": "🔴 DAG 6 | MINECRAFT CREATOR SMP 3! 🔥 | Kamp Noord 🧭 - Timestream 108",
+          "createdAt": "2025-11-14T13:59:49Z",
+          "duration": "2h15m56s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 44
+        },
+        {
+          "id": "2617307653",
+          "title": "🔴 DAG 5 | MINECRAFT CREATOR SMP 3! 🔥| Kamp Noord 🧭 - Timestream 107",
+          "createdAt": "2025-11-13T13:44:10Z",
+          "duration": "6h36m44s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/b7c09b0bb8407a3c98bd_royalistiq_316072093787_1763041445//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 63424
+        },
+        {
+          "id": "2616863895",
+          "title": "🔴 DAG 4 | MINECRAFT CREATOR SMP 3! 🔥| Kamp Noord 🧭 - Timestream 106",
+          "createdAt": "2025-11-12T23:12:16Z",
+          "duration": "2m3s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/53dd2f41384a2dfd960d_royalistiq_316062123611_1762989132//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1152
+        },
+        {
+          "id": "2616564835",
+          "title": "🔴 DAG 4 | MINECRAFT CREATOR SMP 3! 🔥| Kamp Noord 🧭 - Timestream 106",
+          "createdAt": "2025-11-12T16:36:14Z",
+          "duration": "6h35m42s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/a62e5ce4f4bea88fb5af_royalistiq_316056044635_1762965370//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 58098
+        },
+        {
+          "id": "2615591716",
+          "title": "🔴 DAG 3 | MINECRAFT CREATOR SMP 3! 🔥| Kamp Noord 🧭 - Timestream 105",
+          "createdAt": "2025-11-11T14:39:01Z",
+          "duration": "8h4m24s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/832844daafca7a8fb2a6_royalistiq_315990761050_1762871937//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 72668
+        }
+      ]
+    },
+    {
+      "name": "SanDramatis",
+      "twitchUsername": "sandramatis",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617273853",
+          "title": "[NL] ❄️ CSMP day 4! in de middag? -> !csmp !meta -> !113",
+          "createdAt": "2025-11-13T12:33:12Z",
+          "duration": "4h49m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/20e59b65fea254b4aacd_sandramatis_314830839505_1763037186//thumb/thumb1-%{width}x%{height}.jpg",
+          "viewCount": 12897
+        },
+        {
+          "id": "2616673667",
+          "title": "[NL] ❄️ FASE 2 VAN MN PLAN day 4!  ->  !meta -> !113",
+          "createdAt": "2025-11-12T18:55:00Z",
+          "duration": "6h22m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0b2d1d4a0824e0d3d484_sandramatis_314865829715_1762973693//thumb/thumb1-%{width}x%{height}.jpg",
+          "viewCount": 6146
+        },
+        {
+          "id": "2615699467",
+          "title": "[NL] ❄️ CREATOR SMP day 3! -> ik ga iets cooken, come see ->  !meta -> !113",
+          "createdAt": "2025-11-11T17:22:00Z",
+          "duration": "7h2m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c4a20932a052c7d9a8ab_sandramatis_314855160531_1762881713//thumb/thumb1-%{width}x%{height}.jpg",
+          "viewCount": 5821
+        }
+      ]
+    },
+    {
+      "name": "Santino_YT",
+      "twitchUsername": "sanddayhd",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2616625489",
+          "title": "Het Is KANTEL DAG 4 - POV Zuid - Hardcore Creator SMP 3",
+          "createdAt": "2025-11-12T17:56:04Z",
+          "duration": "4h53m55s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6ad0c02bcb0d0c4e94a9_sanddayhd_314846783442_1762970158//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 12918
+        },
+        {
+          "id": "2616438687",
+          "title": "Het Is KANTEL DAG 4 - Hardcore Creator SMP 3 - #TeamZuid",
+          "createdAt": "2025-11-12T13:07:47Z",
+          "duration": "2h55m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cb17a81a094f6eaf4e84_sanddayhd_314822658769_1762952861//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6301
+        },
+        {
+          "id": "2615800216",
+          "title": "Dag 3 - Hardcore Creator SMP 3 - #TeamZuid",
+          "createdAt": "2025-11-11T19:29:48Z",
+          "duration": "3h35m59s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b5f1e017155e0a59efa2_sanddayhd_315286628965_1762889382//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2033
+        },
+        {
+          "id": "2615563462",
+          "title": "Dag 3 - Hardcore Creator SMP 3 - #TeamZuid",
+          "createdAt": "2025-11-11T13:52:24Z",
+          "duration": "1h50m5s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/12bea3a69fc798a490cc_sanddayhd_314853414227_1762869138//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3436
+        }
+      ]
+    },
+    {
+      "name": "sejecem_",
+      "twitchUsername": "sejecem",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618081392",
+          "title": "Eerst wat anders -> SMP training | !steelseries | !cs | !discord",
+          "createdAt": "2025-11-14T11:08:07Z",
+          "duration": "3h53m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6a638cc1e637b6894b63_sejecem_314879062227_1763118480//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 22
+        },
+        {
+          "id": "2617464004",
+          "title": "Wie bouwt de beste stad? met @gamemeneer @roedie @georgefaralley #ad | !steelseries | !cs | !discord",
+          "createdAt": "2025-11-13T18:00:26Z",
+          "duration": "3h45m19s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/757395c660f7f479bf9c_sejecem_314873378003_1763056820//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 4816
+        },
+        {
+          "id": "2616385467",
+          "title": "Ik kan het nog steeds niet geloven | !steelseries | !cs | !discord",
+          "createdAt": "2025-11-12T11:17:57Z",
+          "duration": "5h44m17s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/80876d249e4e833b53bb_sejecem_314822072785_1762946271//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 19352
+        },
+        {
+          "id": "2616378867",
+          "title": "Ik kan het nog steeds niet geloven | !steelseries | !cs | !discord",
+          "createdAt": "2025-11-12T11:01:50Z",
+          "duration": "15m47s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/021ec4ec9428cea7b659_sejecem_314861903827_1762945303//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 988
+        }
+      ]
+    },
+    {
+      "name": "Serpent",
+      "twitchUsername": "serpent",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618051399",
+          "title": "🌐⚠️BREAKING NEWS: Ik hoop dat je een mooie dag gaat hebben🥰💖",
+          "createdAt": "2025-11-14T09:41:40Z",
+          "duration": "1h28m43s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/24fd1c722fae96a258ad_serpent_314838496209_1763113294//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7459
+        },
+        {
+          "id": "2617635206",
+          "title": "🏔️🎮🏹DAG 3 CREATORSMP: NOG FF BEETJE SMP EN VOORAL VEEL SKYRIM!✨⚔️🐲",
+          "createdAt": "2025-11-13T21:50:20Z",
+          "duration": "2h41m54s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d26b00166170fbf861a0_serpent_314875967571_1763070614//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9912
+        }
+      ]
+    },
+    {
+      "name": "Shappo0",
+      "twitchUsername": "shappo0",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617338236",
+          "title": "!Trust",
+          "createdAt": "2025-11-13T14:43:54Z",
+          "duration": "5h28m27s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/66f6bc5fb5c576db142a_shappo0_314853357138_1763045028//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 71395
+        },
+        {
+          "id": "2616597129",
+          "title": "!Trust",
+          "createdAt": "2025-11-12T17:18:43Z",
+          "duration": "5h27m58s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/590421530629a6b5d07c_shappo0_314824506833_1762967916//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 76272
+        },
+        {
+          "id": "2615631075",
+          "title": "!Trust",
+          "createdAt": "2025-11-11T15:44:00Z",
+          "duration": "6h26m7s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e377683c595e38a9c5e9_shappo0_314836848594_1762875834//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 75810
+        }
+      ]
+    },
+    {
+      "name": "SkepTriq",
+      "twitchUsername": "skeptriq",
+      "team": 1,
+      "vods": []
+    },
+    {
+      "name": "SpacingUnicorn",
+      "twitchUsername": "spacingunicorn",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618109062",
+          "title": "🔥oefenen voor verliezerseiland in CREATOR SMP🔥",
+          "createdAt": "2025-11-14T12:15:30Z",
+          "duration": "1h45m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d0ee4207603f4c5bcf9f_spacingunicorn_314839219409_1763122524//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 25
+        },
+        {
+          "id": "2617261622",
+          "title": "🔥de eerste (💀) in de CREATOR SMP🔥| pvp oefenen met @imkefleur",
+          "createdAt": "2025-11-13T12:05:18Z",
+          "duration": "1h44m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/095d8b6a7291087c5f95_spacingunicorn_314870916691_1763035512//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 8245
+        }
+      ]
+    },
+    {
+      "name": "StreamWithLien",
+      "twitchUsername": "streamwithlien",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618170676",
+          "title": "CreatorSMP & Yappings - XXL VRIJDAG STREAM 🧡 !Meta !Hue !Socials !Love",
+          "createdAt": "2025-11-14T14:17:21Z",
+          "duration": "1h58m31s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 14
+        },
+        {
+          "id": "2617491122",
+          "title": "CreatorSMP - Bondjes maken met Team ZUID  🧡 !Meta !Hue !Socials !Love",
+          "createdAt": "2025-11-13T18:36:33Z",
+          "duration": "4h45m19s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bb66508ae15425fef0d8_streamwithlien_314833584465_1763058986//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11183
+        },
+        {
+          "id": "2616626927",
+          "title": "CreatorSMP - Team ZUID - Het avontuur gaat verder 🧡 !Meta !Hue !Socials !Love",
+          "createdAt": "2025-11-12T17:57:45Z",
+          "duration": "5h48m45s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/abc9d801bc4a192f524d_streamwithlien_314824891345_1762970259//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13987
+        },
+        {
+          "id": "2615612769",
+          "title": "CreatorSMP - De start van Lien - Dag 1 🧡 !Meta !Hue !Socials !Love",
+          "createdAt": "2025-11-11T15:12:09Z",
+          "duration": "4h32m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/93022dc332d2959630a4_streamwithlien_314814409041_1762873922//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 14843
+        }
+      ]
+    },
+    {
+      "name": "TacoBellaTV",
+      "twitchUsername": "tacobellatv",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2615737857",
+          "title": "CREATOR SMP ❄️ | DAG 2 OP NOORD",
+          "createdAt": "2025-11-11T18:12:23Z",
+          "duration": "3h39m58s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1beb6ac41f6af97d9f48_tacobellatv_314816129105_1762884737//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3713
+        }
+      ]
+    },
+    {
+      "name": "TiesGames",
+      "twitchUsername": "tiesgames",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618163742",
+          "title": "Minecraft CreatorSMP Hardcore 3 (DAG 6) - Zuid POV",
+          "createdAt": "2025-11-14T14:04:50Z",
+          "duration": "2h11m14s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 1
+        },
+        {
+          "id": "2618147595",
+          "title": "Minecraft CreatorSMP Hardcore 3 (DAG 4) - Zuid POV",
+          "createdAt": "2025-11-14T13:34:21Z",
+          "duration": "21m6s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cf3d06cda050b2e77620_tiesgames_315408103398_1763127251//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17
+        },
+        {
+          "id": "2616671658",
+          "title": "Minecraft CreatorSMP Hardcore 3 (DAG 3) - Zuid POV",
+          "createdAt": "2025-11-12T18:52:56Z",
+          "duration": "3h12m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/a1bb7e7f6af45b3015e4_tiesgames_315133794023_1762973566//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1201
+        },
+        {
+          "id": "2615751957",
+          "title": "Minecraft CreatorSMP Hardcore 3 (DAG 2)",
+          "createdAt": "2025-11-11T18:31:18Z",
+          "duration": "3h51m37s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2aba1b185ce42576b416_tiesgames_315388494822_1762885867//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1593
+        }
+      ]
+    },
+    {
+      "name": "Vince_STICK",
+      "twitchUsername": "vince_stick",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2617496989",
+          "title": "DIT GAAT GOED! 🟧 DAG 3 🟧 EILAND ZUID 🟧 CREATOR SMP 3 🟧 CLIP HET!!! 🟧",
+          "createdAt": "2025-11-13T18:45:17Z",
+          "duration": "1h18m33s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3bd50653ad98ba58579c_vince_stick_314855501394_1763059511//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13511
+        },
+        {
+          "id": "2615754331",
+          "title": "IK HEB EEN TEAM! toch? 🟧 DAG 3 🟧 EILAND ZUID 🟧 CREATOR SMP 3 🟧 CLIP HET!!! 🟧",
+          "createdAt": "2025-11-11T18:34:27Z",
+          "duration": "3h39m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fd9e6dc8cdbbfca3296d_vince_stick_314838476754_1762886061//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 10037
+        }
+      ]
+    },
+    {
+      "name": "Wela",
+      "twitchUsername": "ikbenwela",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2618130482",
+          "title": "DAG 5: CreatorSMP HARDCORE!🌳⛏️ (KLAARMAKEN VOOR MORGEN)",
+          "createdAt": "2025-11-14T13:01:18Z",
+          "duration": "3h14m44s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 34
+        },
+        {
+          "id": "2617337856",
+          "title": "DAG 4: CreatorSMP HARDCORE!🌳⛏️",
+          "createdAt": "2025-11-13T14:43:07Z",
+          "duration": "6h41m31s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6eae71f0039912a26e1a_ikbenwela_314853347538_1763044976//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 25670
+        },
+        {
+          "id": "2616584381",
+          "title": "DAG 3: CreatorSMP HARDCORE!🌳⛏️ (HELP) (klaarmaken om ZUID te kantelen)",
+          "createdAt": "2025-11-12T17:02:21Z",
+          "duration": "6h18m33s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd3df939f965d54ef75e_ikbenwela_314846257874_1762966931//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 18512
+        },
+        {
+          "id": "2615637204",
+          "title": "DAG 2: CreatorSMP HARDCORE!🌳⛏️ (Eerste death van dag 3 POV)",
+          "createdAt": "2025-11-11T15:54:13Z",
+          "duration": "7h9m15s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/374c3eaf013abc1af22d_ikbenwela_314836926930_1762876442//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 22370
+        }
+      ]
+    },
+    {
+      "name": "Wolfeei",
+      "twitchUsername": "wolfeei",
+      "team": 0,
+      "vods": [
+        {
+          "id": "2617469950",
+          "title": "[NL] de mol op noord 🚨 CREATOR SMP 🚨 !creatorsmp for info",
+          "createdAt": "2025-11-13T18:07:02Z",
+          "duration": "4h57m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/394d1ac1cb26cd4dc029_wolfeei_314873463123_1763057215//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7293
+        },
+        {
+          "id": "2616712434",
+          "title": "[NL] 🚨 CREATOR SMP DAG 4 🚨 !creatorsmp for info",
+          "createdAt": "2025-11-12T19:43:16Z",
+          "duration": "3h23m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b94895f602e6ee023599_wolfeei_314826109649_1762976590//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 5608
+        },
+        {
+          "id": "2615712130",
+          "title": "🚨 CREATOR SMP DAG 3 🚨 !creatorsmp for info",
+          "createdAt": "2025-11-11T17:39:44Z",
+          "duration": "5h26m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0a0ab762216717c96d77_wolfeei_314815766353_1762882775//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7268
+        }
+      ]
+    },
+    {
+      "name": "Yarasky",
+      "twitchUsername": "yaraskygaming",
+      "team": 1,
+      "vods": [
+        {
+          "id": "2618179160",
+          "title": "De start van de COD grind! - Black Ops 7 Release-dag",
+          "createdAt": "2025-11-14T14:33:20Z",
+          "duration": "1h42m9s",
+          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
+          "viewCount": 3
+        },
+        {
+          "id": "2616626844",
+          "title": "🔴 DAG 4 - MINECRAFT CREATOR SMP 3! // Kamp Zuid - Yarasky Livestream",
+          "createdAt": "2025-11-12T17:57:39Z",
+          "duration": "3h52m31s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/560dbb755ebb2deb9b3e_yaraskygaming_315396045798_1762970248//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11464
+        },
+        {
+          "id": "2616440776",
+          "title": "🔴 STAD BOUWEN IN ROMEINSE RIJK! // Anno 117: Pax Romana - Yarasky Livestream",
+          "createdAt": "2025-11-12T13:11:37Z",
+          "duration": "3h52m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/24dcfaa7bae0bbf4fb7e_yaraskygaming_315130341863_1762953087//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 16721
+        },
+        {
+          "id": "2615667030",
+          "title": "🔴 DAG 3 - MINECRAFT CREATOR SMP 3! - Kamp Zuid",
+          "createdAt": "2025-11-11T16:38:17Z",
+          "duration": "25m37s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/a4be9716b87ce7f85fa7_yaraskygaming_315284576357_1762879086//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3105
+        },
+        {
+          "id": "2615610835",
+          "title": "🔴 DAG 3 - MINECRAFT CREATOR SMP 3! - Kamp Zuid",
+          "createdAt": "2025-11-11T15:08:55Z",
+          "duration": "1h28m58s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ca510ca6b24f125fd765_yaraskygaming_315283872229_1762873724//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 11544
+        },
+        {
+          "id": "2615522011",
+          "title": "🔴 DAG 3 - MINECRAFT CREATOR SMP 3! - Kamp Zuid",
+          "createdAt": "2025-11-11T12:37:00Z",
+          "duration": "2h31m25s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/294a188b677ec6edb312_yaraskygaming_315282889061_1762864609//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 31614
+        }
+      ]
+    }
+  ]
+}

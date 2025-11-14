@@ -103,9 +103,9 @@ const TWITCH_TOKEN_URL = "https://id.twitch.tv/oauth2/token";
 const TWITCH_API_BASE = "https://api.twitch.tv/helix";
 const OUTPUT_PATH = join(process.cwd(), "src", "data", "vods.json");
 
-// Date range for VOD filtering (Nov 11-30, 2024)
-const START_DATE = new Date("2024-11-11T00:00:00Z");
-const END_DATE = new Date("2024-11-30T23:59:59Z");
+// Date range for VOD filtering (Nov 11-30, 2025)
+const START_DATE = new Date("2025-11-11T00:00:00Z");
+const END_DATE = new Date("2025-11-30T23:59:59Z");
 
 // Rate limiting
 const REQUESTS_PER_MINUTE = 800;
