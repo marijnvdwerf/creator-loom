@@ -83,19 +83,20 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         playerInitialized.current = true;
 
         // Add event listeners to track playback
-        const updateTime = () => {
+        const updateTime = (eventName?: string) => {
           if (playerRef.current && onTimeUpdate) {
             const playerTime = playerRef.current.getCurrentTime();
             const realWorldTime = getRealWorldTime(playerTime);
             if (realWorldTime !== null) {
+              console.log(`[Twitch Player] Time update${eventName ? ` (${eventName})` : ''}: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
               onTimeUpdate(realWorldTime);
             }
           }
         };
 
-        playerRef.current.addEventListener('Twitch.Player.PLAYING', updateTime);
-        playerRef.current.addEventListener('Twitch.Player.SEEK', updateTime);
-        playerRef.current.addEventListener('Twitch.Player.PAUSE', updateTime);
+        playerRef.current.addEventListener('Twitch.Player.PLAYING', () => updateTime('PLAYING'));
+        playerRef.current.addEventListener('Twitch.Player.SEEK', () => updateTime('SEEK'));
+        playerRef.current.addEventListener('Twitch.Player.PAUSE', () => updateTime('PAUSE'));
 
         // Start polling current time frequently (100ms for responsive scrubbing)
         timeUpdateInterval.current = window.setInterval(() => {
@@ -103,6 +104,7 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
             const playerTime = playerRef.current.getCurrentTime();
             const realWorldTime = getRealWorldTime(playerTime);
             if (realWorldTime !== null) {
+              console.log(`[Twitch Player] Time poll: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
               onTimeUpdate(realWorldTime);
             }
           }
