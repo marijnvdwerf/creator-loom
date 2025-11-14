@@ -57,6 +57,28 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
     return vodStartMinuteOfDay + playerCurrentSeconds / 60;
   };
 
+  // Helper to update time and log it
+  const updateTime = (eventName?: string) => {
+    if (playerRef.current && onTimeUpdate) {
+      const playerTime = playerRef.current.getCurrentTime();
+      const realWorldTime = getRealWorldTime(playerTime);
+      if (realWorldTime !== null) {
+        console.log(`[Twitch Player] Time update${eventName ? ` (${eventName})` : ''}: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
+        onTimeUpdate(realWorldTime);
+      }
+    }
+  };
+
+  // Helper to setup event listeners on the player
+  const setupEventListeners = () => {
+    if (!playerRef.current) return;
+
+    console.log('[Twitch Player] Setting up event listeners');
+    playerRef.current.addEventListener('Twitch.Player.PLAYING', () => updateTime('PLAYING'));
+    playerRef.current.addEventListener('Twitch.Player.SEEK', () => updateTime('SEEK'));
+    playerRef.current.addEventListener('Twitch.Player.PAUSE', () => updateTime('PAUSE'));
+  };
+
   useEffect(() => {
     // Wait for Twitch embed script to load
     if (!window.Twitch) {
@@ -66,6 +88,7 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
 
     // Initialize player once on mount
     if (!playerInitialized.current) {
+      console.log('[Twitch Player] Initializing player');
       const options: TwitchPlayerOptions = {
         width: '100%',
         height: '100%',
@@ -76,46 +99,37 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
       // Set initial video if available
       if (selectedVod) {
         options.video = selectedVod.vod.id;
+        console.log(`[Twitch Player] Initial video: ${selectedVod.vod.id}`);
       }
 
       try {
         playerRef.current = new window.Twitch.Player('twitch-player', options);
         playerInitialized.current = true;
 
-        // Add event listeners to track playback
-        const updateTime = (eventName?: string) => {
-          if (playerRef.current && onTimeUpdate) {
-            const playerTime = playerRef.current.getCurrentTime();
-            const realWorldTime = getRealWorldTime(playerTime);
-            if (realWorldTime !== null) {
-              console.log(`[Twitch Player] Time update${eventName ? ` (${eventName})` : ''}: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
-              onTimeUpdate(realWorldTime);
-            }
-          }
-        };
-
-        playerRef.current.addEventListener('Twitch.Player.PLAYING', () => updateTime('PLAYING'));
-        playerRef.current.addEventListener('Twitch.Player.SEEK', () => updateTime('SEEK'));
-        playerRef.current.addEventListener('Twitch.Player.PAUSE', () => updateTime('PAUSE'));
+        // Setup event listeners
+        setupEventListeners();
 
         // Start polling current time frequently (100ms for responsive scrubbing)
-        timeUpdateInterval.current = window.setInterval(() => {
-          if (playerRef.current && onTimeUpdate) {
-            const playerTime = playerRef.current.getCurrentTime();
-            const realWorldTime = getRealWorldTime(playerTime);
-            if (realWorldTime !== null) {
-              console.log(`[Twitch Player] Time poll: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
-              onTimeUpdate(realWorldTime);
+        if (!timeUpdateInterval.current) {
+          timeUpdateInterval.current = window.setInterval(() => {
+            if (playerRef.current && onTimeUpdate) {
+              const playerTime = playerRef.current.getCurrentTime();
+              const realWorldTime = getRealWorldTime(playerTime);
+              if (realWorldTime !== null) {
+                console.log(`[Twitch Player] Time poll: player=${playerTime.toFixed(2)}s, realWorldTime=${realWorldTime.toFixed(2)}min`);
+                onTimeUpdate(realWorldTime);
+              }
             }
-          }
-        }, 100);
+          }, 100);
+        }
 
         // If we have a timestamp, seek to it after player is ready
         if (selectedVod && selectedVod.timestamp > 0) {
           // Twitch player needs a moment to initialize before seeking
           setTimeout(() => {
+            console.log(`[Twitch Player] Seeking to ${selectedVod.timestamp}s`);
             playerRef.current?.seek(selectedVod.timestamp);
-            updateTime();
+            updateTime('INITIAL_SEEK');
           }, 1000);
         }
       } catch (error) {
@@ -123,7 +137,13 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
       }
     } else if (selectedVod && playerRef.current) {
       // Player exists, change the video and seek to timestamp
+      console.log(`[Twitch Player] Changing video to ${selectedVod.vod.id}, seeking to ${selectedVod.timestamp}s`);
       playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
+
+      // Trigger time update after video change
+      setTimeout(() => {
+        updateTime('VIDEO_CHANGED');
+      }, 500);
     }
 
     return () => {
