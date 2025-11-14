@@ -15,7 +15,7 @@ export function TimeRuler({ startMinute, endMinute }: TimeRulerProps) {
   }
 
   return (
-    <div className="relative h-6 bg-[#0f0f0f] border-b border-border/30">
+    <div className="relative h-6 bg-muted/20 border-b border-border/30">
       <div className="absolute inset-0 flex">
         {hourMarks.map((minute) => {
           const offsetPercent = ((minute - startMinute) / totalMinutes) * 100;

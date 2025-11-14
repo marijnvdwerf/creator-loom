@@ -28,7 +28,7 @@ export function TimelineRow({
   });
 
   return (
-    <div className="group h-6 bg-[#0f0f0f] hover:bg-[#141414] border-b border-border/20 flex items-center">
+    <div className="group h-6 bg-muted/20 hover:bg-muted/30 border-b border-border/20 flex items-center">
       {/* Creator name */}
       <div
         className={`w-40 flex-shrink-0 px-2 text-[11px] truncate border-l`}
@@ -57,7 +57,7 @@ export function TimelineRow({
           return (
             <div
               key={vod.id}
-              className="absolute top-0.5 bottom-0.5 bg-gradient-to-b from-[#2a2a2a] to-[#252525] border border-border/40 rounded-sm cursor-pointer hover:from-[#353535] hover:to-[#2f2f2f] hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20 transition-all overflow-hidden"
+              className="absolute top-0.5 bottom-0.5 bg-gradient-to-b from-muted to-muted/80 border border-border/40 rounded-sm cursor-pointer hover:from-accent hover:to-accent/80 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20 transition-all overflow-hidden"
               style={{
                 left: `${Math.max(0, leftPercent)}%`,
                 width: `${Math.min(widthPercent, 100 - leftPercent)}%`,

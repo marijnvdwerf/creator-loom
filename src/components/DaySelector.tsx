@@ -22,7 +22,7 @@ export function DaySelector({ selectedDate, onDateSelect }: DaySelectorProps) {
   };
 
   return (
-    <div className="bg-[#141414] border-b border-border px-4 py-2">
+    <div className="bg-muted/30 border-b border-border px-4 py-2">
       <div className="flex gap-1 overflow-x-auto">
         {days.map((day) => {
           const dayNum = format(day, 'd');
@@ -37,7 +37,7 @@ export function DaySelector({ selectedDate, onDateSelect }: DaySelectorProps) {
                 flex-shrink-0 px-3 py-2 rounded text-xs font-medium transition-colors
                 ${selected
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-[#1f1f1f] text-muted-foreground hover:bg-[#2a2a2a] hover:text-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/70 hover:text-foreground'
                 }
               `}
             >

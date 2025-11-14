@@ -49,7 +49,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
   }, [data.creators]);
 
   return (
-    <div className="h-full bg-[#0a0a0a] text-white flex flex-col">
+    <div className="h-full bg-background text-foreground flex flex-col">
       {/* Day selector */}
       <DaySelector selectedDate={selectedDate} onDateSelect={onDateSelect} />
 
@@ -66,7 +66,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
 
         {/* Team 0 */}
         <div className="mb-2">
-          <div className="sticky top-0 z-10 px-4 py-0.5 bg-[#0a0a0a] border-b border-border/30">
+          <div className="sticky top-0 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-blue-400/90">
               TEAM 0 ({team0.filter(c => c.alive !== false).length} alive, {team0.filter(c => c.alive === false).length} dead)
             </h3>
@@ -86,7 +86,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
 
         {/* Team 1 */}
         <div>
-          <div className="sticky top-0 z-10 px-4 py-0.5 bg-[#0a0a0a] border-b border-border/30">
+          <div className="sticky top-0 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-red-400/90">
               TEAM 1 ({team1.filter(c => c.alive !== false).length} alive, {team1.filter(c => c.alive === false).length} dead)
             </h3>
