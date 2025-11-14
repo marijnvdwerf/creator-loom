@@ -85,6 +85,35 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
     }
   };
 
+  // Helper to setup event listeners
+  const setupEventListeners = () => {
+    if (!playerRef.current) {
+      console.warn('[Twitch Player] Cannot setup listeners - playerRef.current is null');
+      return;
+    }
+
+    console.log('[Twitch Player] Setting up event listeners on player instance:', playerRef.current);
+
+    const playingHandler = () => {
+      console.log('[Twitch Player] *** PLAYING event fired ***');
+      updateTime('PLAYING');
+    };
+    const seekHandler = () => {
+      console.log('[Twitch Player] *** SEEK event fired ***');
+      updateTime('SEEK');
+    };
+    const pauseHandler = () => {
+      console.log('[Twitch Player] *** PAUSE event fired ***');
+      updateTime('PAUSE');
+    };
+
+    playerRef.current.addEventListener('Twitch.Player.PLAYING', playingHandler);
+    playerRef.current.addEventListener('Twitch.Player.SEEK', seekHandler);
+    playerRef.current.addEventListener('Twitch.Player.PAUSE', pauseHandler);
+
+    console.log('[Twitch Player] Event listeners registered successfully');
+  };
+
   // Initialize player and handle video changes
   useEffect(() => {
     // Wait for Twitch embed script to load
@@ -114,27 +143,8 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         playerRef.current = new window.Twitch.Player('twitch-player', options);
         playerInitialized.current = true;
 
-        // Setup event listeners that will persist across video changes
-        console.log('[Twitch Player] Setting up event listeners on player instance:', playerRef.current);
-
-        const playingHandler = () => {
-          console.log('[Twitch Player] *** PLAYING event fired ***');
-          updateTime('PLAYING');
-        };
-        const seekHandler = () => {
-          console.log('[Twitch Player] *** SEEK event fired ***');
-          updateTime('SEEK');
-        };
-        const pauseHandler = () => {
-          console.log('[Twitch Player] *** PAUSE event fired ***');
-          updateTime('PAUSE');
-        };
-
-        playerRef.current.addEventListener('Twitch.Player.PLAYING', playingHandler);
-        playerRef.current.addEventListener('Twitch.Player.SEEK', seekHandler);
-        playerRef.current.addEventListener('Twitch.Player.PAUSE', pauseHandler);
-
-        console.log('[Twitch Player] Event listeners registered successfully');
+        // Setup event listeners
+        setupEventListeners();
 
         // Seek to timestamp if provided
         if (selectedVod.timestamp > 0) {
@@ -155,9 +165,19 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         console.error('Failed to create Twitch player:', error);
       }
     } else if (playerRef.current) {
-      // Player already initialized, just change the video
+      // Player already initialized, change the video and re-setup listeners
       console.log(`[Twitch Player] Changing video to ${selectedVod.vod.id}, seeking to ${selectedVod.timestamp}s`);
       playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
+
+      // Re-register event listeners after video change
+      console.log('[Twitch Player] Re-registering event listeners after video change');
+      setupEventListeners();
+
+      // Trigger initial time update after video loads
+      setTimeout(() => {
+        console.log('[Twitch Player] Initial time update after video change');
+        updateTime('VIDEO_CHANGED');
+      }, 500);
     }
   }, [selectedVod]);
 
