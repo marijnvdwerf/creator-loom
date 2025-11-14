@@ -132,6 +132,12 @@ function validateEnvironment(): void {
   }
 }
 
+function extractUsernameFromUrl(url: string): string {
+  // Extract username from URLs like "https://www.twitch.tv/username" or "https://twitch.tv/username"
+  const match = url.match(/twitch\.tv\/([^\/\s?]+)/i);
+  return match ? match[1] : url;
+}
+
 // ============================================================================
 // Twitch API Functions
 // ============================================================================
@@ -300,14 +306,17 @@ async function processCreator(
   token: string,
   clientId: string
 ): Promise<CreatorOutput | null> {
-  const twitchUsername = creator.social.twitch;
+  const twitchUrl = creator.social.twitch;
 
-  if (!twitchUsername) {
+  if (!twitchUrl) {
     console.log(`Skipping ${creator.name}: No Twitch username`);
     return null;
   }
 
-  console.log(`Processing ${creator.name} (${twitchUsername})...`);
+  // Extract username from URL
+  const twitchUsername = extractUsernameFromUrl(twitchUrl);
+
+  console.log(`Processing ${creator.name} (${twitchUrl})...`);
 
   // Get user ID
   await delay(DELAY_BETWEEN_REQUESTS);
