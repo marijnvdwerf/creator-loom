@@ -116,6 +116,8 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
 
   // Initialize player and handle video changes
   useEffect(() => {
+    console.log('[Twitch Player] useEffect triggered, selectedVod:', selectedVod?.vod.id);
+
     // Wait for Twitch embed script to load
     if (!window.Twitch) {
       console.warn('Twitch embed script not loaded yet');
@@ -140,11 +142,15 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
       };
 
       try {
+        console.log('[Twitch Player] Creating Twitch.Player instance...');
         playerRef.current = new window.Twitch.Player('twitch-player', options);
+        console.log('[Twitch Player] Player instance created successfully');
         playerInitialized.current = true;
 
         // Setup event listeners
+        console.log('[Twitch Player] About to call setupEventListeners()');
         setupEventListeners();
+        console.log('[Twitch Player] setupEventListeners() completed');
 
         // Seek to timestamp if provided
         if (selectedVod.timestamp > 0) {
