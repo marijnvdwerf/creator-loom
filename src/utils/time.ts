@@ -26,9 +26,11 @@ export function formatDuration(seconds: number): string {
   return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
 }
 
-// Get time in minutes since midnight UTC
+// Get time in minutes since midnight in Europe/Amsterdam timezone
 export function getMinutesSinceMidnight(date: Date): number {
-  return date.getUTCHours() * 60 + date.getUTCMinutes();
+  // Convert to Amsterdam time
+  const amsterdamTime = new Date(date.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
+  return amsterdamTime.getHours() * 60 + amsterdamTime.getMinutes();
 }
 
 // Format time as HH:MM

@@ -7,8 +7,8 @@ interface TwitchPlayerProps {
 
 export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
   return (
-    <div className="h-full bg-background text-foreground p-4 flex flex-col">
-      <div className="mb-4">
+    <div className="h-full bg-background text-foreground flex flex-col overflow-hidden">
+      <div className="px-4 py-3 border-b border-border">
         <h2 className="text-lg font-semibold">Player</h2>
         {selectedVod ? (
           <div>
@@ -21,7 +21,7 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
       </div>
 
       {/* Player placeholder */}
-      <div className="flex-1 bg-muted/30 rounded border border-border flex items-center justify-center">
+      <div className="flex-1 bg-muted/30 flex items-center justify-center overflow-auto">
         {selectedVod ? (
           <div className="text-center p-8">
             <div className="text-6xl mb-4">▶️</div>
@@ -41,7 +41,7 @@ export function TwitchPlayer({ selectedVod }: TwitchPlayerProps) {
       </div>
 
       {/* Controls placeholder */}
-      <div className="mt-4 p-3 bg-muted/30 rounded border border-border">
+      <div className="p-3 bg-muted/30 border-t border-border">
         <div className="text-xs font-mono text-muted-foreground">
           Current time: --:--:--
         </div>

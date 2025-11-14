@@ -49,26 +49,22 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
   }, [data.creators]);
 
   return (
-    <div className="h-full bg-background text-foreground flex flex-col">
+    <div className="h-full bg-background text-foreground flex flex-col overflow-hidden">
       {/* Day selector */}
       <DaySelector selectedDate={selectedDate} onDateSelect={onDateSelect} />
 
-      {/* Header */}
-      <div className="px-4 py-2 border-b border-border">
-        <h2 className="text-sm font-semibold">CreatorSMP Timeline</h2>
-        <p className="text-xs text-muted-foreground">November 9-30, 2025</p>
-      </div>
-
       {/* Scrollable timeline */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
         {/* Time ruler */}
-        <TimeRuler startMinute={startMinute} endMinute={endMinute} />
+        <div className="sticky top-0 z-20">
+          <TimeRuler startMinute={startMinute} endMinute={endMinute} />
+        </div>
 
-        {/* Team 0 */}
+        {/* Team Noord */}
         <div className="mb-2">
-          <div className="sticky top-0 z-10 px-4 py-0.5 bg-background border-b border-border/30">
+          <div className="sticky top-6 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-blue-400/90">
-              TEAM 0 ({team0.filter(c => c.alive !== false).length} alive, {team0.filter(c => c.alive === false).length} dead)
+              NOORD ({team0.filter(c => c.alive !== false).length} alive, {team0.filter(c => c.alive === false).length} dead)
             </h3>
           </div>
           {team0.map((creator) => (
@@ -84,11 +80,11 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
           ))}
         </div>
 
-        {/* Team 1 */}
+        {/* Team Zuid */}
         <div>
-          <div className="sticky top-0 z-10 px-4 py-0.5 bg-background border-b border-border/30">
+          <div className="sticky top-6 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-red-400/90">
-              TEAM 1 ({team1.filter(c => c.alive !== false).length} alive, {team1.filter(c => c.alive === false).length} dead)
+              ZUID ({team1.filter(c => c.alive !== false).length} alive, {team1.filter(c => c.alive === false).length} dead)
             </h3>
           </div>
           {team1.map((creator) => (

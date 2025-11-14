@@ -21,10 +21,12 @@ export function TimelineRow({
 }: TimelineRowProps) {
   const totalMinutes = endMinute - startMinute;
 
-  // Filter VODs for the selected day
+  // Filter VODs for the selected day (in Amsterdam timezone)
   const dayVods = creator.vods.filter((vod) => {
     const vodDate = new Date(vod.createdAt);
-    return isSameDay(vodDate, selectedDate);
+    // Convert to Amsterdam timezone for comparison
+    const amsterdamDate = new Date(vodDate.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
+    return isSameDay(amsterdamDate, selectedDate);
   });
 
   return (
