@@ -81,7 +81,7 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
     }
   };
 
-  // Initialize player once on mount
+  // Initialize player and handle video changes
   useEffect(() => {
     // Wait for Twitch embed script to load
     if (!window.Twitch) {
@@ -89,52 +89,61 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
       return;
     }
 
-    if (playerInitialized.current) {
-      return; // Already initialized
-    }
-
-    console.log('[Twitch Player] Initializing player');
-    const options: TwitchPlayerOptions = {
-      width: '100%',
-      height: '100%',
-      parent: ['localhost', '127.0.0.1'],
-      autoplay: true,
-    };
-
-    try {
-      playerRef.current = new window.Twitch.Player('twitch-player', options);
-      playerInitialized.current = true;
-
-      // Setup event listeners that will persist across video changes
-      console.log('[Twitch Player] Setting up event listeners');
-      playerRef.current.addEventListener('Twitch.Player.PLAYING', () => {
-        console.log('[Twitch Player] PLAYING event fired');
-        updateTime('PLAYING');
-      });
-      playerRef.current.addEventListener('Twitch.Player.SEEK', () => {
-        console.log('[Twitch Player] SEEK event fired');
-        updateTime('SEEK');
-      });
-      playerRef.current.addEventListener('Twitch.Player.PAUSE', () => {
-        console.log('[Twitch Player] PAUSE event fired');
-        updateTime('PAUSE');
-      });
-
-      console.log('[Twitch Player] Event listeners set up successfully');
-    } catch (error) {
-      console.error('Failed to create Twitch player:', error);
-    }
-  }, []); // Empty dependency array - only run once on mount
-
-  // Handle video changes
-  useEffect(() => {
-    if (!playerRef.current || !selectedVod) {
+    // Don't initialize until we have a video to play
+    if (!selectedVod) {
+      console.log('[Twitch Player] Waiting for selectedVod before initializing player');
       return;
     }
 
-    console.log(`[Twitch Player] Setting video to ${selectedVod.vod.id}, seeking to ${selectedVod.timestamp}s`);
-    playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
-  }, [selectedVod?.vod.id, selectedVod?.timestamp]);
+    // Initialize player on first selectedVod
+    if (!playerInitialized.current) {
+      console.log('[Twitch Player] Initializing player with video:', selectedVod.vod.id);
+      const options: TwitchPlayerOptions = {
+        video: selectedVod.vod.id,
+        width: '100%',
+        height: '100%',
+        parent: ['localhost', '127.0.0.1'],
+        autoplay: true,
+      };
+
+      try {
+        playerRef.current = new window.Twitch.Player('twitch-player', options);
+        playerInitialized.current = true;
+
+        // Setup event listeners that will persist across video changes
+        console.log('[Twitch Player] Setting up event listeners');
+        playerRef.current.addEventListener('Twitch.Player.PLAYING', () => {
+          console.log('[Twitch Player] PLAYING event fired');
+          updateTime('PLAYING');
+        });
+        playerRef.current.addEventListener('Twitch.Player.SEEK', () => {
+          console.log('[Twitch Player] SEEK event fired');
+          updateTime('SEEK');
+        });
+        playerRef.current.addEventListener('Twitch.Player.PAUSE', () => {
+          console.log('[Twitch Player] PAUSE event fired');
+          updateTime('PAUSE');
+        });
+
+        // Seek to timestamp if provided
+        if (selectedVod.timestamp > 0) {
+          setTimeout(() => {
+            console.log(`[Twitch Player] Seeking to ${selectedVod.timestamp}s`);
+            playerRef.current?.seek(selectedVod.timestamp);
+            updateTime('INITIAL_SEEK');
+          }, 1000);
+        }
+
+        console.log('[Twitch Player] Event listeners set up successfully');
+      } catch (error) {
+        console.error('Failed to create Twitch player:', error);
+      }
+    } else if (playerRef.current) {
+      // Player already initialized, just change the video
+      console.log(`[Twitch Player] Changing video to ${selectedVod.vod.id}, seeking to ${selectedVod.timestamp}s`);
+      playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
+    }
+  }, [selectedVod]);
 
   return (
     <div className="h-full bg-black relative overflow-hidden">
