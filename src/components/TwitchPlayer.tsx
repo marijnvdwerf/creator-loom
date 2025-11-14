@@ -56,6 +56,8 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
 
   // Helper to update time and log it
   const updateTime = (eventName?: string) => {
+    console.log(`[Twitch Player] updateTime called with event: ${eventName || 'none'}`);
+
     if (!playerRef.current) {
       console.warn('[Twitch Player] playerRef.current is null, cannot update time');
       return;
@@ -68,6 +70,8 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
 
     try {
       const playerTime = playerRef.current.getCurrentTime();
+      console.log(`[Twitch Player] Got player time: ${playerTime}`);
+
       const timeInfo = getRealWorldTimeInfo(playerTime);
 
       if (timeInfo !== null) {
@@ -111,19 +115,26 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         playerInitialized.current = true;
 
         // Setup event listeners that will persist across video changes
-        console.log('[Twitch Player] Setting up event listeners');
-        playerRef.current.addEventListener('Twitch.Player.PLAYING', () => {
-          console.log('[Twitch Player] PLAYING event fired');
+        console.log('[Twitch Player] Setting up event listeners on player instance:', playerRef.current);
+
+        const playingHandler = () => {
+          console.log('[Twitch Player] *** PLAYING event fired ***');
           updateTime('PLAYING');
-        });
-        playerRef.current.addEventListener('Twitch.Player.SEEK', () => {
-          console.log('[Twitch Player] SEEK event fired');
+        };
+        const seekHandler = () => {
+          console.log('[Twitch Player] *** SEEK event fired ***');
           updateTime('SEEK');
-        });
-        playerRef.current.addEventListener('Twitch.Player.PAUSE', () => {
-          console.log('[Twitch Player] PAUSE event fired');
+        };
+        const pauseHandler = () => {
+          console.log('[Twitch Player] *** PAUSE event fired ***');
           updateTime('PAUSE');
-        });
+        };
+
+        playerRef.current.addEventListener('Twitch.Player.PLAYING', playingHandler);
+        playerRef.current.addEventListener('Twitch.Player.SEEK', seekHandler);
+        playerRef.current.addEventListener('Twitch.Player.PAUSE', pauseHandler);
+
+        console.log('[Twitch Player] Event listeners registered successfully');
 
         // Seek to timestamp if provided
         if (selectedVod.timestamp > 0) {
@@ -132,9 +143,14 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
             playerRef.current?.seek(selectedVod.timestamp);
             updateTime('INITIAL_SEEK');
           }, 1000);
+        } else {
+          console.log('[Twitch Player] No initial seek timestamp provided');
+          // Try calling updateTime manually to test
+          setTimeout(() => {
+            console.log('[Twitch Player] Testing updateTime manually');
+            updateTime('TEST');
+          }, 500);
         }
-
-        console.log('[Twitch Player] Event listeners set up successfully');
       } catch (error) {
         console.error('Failed to create Twitch player:', error);
       }
