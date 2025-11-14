@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { DaySelector } from './DaySelector';
 import { TimeRuler } from './TimeRuler';
 import { TimelineRow } from './TimelineRow';
+import { TimeIndicator } from './TimeIndicator';
 import { VODData, Creator, VOD } from '@/types/vod';
 import vodData from '@/data/vods.json';
 
@@ -54,7 +55,10 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
       <DaySelector selectedDate={selectedDate} onDateSelect={onDateSelect} />
 
       {/* Scrollable timeline */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden relative">
+        {/* Time indicator */}
+        <TimeIndicator selectedDate={selectedDate} startMinute={startMinute} endMinute={endMinute} />
+
         {/* Time ruler */}
         <div className="sticky top-0 z-20">
           <TimeRuler startMinute={startMinute} endMinute={endMinute} />
