@@ -28,10 +28,10 @@ export function TimelineRow({
   });
 
   return (
-    <div className="group h-8 bg-[#141414] hover:bg-[#1a1a1a] border-b border-border/50 flex items-center">
+    <div className="group h-6 bg-[#0f0f0f] hover:bg-[#141414] border-b border-border/20 flex items-center">
       {/* Creator name */}
       <div
-        className={`w-40 flex-shrink-0 px-2 text-xs truncate border-l-2`}
+        className={`w-40 flex-shrink-0 px-2 text-[11px] truncate border-l`}
         style={{ borderLeftColor: teamColor }}
       >
         <span className="font-medium">{creator.name}</span>
@@ -57,7 +57,7 @@ export function TimelineRow({
           return (
             <div
               key={vod.id}
-              className="absolute top-1 bottom-1 bg-[#2a2a2a] border border-border rounded cursor-pointer hover:bg-[#3a3a3a] hover:border-primary/50 transition-colors overflow-hidden"
+              className="absolute top-0.5 bottom-0.5 bg-gradient-to-b from-[#2a2a2a] to-[#252525] border border-border/40 rounded-sm cursor-pointer hover:from-[#353535] hover:to-[#2f2f2f] hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20 transition-all overflow-hidden"
               style={{
                 left: `${Math.max(0, leftPercent)}%`,
                 width: `${Math.min(widthPercent, 100 - leftPercent)}%`,
@@ -65,7 +65,7 @@ export function TimelineRow({
               onClick={() => onVodClick?.(vod, creator)}
               title={`${vod.title}\n${format(vodStartDate, 'HH:mm')} - ${Math.floor(vodDurationMinutes / 60)}h ${Math.floor(vodDurationMinutes % 60)}m`}
             >
-              <div className="h-full px-1 flex items-center text-[10px] text-muted-foreground truncate">
+              <div className="h-full px-1.5 flex items-center text-[10px] text-muted-foreground/80 truncate">
                 {vod.title}
               </div>
             </div>

@@ -15,7 +15,7 @@ export function TimeRuler({ startMinute, endMinute }: TimeRulerProps) {
   }
 
   return (
-    <div className="relative h-8 bg-[#141414] border-b border-border">
+    <div className="relative h-6 bg-[#0f0f0f] border-b border-border/30">
       <div className="absolute inset-0 flex">
         {hourMarks.map((minute) => {
           const offsetPercent = ((minute - startMinute) / totalMinutes) * 100;
@@ -26,8 +26,8 @@ export function TimeRuler({ startMinute, endMinute }: TimeRulerProps) {
               className="absolute top-0 bottom-0"
               style={{ left: `${offsetPercent}%` }}
             >
-              <div className="h-full border-l border-border/50" />
-              <div className="absolute top-1 -translate-x-1/2 text-[10px] font-mono text-muted-foreground">
+              <div className="h-full border-l border-border/20" />
+              <div className="absolute top-0.5 -translate-x-1/2 text-[10px] font-mono text-muted-foreground/70">
                 {formatTime(minute)}
               </div>
             </div>

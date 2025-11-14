@@ -65,9 +65,9 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
         <TimeRuler startMinute={startMinute} endMinute={endMinute} />
 
         {/* Team 0 */}
-        <div className="mb-4">
-          <div className="sticky top-0 z-10 px-4 py-1 bg-[#0a0a0a] border-b border-border">
-            <h3 className="text-xs font-semibold text-blue-400">
+        <div className="mb-2">
+          <div className="sticky top-0 z-10 px-4 py-0.5 bg-[#0a0a0a] border-b border-border/30">
+            <h3 className="text-[11px] font-semibold text-blue-400/90">
               TEAM 0 ({team0.filter(c => c.alive !== false).length} alive, {team0.filter(c => c.alive === false).length} dead)
             </h3>
           </div>
@@ -86,8 +86,8 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick }: TimelinePro
 
         {/* Team 1 */}
         <div>
-          <div className="sticky top-0 z-10 px-4 py-1 bg-[#0a0a0a] border-b border-border">
-            <h3 className="text-xs font-semibold text-red-400">
+          <div className="sticky top-0 z-10 px-4 py-0.5 bg-[#0a0a0a] border-b border-border/30">
+            <h3 className="text-[11px] font-semibold text-red-400/90">
               TEAM 1 ({team1.filter(c => c.alive !== false).length} alive, {team1.filter(c => c.alive === false).length} dead)
             </h3>
           </div>
