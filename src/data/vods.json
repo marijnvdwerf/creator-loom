@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-14T16:17:37.250Z",
+  "lastUpdated": "2025-11-15T06:22:37.658Z",
   "creators": [
     {
       "name": "AlexKleinYT",
@@ -12,7 +12,7 @@
           "createdAt": "2025-11-13T14:54:55Z",
           "duration": "1h34m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b5af4e0557034b6947cd_alexkleinyt_314871823443_1763045689//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 591
+          "viewCount": 627
         },
         {
           "id": "2614788549",
@@ -20,7 +20,7 @@
           "createdAt": "2025-11-10T16:25:36Z",
           "duration": "2h14m42s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c7213181d5ec09dc6e28_alexkleinyt_314828373458_1762791931//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3756
+          "viewCount": 3760
         }
       ]
     },
@@ -35,7 +35,7 @@
           "createdAt": "2025-11-13T14:11:40Z",
           "duration": "5h18m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8412974029ae5ac44de2_alissarella_314831347665_1763043094//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9624
+          "viewCount": 9750
         },
         {
           "id": "2616656120",
@@ -43,7 +43,7 @@
           "createdAt": "2025-11-12T18:33:00Z",
           "duration": "2h51m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/fbf2785ddacd418dd1fa_alissarella_315294489445_1762972373//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1282
+          "viewCount": 1284
         },
         {
           "id": "2616431951",
@@ -51,7 +51,7 @@
           "createdAt": "2025-11-12T12:56:57Z",
           "duration": "3h22m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5ee80aa91549ae3c2540_alissarella_314844547922_1762952211//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 3511
+          "viewCount": 3512
         },
         {
           "id": "2615568246",
@@ -59,7 +59,7 @@
           "createdAt": "2025-11-11T14:00:14Z",
           "duration": "7h1m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc10c0c8994d07e51e75_alissarella_314813881937_1762869608//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5822
+          "viewCount": 5823
         },
         {
           "id": "2614019336",
@@ -77,12 +77,28 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618441560",
+          "title": "💥CREATOR SMP: DAG 6... #Noord (ben weer terug)",
+          "createdAt": "2025-11-14T20:33:03Z",
+          "duration": "2h22m49s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/49e7ec5e84bc07822186_almostnormal_314865394514_1763152377//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1884
+        },
+        {
+          "id": "2618325666",
+          "title": "💥CREATOR SMP: DAG 6... #Noord",
+          "createdAt": "2025-11-14T18:09:34Z",
+          "duration": "1h21m42s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/308a4719a621230ba18c_almostnormal_314841866321_1763143767//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 571
+        },
+        {
           "id": "2616435308",
           "title": "💥CREATOR SMP: DAG 3... #Noord",
           "createdAt": "2025-11-12T13:02:02Z",
           "duration": "2h44m33s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3708361e45717e9a7e4b_almostnormal_314844577106_1762952516//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 10183
+          "viewCount": 10192
         },
         {
           "id": "2615778849",
@@ -90,7 +106,7 @@
           "createdAt": "2025-11-11T19:03:47Z",
           "duration": "4h14m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a7e273f098267a4777e7_almostnormal_314856259027_1762887821//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2938
+          "viewCount": 2944
         },
         {
           "id": "2614030080",
@@ -98,7 +114,7 @@
           "createdAt": "2025-11-09T17:41:47Z",
           "duration": "3h19m39s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/44d8d5ad016214196dc9_almostnormal_314820550738_1762710101//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2531
+          "viewCount": 2533
         }
       ]
     },
@@ -108,12 +124,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618313621",
+          "title": "CS2 LENOVO LEGION TOURNAMENT - battle tegen Team @jpa1r | !cs2 #ad",
+          "createdAt": "2025-11-14T17:56:13Z",
+          "duration": "4h11m6s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fb8f0dd0e0c767c185f7_altijdmelvin_314863546578_1763142963//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3889
+        },
+        {
           "id": "2617281842",
           "title": "CREATOR SMP NOORD GRIND SESSIE | !cs2",
           "createdAt": "2025-11-13T12:51:41Z",
           "duration": "5h47m24s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3dc1b7147b625d429fba_altijdmelvin_314852759634_1763038291//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 12994
+          "viewCount": 13031
         },
         {
           "id": "2616626939",
@@ -121,7 +145,7 @@
           "createdAt": "2025-11-12T17:57:46Z",
           "duration": "4h33m8s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a1497431894e5f634fe7_altijdmelvin_314846806226_1762970255//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6072
+          "viewCount": 6077
         },
         {
           "id": "2614830732",
@@ -129,7 +153,7 @@
           "createdAt": "2025-11-10T17:28:45Z",
           "duration": "4h52m58s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/500b3a501656805fb2d6_altijdmelvin_314828893138_1762795715//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7855
+          "viewCount": 7857
         },
         {
           "id": "2614021599",
@@ -137,7 +161,7 @@
           "createdAt": "2025-11-09T17:30:26Z",
           "duration": "4h17m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7262e09d22785781a6d0_altijdmelvin_314820438482_1762709415//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6697
+          "viewCount": 6699
         }
       ]
     },
@@ -152,7 +176,7 @@
           "createdAt": "2025-11-13T14:24:29Z",
           "duration": "7h55m15s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/4e83b3ce3565ca43dd4e_awesomedaddygaming_315299658597_1763043863//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8178
+          "viewCount": 8200
         },
         {
           "id": "2616427951",
@@ -197,9 +221,9 @@
           "id": "2618159190",
           "title": "HARDCORE CREATOR SMP",
           "createdAt": "2025-11-14T13:57:43Z",
-          "duration": "2h19m53s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 12
+          "duration": "2h56m21s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/74ce41447d31cf7d104a_ayv3e_314861591378_1763128652//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9489
         },
         {
           "id": "2617451589",
@@ -207,7 +231,7 @@
           "createdAt": "2025-11-13T17:43:42Z",
           "duration": "5h23m38s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8a5570c383360704fc5c_ayv3e_314854808274_1763055811//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17668
+          "viewCount": 17692
         },
         {
           "id": "2616458668",
@@ -215,7 +239,7 @@
           "createdAt": "2025-11-12T13:45:29Z",
           "duration": "2h50m51s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6c8ef048f46ddf3eb70b_ayv3e_314844813394_1762955119//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 21509
+          "viewCount": 21520
         },
         {
           "id": "2614844241",
@@ -223,7 +247,7 @@
           "createdAt": "2025-11-10T17:49:28Z",
           "duration": "3h15m8s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4b67b50bcd14c591b7ef_ayv3e_314806798033_1762796957//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8577
+          "viewCount": 8596
         },
         {
           "id": "2614010520",
@@ -231,7 +255,7 @@
           "createdAt": "2025-11-09T17:15:00Z",
           "duration": "4h35m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7b8f1fc6f7932fa43ecd_ayv3e_314820285650_1762708490//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 10776
+          "viewCount": 10796
         }
       ]
     },
@@ -246,7 +270,7 @@
           "createdAt": "2025-11-10T21:24:26Z",
           "duration": "2h10m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1fe05ded9d8b7d0cf165_bardo_314848968147_1762809860//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6203
+          "viewCount": 6206
         },
         {
           "id": "2614679630",
@@ -275,9 +299,9 @@
           "id": "2618163266",
           "title": "MINECRAFT CREATOR SMP HARDCORE SURVIVAL DAG 6 - Kamp Noord!",
           "createdAt": "2025-11-14T14:03:59Z",
-          "duration": "2h13m2s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 0
+          "duration": "9h17m36s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e1d00f04b3b5d436cbe0_basr_314839797201_1763129029//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6167
         },
         {
           "id": "2616708280",
@@ -285,7 +309,7 @@
           "createdAt": "2025-11-12T19:37:25Z",
           "duration": "5h5m42s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6324eadd324a5bb255dc_basr_314847924178_1762976235//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5747
+          "viewCount": 5753
         },
         {
           "id": "2615606227",
@@ -293,7 +317,7 @@
           "createdAt": "2025-11-11T15:01:50Z",
           "duration": "8h25m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a2993a0479d83243b5fb_basr_314814336209_1762873299//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2476
+          "viewCount": 2477
         },
         {
           "id": "2614037480",
@@ -314,9 +338,9 @@
           "id": "2618240323",
           "title": "CreatorSMP NOORD ❄️🧊| er is ZOVEEL gebeurd.. | !meta #109 IG: Bintjeeeh",
           "createdAt": "2025-11-14T16:12:24Z",
-          "duration": "5m11s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 0
+          "duration": "7h22m25s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a3bfe5ae589e6cd1d95e_bintjeeeh_314862604114_1763136738//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 4815
         },
         {
           "id": "2618128213",
@@ -324,7 +348,7 @@
           "createdAt": "2025-11-14T12:57:52Z",
           "duration": "2h3m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9d33bcceeceecb209d8d_bintjeeeh_314839426769_1763125066//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 15
+          "viewCount": 5221
         },
         {
           "id": "2615544377",
@@ -332,7 +356,7 @@
           "createdAt": "2025-11-11T13:17:18Z",
           "duration": "9h43m59s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e16a805a45a9ece85a70_bintjeeeh_314853194323_1762867031//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17454
+          "viewCount": 17459
         },
         {
           "id": "2614863305",
@@ -340,7 +364,7 @@
           "createdAt": "2025-11-10T18:14:08Z",
           "duration": "5h25m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0060a2f34124541421cd_bintjeeeh_314829353682_1762798442//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6083
+          "viewCount": 6084
         },
         {
           "id": "2614144718",
@@ -358,12 +382,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618353586",
+          "title": "Nu moeten we écht door - CreatorSMP Dag 5 🔥",
+          "createdAt": "2025-11-14T18:47:29Z",
+          "duration": "4h29m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5525bae2fd16f1d905fb_bokado_314864095058_1763146043//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 4036
+        },
+        {
           "id": "2617319837",
           "title": "Bouwen, plannen maken, en trial chamber? - Dag 4 🔥",
           "createdAt": "2025-11-13T14:06:52Z",
           "duration": "2h31m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4c46b88717c06612f516_bokado_314831318993_1763042806//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3745
+          "viewCount": 3798
         },
         {
           "id": "2615755194",
@@ -371,7 +403,7 @@
           "createdAt": "2025-11-11T18:35:32Z",
           "duration": "2h50m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9899ffbbd6f5ecf6c72b_bokado_314838485714_1762886126//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 4362
+          "viewCount": 4376
         },
         {
           "id": "2614874147",
@@ -379,7 +411,7 @@
           "createdAt": "2025-11-10T18:29:58Z",
           "duration": "3h36m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bc9ceb9a8c121c19f007_bokado_314846918227_1762799392//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6031
+          "viewCount": 6045
         },
         {
           "id": "2614029445",
@@ -387,7 +419,7 @@
           "createdAt": "2025-11-09T17:40:59Z",
           "duration": "4h3m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/94a2474d88106dbdc6d3_bokado_314798099025_1762710053//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6426
+          "viewCount": 6433
         }
       ]
     },
@@ -397,12 +429,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618375023",
+          "title": "🔴 #121 ✨ CREATOR SMP 3 - DAG 3 ✨ COMEBACK ✨ OUD ZUID ✨ !meta ✨ !clip om te clippen ✨",
+          "createdAt": "2025-11-14T19:11:47Z",
+          "duration": "5h22m37s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6f8b567859c71ab78d7d_brolsen_314842550225_1763147501//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 14
+        },
+        {
           "id": "2615813744",
           "title": "🔴 #120 ✨ CREATOR SMP 3 - #2 ✨ OUD ZUID ✨ !meta ✨ !clip om te clippen ✨",
           "createdAt": "2025-11-11T19:46:18Z",
           "duration": "3h50m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c58ff6f1a37b927c5a11_brolsen_314856724563_1762890372//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1342
+          "viewCount": 1344
         },
         {
           "id": "2614031530",
@@ -426,12 +466,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618334684",
+          "title": "CreatorSMP!!",
+          "createdAt": "2025-11-14T18:21:54Z",
+          "duration": "5h0m27s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6ce0b866b4910e33c2ce_clownpiercenl_314882126291_1763144507//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 160505
+        },
+        {
           "id": "2617345616",
           "title": "CreatorSMP!!",
           "createdAt": "2025-11-13T14:57:42Z",
           "duration": "8h12m39s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/94b91dd76a005eff744c_clownpiercenl_315139137383_1763045856//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 249919
+          "viewCount": 253316
         },
         {
           "id": "2616643492",
@@ -439,7 +487,7 @@
           "createdAt": "2025-11-12T18:16:29Z",
           "duration": "5h32m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ea35f9ad5bc7e2e7047f_clownpiercenl_315294309349_1762971383//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 153570
+          "viewCount": 153853
         },
         {
           "id": "2615592783",
@@ -447,7 +495,7 @@
           "createdAt": "2025-11-11T14:40:54Z",
           "duration": "8h24m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ea942aa963e5aee5d255_clownpiercenl_315386407270_1762872048//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 279634
+          "viewCount": 280027
         }
       ]
     },
@@ -457,12 +505,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618258991",
+          "title": "CreatorSMP | !discord !merch",
+          "createdAt": "2025-11-14T16:40:54Z",
+          "duration": "4h28m19s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/58edf57326cc0cc805ef_clonnylive_316091606107_1763138449//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3278
+        },
+        {
           "id": "2617398946",
           "title": "CreatorSMP | !discord !merch",
           "createdAt": "2025-11-13T16:26:29Z",
           "duration": "6h6m18s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/df3b77952e201be2e115_clonnylive_316024034650_1763051183//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3882
+          "viewCount": 3883
         },
         {
           "id": "2615675755",
@@ -470,7 +526,7 @@
           "createdAt": "2025-11-11T16:51:25Z",
           "duration": "3h48m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/5d6530bf46b122b674c3_clonnylive_316035475931_1762879879//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3294
+          "viewCount": 3295
         },
         {
           "id": "2614804176",
@@ -478,7 +534,7 @@
           "createdAt": "2025-11-10T16:51:12Z",
           "duration": "5h2m3s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/703aa6d64e13b537dac3_clonnylive_315931867225_1762793466//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6207
+          "viewCount": 6208
         },
         {
           "id": "2613990492",
@@ -501,7 +557,7 @@
           "createdAt": "2025-11-13T17:36:36Z",
           "duration": "2h58m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/71cfb66c8d6445d2be38_davincstylegames_314832917841_1763055390//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5911
+          "viewCount": 6003
         },
         {
           "id": "2616610060",
@@ -509,7 +565,7 @@
           "createdAt": "2025-11-12T17:36:02Z",
           "duration": "1h57m22s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/01e0910fdde0587efb39_davincstylegames_314824663121_1762968956//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3731
+          "viewCount": 3737
         },
         {
           "id": "2616426142",
@@ -517,7 +573,7 @@
           "createdAt": "2025-11-12T12:45:33Z",
           "duration": "2h59m21s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/22fa0dc8dc03571083af_davincstylegames_314844479314_1762951527//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17649
+          "viewCount": 17657
         },
         {
           "id": "2615703097",
@@ -525,7 +581,7 @@
           "createdAt": "2025-11-11T17:27:21Z",
           "duration": "3h46m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/62125ffc48a6bd6419b4_davincstylegames_314815628881_1762882036//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6281
+          "viewCount": 6283
         },
         {
           "id": "2614017057",
@@ -533,7 +589,7 @@
           "createdAt": "2025-11-09T17:24:13Z",
           "duration": "4h8m39s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3008f1c8d2f53ebdbf88_davincstylegames_314820378322_1762709047//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6447
+          "viewCount": 6448
         }
       ]
     },
@@ -546,9 +602,9 @@
           "id": "2618118306",
           "title": "[Noord] SMP Tijd voor traps en enchantments!",
           "createdAt": "2025-11-14T12:36:18Z",
-          "duration": "3h40m40s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 2
+          "duration": "4h27m43s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a7c17be37ccdd2d4a224_deem_i_314839316945_1763123772//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7715
         },
         {
           "id": "2616333665",
@@ -556,7 +612,7 @@
           "createdAt": "2025-11-12T08:59:28Z",
           "duration": "8h13m14s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/635f86b6e75fbfc24e35_deem_i_314843386194_1762937962//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 18765
+          "viewCount": 18766
         }
       ]
     },
@@ -575,9 +631,9 @@
           "id": "2618110350",
           "title": "KLAARMAKEN VOOR OORLOG TEGEN NOORD🔥- CREATOR SMP DAG 5 (NIEUWE ALERT))",
           "createdAt": "2025-11-14T12:18:25Z",
-          "duration": "3h58m42s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 6
+          "duration": "4h13m6s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f14b3b968a31ae0c617e_diontvg_314861077842_1763122698//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 15639
         },
         {
           "id": "2617263208",
@@ -585,7 +641,7 @@
           "createdAt": "2025-11-13T12:08:42Z",
           "duration": "4h8m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f5a4c7c5fa3344adcd41_diontvg_314852562386_1763035713//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13280
+          "viewCount": 13282
         },
         {
           "id": "2616406685",
@@ -593,7 +649,7 @@
           "createdAt": "2025-11-12T12:05:20Z",
           "duration": "5h1m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3f4af3aff712f2ee423c_diontvg_314862257491_1762949113//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 26094
+          "viewCount": 26095
         },
         {
           "id": "2615511438",
@@ -601,7 +657,7 @@
           "createdAt": "2025-11-11T12:15:18Z",
           "duration": "4h6m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e27aa4ca8870070576b4_diontvg_314813227601_1762863311//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 38489
+          "viewCount": 38490
         },
         {
           "id": "2614658891",
@@ -609,7 +665,7 @@
           "createdAt": "2025-11-10T12:16:55Z",
           "duration": "3h46m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/28027003736c5fc89a15_diontvg_314844142675_1762777008//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17925
+          "viewCount": 17926
         },
         {
           "id": "2614079435",
@@ -617,7 +673,7 @@
           "createdAt": "2025-11-09T18:43:17Z",
           "duration": "2h19m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/23a2203b561ba2faa3d3_diontvg_314798857937_1762713789//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5237
+          "viewCount": 5238
         },
         {
           "id": "2613844269",
@@ -625,7 +681,7 @@
           "createdAt": "2025-11-09T13:02:05Z",
           "duration": "3h51m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5298f0a8bffa9986bab9_diontvg_314835333971_1762693319//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 19712
+          "viewCount": 19713
         }
       ]
     },
@@ -635,12 +691,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618313611",
+          "title": "(dag 6) CREATOR SMP 3 EILAND ZUID (CHAOS POV)",
+          "createdAt": "2025-11-14T17:56:13Z",
+          "duration": "5h9m9s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d9d34e305861423d095e_donkaaklijn_314881862995_1763142967//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 152033
+        },
+        {
           "id": "2618071227",
           "title": "[DROPS] BLACK OPS 7 RELEASE AAA !cod #ad    (daarna mc)",
           "createdAt": "2025-11-14T10:42:08Z",
           "duration": "4h32m53s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2f19f0a7d25039af05b8_donkaaklijn_314838767697_1763116922//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 790
+          "viewCount": 61777
         },
         {
           "id": "2617340163",
@@ -648,7 +712,7 @@
           "createdAt": "2025-11-13T14:47:46Z",
           "duration": "7h7m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/99a5a4838220212b5a41_donkaaklijn_314871776595_1763045260//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 238343
+          "viewCount": 238871
         },
         {
           "id": "2616600984",
@@ -656,7 +720,7 @@
           "createdAt": "2025-11-12T17:23:56Z",
           "duration": "5h42m4s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3d09ce29d2034af0d78b_donkaaklijn_314864748371_1762968230//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 189759
+          "viewCount": 189902
         },
         {
           "id": "2615894082",
@@ -664,7 +728,7 @@
           "createdAt": "2025-11-11T21:24:44Z",
           "duration": "1h28m8s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3109d6b2bf76f039d69f_donkaaklijn_314840281426_1762896278//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 52316
+          "viewCount": 52359
         },
         {
           "id": "2615591825",
@@ -672,7 +736,7 @@
           "createdAt": "2025-11-11T14:39:13Z",
           "duration": "6h43m48s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ec5825377c92aa6b0e23_donkaaklijn_314836353874_1762871947//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 230008
+          "viewCount": 230069
         },
         {
           "id": "2614730314",
@@ -680,7 +744,7 @@
           "createdAt": "2025-11-10T14:47:33Z",
           "duration": "7h27m15s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b6edd70920ae12ffc0e0_donkaaklijn_314827662930_1762786047//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 238289
+          "viewCount": 238356
         },
         {
           "id": "2613990662",
@@ -688,7 +752,7 @@
           "createdAt": "2025-11-09T16:50:08Z",
           "duration": "6h5m14s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c41f1ac41f95a7e74033_donkaaklijn_314820044498_1762707002//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 193102
+          "viewCount": 193200
         }
       ]
     },
@@ -701,9 +765,9 @@
           "id": "2618187384",
           "title": "Dag 6 CreatorSMP Hardcore S3 🔥❄️ | Zuid POV",
           "createdAt": "2025-11-14T14:49:09Z",
-          "duration": "1h28m12s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 14
+          "duration": "8h29m18s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/3643af26a2193850d18a_duncan_315146698599_1763131740//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 70961
         },
         {
           "id": "2617326943",
@@ -711,7 +775,7 @@
           "createdAt": "2025-11-13T14:21:03Z",
           "duration": "8h38m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/5b8ed6123bd7db3afff3_duncan_315401257446_1763043654//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 77992
+          "viewCount": 78044
         },
         {
           "id": "2616421544",
@@ -719,7 +783,7 @@
           "createdAt": "2025-11-12T12:35:52Z",
           "duration": "10h30m12s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ac38fd43715b1a74ddc2_duncan_315291518053_1762950943//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 130485
+          "viewCount": 130500
         },
         {
           "id": "2615710710",
@@ -727,7 +791,7 @@
           "createdAt": "2025-11-11T17:37:47Z",
           "duration": "5h33m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ad3d846c339b11f0568b_duncan_315122149479_1762882660//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 40357
+          "viewCount": 40365
         },
         {
           "id": "2614668277",
@@ -735,7 +799,7 @@
           "createdAt": "2025-11-10T12:39:36Z",
           "duration": "10h25m2s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/d310b5347a5ce721812e_duncan_315377976550_1762778369//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 109711
+          "viewCount": 109719
         },
         {
           "id": "2614014167",
@@ -743,7 +807,7 @@
           "createdAt": "2025-11-09T17:20:14Z",
           "duration": "5h50m28s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/191c351d76364decf810_duncan_315269552101_1762708807//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 108415
+          "viewCount": 108423
         }
       ]
     },
@@ -753,12 +817,28 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618460758",
+          "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 6 - DE IJSMUUR VALT BIJNA!!! (deel 2)",
+          "createdAt": "2025-11-14T20:58:14Z",
+          "duration": "2h10m21s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8d5fa9105b813f791beb_enzoknol_314865680466_1763153888//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 57267
+        },
+        {
+          "id": "2618322144",
+          "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 6 - DE IJSMUUR VALT BIJNA!!!",
+          "createdAt": "2025-11-14T18:05:08Z",
+          "duration": "2h44m34s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/f1d4a0ea4113231d5e8e_enzoknol_315410180838_1763143502//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 61349
+        },
+        {
           "id": "2617485864",
           "title": "MINECRAFT SMP HARDCORE SURVIVAL DAG 5",
           "createdAt": "2025-11-13T18:29:31Z",
           "duration": "4h39m41s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ff50223129b9a2a0306d_enzoknol_314873706195_1763058565//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 174364
+          "viewCount": 174872
         },
         {
           "id": "2616684885",
@@ -766,7 +846,7 @@
           "createdAt": "2025-11-12T19:06:54Z",
           "duration": "3h54m48s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c68fecd72a4c4a55e3de_enzoknol_314847584082_1762974408//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 78587
+          "viewCount": 78661
         },
         {
           "id": "2616522671",
@@ -774,7 +854,7 @@
           "createdAt": "2025-11-12T15:33:13Z",
           "duration": "1h24m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5080431b085f32a27ce6_enzoknol_314863693395_1762961587//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 18663
+          "viewCount": 18677
         },
         {
           "id": "2615728240",
@@ -782,7 +862,7 @@
           "createdAt": "2025-11-11T18:00:48Z",
           "duration": "5h9m27s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/aa98ab368fa33b6d58ed_enzoknol_314838113746_1762884042//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 110527
+          "viewCount": 110620
         },
         {
           "id": "2614039646",
@@ -790,7 +870,7 @@
           "createdAt": "2025-11-09T17:54:41Z",
           "duration": "5h17m35s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0c623c785263a1b34429_enzoknol_314820691538_1762710875//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 89507
+          "viewCount": 89547
         },
         {
           "id": "2614034249",
@@ -798,7 +878,7 @@
           "createdAt": "2025-11-09T17:47:32Z",
           "duration": "2m43s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e8836bd622a64387a3cf_enzoknol_314798171601_1762710446//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3393
+          "viewCount": 3401
         }
       ]
     },
@@ -813,7 +893,7 @@
           "createdAt": "2025-11-12T11:18:29Z",
           "duration": "3h31m48s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/16fec2638e27ca0cae44_fems_314862000979_1762946303//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7393
+          "viewCount": 7452
         },
         {
           "id": "2613801806",
@@ -831,12 +911,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618363545",
+          "title": "XP gekrijge op ZUID🔥 - CreatorSMP S3 |@GameMeneer",
+          "createdAt": "2025-11-14T18:59:27Z",
+          "duration": "4h6m53s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4d6330fe36faa8fcbd16_gamemeneer_314842395089_1763146761//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9644
+        },
+        {
           "id": "2617464149",
           "title": "Klappen uitdelen tegen @Sejecem, @Roedie & @GeorgeFaralley | !ad !anno |@GameMeneer (#ad #anno117)",
           "createdAt": "2025-11-13T18:00:33Z",
           "duration": "3h43m31s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e290e06be4e942d55b5_gamemeneer_314833166929_1763056827//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 10169
+          "viewCount": 10320
         },
         {
           "id": "2616680103",
@@ -844,7 +932,7 @@
           "createdAt": "2025-11-12T19:01:37Z",
           "duration": "4h1m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b92d73ce3165f8b77a52_gamemeneer_314825634385_1762974090//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13409
+          "viewCount": 13437
         },
         {
           "id": "2615776869",
@@ -852,7 +940,7 @@
           "createdAt": "2025-11-11T19:01:50Z",
           "duration": "4h1m51s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd309b3dccb891cdc312_gamemeneer_314816673233_1762887704//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 21898
+          "viewCount": 21922
         }
       ]
     },
@@ -862,12 +950,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618393499",
+          "title": "WINNER POV!! THE LEGION TOURNAMENT MATCH 2 LETS GOOOOO! !lenovo !cs !minigame *ad",
+          "createdAt": "2025-11-14T19:34:55Z",
+          "duration": "1h14m4s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/8063b59bc4c1ef61e0a0_georgefaralley_315149546087_1763148886//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 613
+        },
+        {
           "id": "2617452771",
           "title": "🏛️Kan er maar één de beste zijn...🏛️!giveaway 🏛️| #ad #anno117 @sejecem @roedie @gamemeneer",
           "createdAt": "2025-11-13T17:45:30Z",
           "duration": "3h58m17s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/de3be2454bd8f1492b14_georgefaralley_315402717286_1763055921//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2546
+          "viewCount": 2554
         },
         {
           "id": "2615556420",
@@ -875,7 +971,7 @@
           "createdAt": "2025-11-11T13:39:37Z",
           "duration": "4h49m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/70cbb53a40743f3c8f30_georgefaralley_315386032614_1762868368//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7762
+          "viewCount": 7768
         },
         {
           "id": "2614672426",
@@ -883,7 +979,7 @@
           "createdAt": "2025-11-10T12:49:19Z",
           "duration": "4h25m32s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/27560b2dd23b06e2e02e_georgefaralley_315378016102_1762778950//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11990
+          "viewCount": 12008
         },
         {
           "id": "2614239655",
@@ -891,7 +987,7 @@
           "createdAt": "2025-11-09T22:00:50Z",
           "duration": "2h0m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/f94c0f8be7a858c2142c_georgefaralley_315271987301_1762725643//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2016
+          "viewCount": 2023
         },
         {
           "id": "2613994517",
@@ -899,7 +995,7 @@
           "createdAt": "2025-11-09T16:55:17Z",
           "duration": "5h2m2s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/06e86dfd38d7f11cef69_georgefaralley_315372667494_1762707310//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3930
+          "viewCount": 3938
         }
       ]
     },
@@ -909,12 +1005,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618355262",
+          "title": "TIJD VOOR OORLOG - CreatorSMP Hardcore (DAG 6)",
+          "createdAt": "2025-11-14T18:49:40Z",
+          "duration": "4h13m24s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/26566c71983091437005_harm_live_314882407123_1763146170//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2375
+        },
+        {
           "id": "2617459463",
           "title": "KOM MAAR OP MET DIE MACE - CreatorSMP Hardcore (DAG 5)",
           "createdAt": "2025-11-13T17:55:10Z",
           "duration": "3h8m18s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f95d3f768583f787a0c6_harm_live_314833097169_1763056500//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2077
+          "viewCount": 2112
         },
         {
           "id": "2616653989",
@@ -922,7 +1026,7 @@
           "createdAt": "2025-11-12T18:30:20Z",
           "duration": "4h31m2s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bfcfcb9f165bb817009c_harm_live_314865526099_1762972209//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1996
+          "viewCount": 1999
         },
         {
           "id": "2614852695",
@@ -930,7 +1034,7 @@
           "createdAt": "2025-11-10T18:00:29Z",
           "duration": "3h19m35s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2d620cf2f5594dcbfa8d_harm_live_314846567379_1762797619//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2787
+          "viewCount": 2790
         },
         {
           "id": "2614140536",
@@ -938,7 +1042,7 @@
           "createdAt": "2025-11-09T19:54:36Z",
           "duration": "2h57m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/62e50af32e0c416f79bc_harm_live_314799728977_1762718066//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1766
+          "viewCount": 1767
         }
       ]
     },
@@ -953,7 +1057,7 @@
           "createdAt": "2025-11-13T19:06:08Z",
           "duration": "2h33m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0f0d415bf88c586a0285_henryanand_314855755858_1763060762//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 939
+          "viewCount": 957
         },
         {
           "id": "2617337617",
@@ -977,7 +1081,7 @@
           "createdAt": "2025-11-10T16:37:45Z",
           "duration": "6h30m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/41748af52700f2344a23_henryanand_314828472146_1762792659//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8364
+          "viewCount": 8365
         },
         {
           "id": "2614021527",
@@ -995,12 +1099,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618367774",
+          "title": "[DAG 6] CREATORSMP LAATSTE BEETJES VOOR DE IJSMUUR!🔥",
+          "createdAt": "2025-11-14T19:03:06Z",
+          "duration": "4h36m55s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b469cfb53f4b49bad242_igortjuh_314842447441_1763146980//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 30818
+        },
+        {
           "id": "2617498989",
           "title": "[DAG 5] TOTEMS FIXEN VANDAAG JONGENS!🔥",
           "createdAt": "2025-11-13T18:48:08Z",
           "duration": "4h24m5s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2bfe096da7ee973c5fe4_igortjuh_315301929189_1763059682//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 48333
+          "viewCount": 48606
         },
         {
           "id": "2617315817",
@@ -1008,7 +1120,7 @@
           "createdAt": "2025-11-13T14:00:15Z",
           "duration": "3h12m12s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/61d6aa20105c8e986c36_igortjuh_314831276753_1763042409//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 32432
+          "viewCount": 32455
         },
         {
           "id": "2616544400",
@@ -1016,7 +1128,7 @@
           "createdAt": "2025-11-12T16:05:18Z",
           "duration": "7h46m23s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4c0fd6682fec4431711b_igortjuh_314863982163_1762963512//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 86778
+          "viewCount": 86801
         },
         {
           "id": "2615568388",
@@ -1024,7 +1136,7 @@
           "createdAt": "2025-11-11T14:00:23Z",
           "duration": "3h30m54s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/496254438cbff6567cfe_igortjuh_314836080210_1762869617//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 53721
+          "viewCount": 53729
         },
         {
           "id": "2614773272",
@@ -1032,7 +1144,7 @@
           "createdAt": "2025-11-10T16:01:18Z",
           "duration": "5h7m27s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/3c5618b63e766832de9b_igortjuh_315110905447_1762790471//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 60542
+          "viewCount": 60550
         },
         {
           "id": "2613998099",
@@ -1040,7 +1152,7 @@
           "createdAt": "2025-11-09T16:59:40Z",
           "duration": "6h23m1s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5bda8047804b28ba0dd6_igortjuh_314797671505_1762707573//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 92763
+          "viewCount": 92769
         }
       ]
     },
@@ -1055,7 +1167,7 @@
           "createdAt": "2025-11-13T11:42:53Z",
           "duration": "4h55m52s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f6afff94b70d1b6bc5bc_imkefleur_314852431570_1763034167//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11623
+          "viewCount": 11687
         },
         {
           "id": "2613962965",
@@ -1063,7 +1175,7 @@
           "createdAt": "2025-11-09T16:09:49Z",
           "duration": "4h7m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/392ac52919c9e0837cf2_imkefleur_314836937299_1762704582//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 12231
+          "viewCount": 12240
         }
       ]
     },
@@ -1073,12 +1185,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618345031",
+          "title": "❄️ CreatorSMP hardcore dag 6 stream 4 ❄️ we moeten nog zo veel doen!!! ❄️ !Discord ❄️",
+          "createdAt": "2025-11-14T18:35:43Z",
+          "duration": "3h19m45s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9495802ab7a1cd6fd4ba_ingmarmol_314863975762_1763145337//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 664
+        },
+        {
           "id": "2617457757",
           "title": "❄️ CreatorSMP hardcore dag 5 stream3 ❄️ eindelijk beginnen aan me armor ❄️ !Discord ❄️",
           "createdAt": "2025-11-13T17:52:40Z",
           "duration": "3h36m16s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7188e95f40354ac7f497_ingmarmol_314833067601_1763056355//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 710
+          "viewCount": 719
         },
         {
           "id": "2614834717",
@@ -1086,7 +1206,7 @@
           "createdAt": "2025-11-10T17:34:30Z",
           "duration": "4h37m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/29f96b8a3d591e58c655_ingmarmol_314846282707_1762796064//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1762
+          "viewCount": 1763
         },
         {
           "id": "2614022952",
@@ -1115,9 +1235,9 @@
           "id": "2618136797",
           "title": "ziek maar we moeten GRINDEN! CREATOR SMP HARDCORE 3! DAG 4💜 !meta - !spotify -  !discord - !youtube 💜",
           "createdAt": "2025-11-14T13:12:52Z",
-          "duration": "3h4m5s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 8
+          "duration": "3h42m32s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/92b44d0ddf43814e95ef_its_ankie_314879673043_1763125966//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7997
         },
         {
           "id": "2615734041",
@@ -1125,7 +1245,7 @@
           "createdAt": "2025-11-11T18:07:19Z",
           "duration": "3h41m56s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e571813eeb63e129bad_its_ankie_314855635667_1762884432//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6047
+          "viewCount": 6053
         },
         {
           "id": "2614853732",
@@ -1133,7 +1253,7 @@
           "createdAt": "2025-11-10T18:01:31Z",
           "duration": "4h9m53s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a3d383c176e79821c77f_its_ankie_314806930897_1762797685//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6933
+          "viewCount": 6936
         },
         {
           "id": "2613997141",
@@ -1141,7 +1261,7 @@
           "createdAt": "2025-11-09T16:58:34Z",
           "duration": "3h43m12s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1b01fd53c3c5c75b73d3_its_ankie_314820130386_1762707508//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7352
+          "viewCount": 7361
         }
       ]
     },
@@ -1154,9 +1274,9 @@
           "id": "2618175202",
           "title": "🔴DAG 4 CREATOR SMP - VANDAAG EEN RAID DOEN?! | !csmp !dood",
           "createdAt": "2025-11-14T14:26:10Z",
-          "duration": "1h50m46s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 4
+          "duration": "5h1m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd5b669c493585560053_izza_314880110931_1763130364//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6874
         },
         {
           "id": "2616434104",
@@ -1164,7 +1284,7 @@
           "createdAt": "2025-11-12T13:00:24Z",
           "duration": "7h45m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d80fe2354725dabdeb6a_izza_314822612945_1762952418//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17062
+          "viewCount": 17063
         },
         {
           "id": "2614768301",
@@ -1172,7 +1292,7 @@
           "createdAt": "2025-11-10T15:54:14Z",
           "duration": "6h9m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/faaf35fec81d07dfb2ac_izza_314828127186_1762790048//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 10234
+          "viewCount": 10237
         },
         {
           "id": "2613990411",
@@ -1180,7 +1300,7 @@
           "createdAt": "2025-11-09T16:49:46Z",
           "duration": "6h54m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a2d2057614e153184b03_izza_314820041554_1762706980//thumb/thumb2-%{width}x%{height}.jpg",
-          "viewCount": 9396
+          "viewCount": 9398
         }
       ]
     },
@@ -1195,7 +1315,7 @@
           "createdAt": "2025-11-13T18:47:19Z",
           "duration": "4h21m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/629d674595b8b25a6295_jactha___314873894867_1763059632//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 45483
+          "viewCount": 46067
         },
         {
           "id": "2615766799",
@@ -1203,7 +1323,7 @@
           "createdAt": "2025-11-11T18:51:02Z",
           "duration": "4h24m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bafb306e5b585fc46089_jactha___314856102227_1762887056//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 38368
+          "viewCount": 38397
         },
         {
           "id": "2614918600",
@@ -1211,7 +1331,7 @@
           "createdAt": "2025-11-10T19:27:16Z",
           "duration": "3h54m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a644687015d43e563f80_jactha___314847595091_1762802829//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 34150
+          "viewCount": 34177
         },
         {
           "id": "2613929029",
@@ -1219,7 +1339,7 @@
           "createdAt": "2025-11-09T15:20:11Z",
           "duration": "6h59m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/875be003afdb8485c1d3_jactha___314836495059_1762701604//thumb/thumb2-%{width}x%{height}.jpg",
-          "viewCount": 42813
+          "viewCount": 42828
         }
       ]
     },
@@ -1234,7 +1354,7 @@
           "createdAt": "2025-11-13T13:22:05Z",
           "duration": "6h39m1s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/27e85c04bf094c49a0e6_javierostv_314831076689_1763040119//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7816
+          "viewCount": 7837
         },
         {
           "id": "2616503748",
@@ -1242,7 +1362,7 @@
           "createdAt": "2025-11-12T15:02:22Z",
           "duration": "9h27m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b70669ec888c80c890ad_javierostv_314823384017_1762959736//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13328
+          "viewCount": 13330
         },
         {
           "id": "2615581195",
@@ -1258,7 +1378,7 @@
           "createdAt": "2025-11-10T14:10:00Z",
           "duration": "10h9m31s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/977473ffc61b2974651a_javierostv_314827446098_1762783794//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7664
+          "viewCount": 7665
         },
         {
           "id": "2614027384",
@@ -1266,7 +1386,7 @@
           "createdAt": "2025-11-09T17:38:02Z",
           "duration": "5h55m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/667a9c85d644fe539814_javierostv_314837813459_1762709876//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2243
+          "viewCount": 2244
         }
       ]
     },
@@ -1279,9 +1399,9 @@
           "id": "2618193151",
           "title": "MORGEN SMELT DE IJSMUUR!!❄️CreatorSMP S3❄️DAG 6 ❄️",
           "createdAt": "2025-11-14T14:58:56Z",
-          "duration": "1h18m29s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 34
+          "duration": "8h3m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f33cc0ac7aa06dfd1d40_jeremyfrieser_314880327123_1763132329//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 129805
         },
         {
           "id": "2617415307",
@@ -1289,7 +1409,7 @@
           "createdAt": "2025-11-13T16:52:42Z",
           "duration": "6h10m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6b9bead2bf7a8258382d_jeremyfrieser_314872727635_1763052753//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 128604
+          "viewCount": 128803
         },
         {
           "id": "2616517257",
@@ -1297,7 +1417,7 @@
           "createdAt": "2025-11-12T15:24:12Z",
           "duration": "7h16m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9c513f842d4b91b9872c_jeremyfrieser_314863611731_1762961043//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 190303
+          "viewCount": 190405
         },
         {
           "id": "2615629459",
@@ -1305,7 +1425,7 @@
           "createdAt": "2025-11-11T15:41:02Z",
           "duration": "7h24m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9927d7b7392fd3f9861d_jeremyfrieser_314854227411_1762875655//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 147380
+          "viewCount": 147422
         },
         {
           "id": "2614747597",
@@ -1313,7 +1433,7 @@
           "createdAt": "2025-11-10T15:16:54Z",
           "duration": "7h49m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b3b447bff6c003166011_jeremyfrieser_314827870290_1762787807//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 177772
+          "viewCount": 177812
         },
         {
           "id": "2614000090",
@@ -1321,7 +1441,7 @@
           "createdAt": "2025-11-09T17:01:31Z",
           "duration": "6h5m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/13b8aac58fe398baa8a1_jeremyfrieser_314797694033_1762707684//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 164267
+          "viewCount": 164300
         }
       ]
     },
@@ -1336,7 +1456,7 @@
           "createdAt": "2025-11-11T18:16:12Z",
           "duration": "2h34m38s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/bf9ca8183d3c3b9ffd87_jilleke_314855726675_1762884966/thumb/custom-a5dd1869-71a4-4313-9829-8aa397682493-%{width}x%{height}.jpeg",
-          "viewCount": 2213
+          "viewCount": 2218
         },
         {
           "id": "2614056668",
@@ -1354,12 +1474,52 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618469211",
+          "title": "Creator SMP: Stap 3 | Stream 110 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T21:08:01Z",
+          "duration": "2h8m1s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f529810cf80ab50c8318_its_kantje_314865798482_1763154475//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2290
+        },
+        {
+          "id": "2618456955",
+          "title": "Creator SMP: Stap 3 | Stream 110 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T20:53:24Z",
+          "duration": "9m31s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3e672213a8c137dae594_its_kantje_314865624914_1763153598//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 233
+        },
+        {
+          "id": "2618412518",
+          "title": "Creator SMP: Stap 3 | Stream 110 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T19:58:46Z",
+          "duration": "53m40s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9cea52b55f4ac93004d4_its_kantje_314864966866_1763150321//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 963
+        },
+        {
+          "id": "2618406986",
+          "title": "Creator SMP: Stap 3 | Stream 110 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T19:52:13Z",
+          "duration": "4m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d9c4e48049831a8d58dd_its_kantje_314864881490_1763149928//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 77
+        },
+        {
+          "id": "2618404860",
+          "title": "Creator SMP: Stap 3 | Stream 110 of 2025! !Discord [NL/ENG]",
+          "createdAt": "2025-11-14T19:49:43Z",
+          "duration": "1m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ef7bc5aa605cd57fbecb_its_kantje_314864854098_1763149777//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 59
+        },
+        {
           "id": "2618150390",
           "title": "Creator SMP: Claimen wat van mij is / Claiming what is mine. | Stream 109 of 2025! !Discord [NL/ENG]",
           "createdAt": "2025-11-14T13:40:03Z",
-          "duration": "2h37m26s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 1
+          "duration": "4h17m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/58e0c1d8467c033e6a3f_its_kantje_314879826643_1763127597//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6019
         },
         {
           "id": "2617502788",
@@ -1367,7 +1527,7 @@
           "createdAt": "2025-11-13T18:53:25Z",
           "duration": "4h23m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7dbd4e992a86d36b3dbd_its_kantje_314833760209_1763059999//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6015
+          "viewCount": 6025
         },
         {
           "id": "2617288363",
@@ -1375,7 +1535,7 @@
           "createdAt": "2025-11-13T13:03:52Z",
           "duration": "5h27m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0d5effa83ea059ac710c_its_kantje_314830986577_1763039026//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11193
+          "viewCount": 11196
         },
         {
           "id": "2616614100",
@@ -1383,7 +1543,7 @@
           "createdAt": "2025-11-12T17:41:23Z",
           "duration": "5h32m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/760f4d3e6fa03f476a1f_its_kantje_314846624594_1762969278//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8411
+          "viewCount": 8415
         }
       ]
     },
@@ -1393,12 +1553,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618326223",
+          "title": "SMP 3 ZUID",
+          "createdAt": "2025-11-14T18:10:19Z",
+          "duration": "7h7m39s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/d5d8c8f19f6f5131337e_kingkontent_315410243558_1763143810//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 157
+        },
+        {
           "id": "2617442202",
           "title": "SMP3 ZUID",
           "createdAt": "2025-11-13T17:29:51Z",
           "duration": "7h28m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b664fd11e44b2715c9b6_kingkontent_315140325991_1763054982//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 28427
+          "viewCount": 28527
         },
         {
           "id": "2615690700",
@@ -1406,7 +1574,7 @@
           "createdAt": "2025-11-11T17:09:31Z",
           "duration": "8h36m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/902f14dd9a06c3e7cdb2_kingkontent_315284895589_1762880964//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 36968
+          "viewCount": 36976
         },
         {
           "id": "2614724607",
@@ -1414,7 +1582,7 @@
           "createdAt": "2025-11-10T14:35:41Z",
           "duration": "8h36m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2a0d31bf83552c14830f_kingkontent_315275455973_1762785334//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 40556
+          "viewCount": 40565
         },
         {
           "id": "2614017623",
@@ -1422,7 +1590,7 @@
           "createdAt": "2025-11-09T17:25:02Z",
           "duration": "5h35m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/ed38514960d0e85bc57c_kingkontent_315372924646_1762709093//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 20220
+          "viewCount": 20222
         }
       ]
     },
@@ -1435,9 +1603,9 @@
           "id": "2618200811",
           "title": "BLACK OPS 7 TESTEN - MINECRAFT ERNA!🔥 !500 SUB GOAL | FNATIC Laagvliet 🧡",
           "createdAt": "2025-11-14T15:10:09Z",
-          "duration": "1h6m44s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 0
+          "duration": "3h42m6s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fcd0b1ea334bb59a5b0a_laagvliet_315161445860_1763133001//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3238
         },
         {
           "id": "2617320191",
@@ -1445,7 +1613,7 @@
           "createdAt": "2025-11-13T14:07:33Z",
           "duration": "4h3m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/db1c1047a023c0a4ce45_laagvliet_315154241764_1763042847//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3805
+          "viewCount": 3807
         },
         {
           "id": "2617316254",
@@ -1453,7 +1621,7 @@
           "createdAt": "2025-11-13T14:00:45Z",
           "duration": "3m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9b755cdaa1736693505b_laagvliet_315154197604_1763042437//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 65
+          "viewCount": 66
         },
         {
           "id": "2615557354",
@@ -1461,7 +1629,7 @@
           "createdAt": "2025-11-11T13:41:08Z",
           "duration": "3h7m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/04f6990a235c66f24da6_laagvliet_315107377506_1762868462//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7293
+          "viewCount": 7295
         },
         {
           "id": "2614728374",
@@ -1469,7 +1637,7 @@
           "createdAt": "2025-11-10T14:43:38Z",
           "duration": "4h34m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a5df5085b9a698007343_laagvliet_315132902756_1762785811//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 4074
+          "viewCount": 4075
         },
         {
           "id": "2613986013",
@@ -1487,12 +1655,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618278595",
+          "title": "HEEL TEAM ZUID GOEDZETTEN!! 🔥👑CreatorSMP Hardcore Seizoen 3👑🔥 - Dag 5",
+          "createdAt": "2025-11-14T17:06:53Z",
+          "duration": "4h30m8s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/baa294ec5a301e47987c_linktijger_315147823335_1763140006//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 24621
+        },
+        {
           "id": "2617285760",
           "title": "AD | Is dit ECHT de BESTE Mario game? - !Nintendo #SuperMarioGalaxy #NintendoSwitch",
           "createdAt": "2025-11-13T12:59:55Z",
           "duration": "11h2m54s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/d0205288f192495ad973_linktijger_315400830310_1763038789//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 71418
+          "viewCount": 71506
         },
         {
           "id": "2616618928",
@@ -1500,7 +1676,7 @@
           "createdAt": "2025-11-12T17:47:59Z",
           "duration": "5h27m52s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a3d290e54bb12165f44d_linktijger_314846696146_1762969673//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 36245
+          "viewCount": 36259
         },
         {
           "id": "2615673675",
@@ -1508,7 +1684,7 @@
           "createdAt": "2025-11-11T16:48:23Z",
           "duration": "6h28m42s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e693e4cb9539646e5835_linktijger_314815232209_1762879696//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 44802
+          "viewCount": 44808
         },
         {
           "id": "2614670949",
@@ -1516,7 +1692,7 @@
           "createdAt": "2025-11-10T12:45:49Z",
           "duration": "10h16m6s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/606b5c75e381264bb5f0_linktijger_314804656721_1762778743//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 81150
+          "viewCount": 81169
         },
         {
           "id": "2613995870",
@@ -1524,7 +1700,7 @@
           "createdAt": "2025-11-09T16:57:01Z",
           "duration": "6h9m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/92f7d58887a48a33e7ea_linktijger_314820114258_1762707415//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 42688
+          "viewCount": 42691
         }
       ]
     },
@@ -1539,7 +1715,7 @@
           "createdAt": "2025-11-12T12:36:33Z",
           "duration": "2h30m55s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cd8b9e927e820980bac9_ljoeb_315291522021_1762950986//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2543
+          "viewCount": 2548
         },
         {
           "id": "2615526575",
@@ -1573,12 +1749,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618376760",
+          "title": "[NL] TO-DO lijstje afwerken, morgen smelt de muur!! | ZUID",
+          "createdAt": "2025-11-14T19:13:59Z",
+          "duration": "5h50m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ded0feed6574f6ec0b89_lotje_314864422482_1763147633//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 48
+        },
+        {
           "id": "2617516274",
           "title": "[NL] is het kasteel tijd?! Lore cooking!! | ZUID",
           "createdAt": "2025-11-13T19:08:17Z",
           "duration": "4h30m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4d2a9e23f50b81608098_lotje_314874162771_1763060891//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8039
+          "viewCount": 8104
         },
         {
           "id": "2616696185",
@@ -1586,7 +1770,7 @@
           "createdAt": "2025-11-12T19:21:46Z",
           "duration": "4h15m37s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0944ceb8179c99ba4031_lotje_314866153299_1762975300//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5934
+          "viewCount": 5947
         },
         {
           "id": "2614889089",
@@ -1594,7 +1778,7 @@
           "createdAt": "2025-11-10T18:51:16Z",
           "duration": "4h9m11s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fb2ef3ac29d67209db4c_lotje_314829736658_1762800670//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7568
+          "viewCount": 7572
         },
         {
           "id": "2614129216",
@@ -1602,7 +1786,7 @@
           "createdAt": "2025-11-09T19:40:45Z",
           "duration": "3h59m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bec06b7f8adf4f13bf8b_lotje_314799573201_1762717239//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5956
+          "viewCount": 5962
         }
       ]
     },
@@ -1612,12 +1796,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618294678",
+          "title": "🔥CREATORSMP DAG 6 🔥",
+          "createdAt": "2025-11-14T17:30:08Z",
+          "duration": "5h58m6s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a8a5ef2b9332b448a17c_maicobeukers_314881613779_1763141403//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 12854
+        },
+        {
           "id": "2617357203",
           "title": "🔥CREATORSMP DAG 5 - Bouwen 🔥",
           "createdAt": "2025-11-13T15:16:40Z",
           "duration": "7h53m23s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fbbaa8c7c59064514c8d_maicobeukers_314871982163_1763046994//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 23977
+          "viewCount": 24081
         },
         {
           "id": "2616665274",
@@ -1625,7 +1817,7 @@
           "createdAt": "2025-11-12T18:45:23Z",
           "duration": "4h10m22s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ad86f1f38ff1e404f3f9_maicobeukers_314825431633_1762973117//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8980
+          "viewCount": 8986
         },
         {
           "id": "2616638965",
@@ -1633,7 +1825,7 @@
           "createdAt": "2025-11-12T18:10:29Z",
           "duration": "31m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/954bc370ec5cce58771d_maicobeukers_314846967890_1762971023//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1370
+          "viewCount": 1376
         },
         {
           "id": "2615695380",
@@ -1641,7 +1833,7 @@
           "createdAt": "2025-11-11T17:15:59Z",
           "duration": "5h23m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/bd918aac3d5a94b1f9ea_maicobeukers_315387619046_1762881352//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 15181
+          "viewCount": 15202
         },
         {
           "id": "2614731303",
@@ -1649,7 +1841,7 @@
           "createdAt": "2025-11-10T14:49:22Z",
           "duration": "6h20m18s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/e79e81bbca30cdebec96_maicobeukers_315378643174_1762786156//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14246
+          "viewCount": 14249
         },
         {
           "id": "2614008436",
@@ -1657,7 +1849,7 @@
           "createdAt": "2025-11-09T17:12:19Z",
           "duration": "5h42m48s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/6e37a037d4b710f34a39_maicobeukers_315102470247_1762708333//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 15502
+          "viewCount": 15505
         }
       ]
     },
@@ -1667,12 +1859,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618355931",
+          "title": "❄️CreatorSMP NOORD❄️ | Verder met Project Schaduw🐦‍⬛ !discord !csmp",
+          "createdAt": "2025-11-14T18:50:33Z",
+          "duration": "4h12m46s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/d571eee6faf01eaf6d18_manoontje_315410663526_1763146227//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1072
+        },
+        {
           "id": "2616628605",
           "title": "🔥CreatorSMP S3🔥 | Wilde plannen🫢 !discord !csmp",
           "createdAt": "2025-11-12T17:59:39Z",
           "duration": "4h49m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0180adf510670c3fffd9_manoontje_314865155539_1762970373//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1365
+          "viewCount": 1381
         },
         {
           "id": "2614027550",
@@ -1688,7 +1888,16 @@
       "name": "MarnixWesthuis",
       "twitchUsername": "marnixwesthuis",
       "team": 1,
-      "vods": []
+      "vods": [
+        {
+          "id": "2618173337",
+          "title": "🔥CREATORSMP - ZUID | !meta !deaths !leeftijd !kortlontje",
+          "createdAt": "2025-11-14T14:22:23Z",
+          "duration": "4h18m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/67b142ed96bcdf5d292b_marnixwesthuis_314839918673_1763130137//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 1429
+        }
+      ]
     },
     {
       "name": "MaysieLive",
@@ -1699,9 +1908,9 @@
           "id": "2618128943",
           "title": "CreatorSMP Dag 6! Het hele eiland stacken!",
           "createdAt": "2025-11-14T12:59:10Z",
-          "duration": "3h18m21s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 19
+          "duration": "10h19m27s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f61116035257ef8c89c4_maysielive_314861267922_1763125144//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 42693
         },
         {
           "id": "2617647311",
@@ -1709,7 +1918,7 @@
           "createdAt": "2025-11-13T22:06:49Z",
           "duration": "1h35m24s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/26cef313c1e5c625bde6_maysielive_314876113619_1763071603//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6624
+          "viewCount": 6644
         },
         {
           "id": "2617631896",
@@ -1717,7 +1926,7 @@
           "createdAt": "2025-11-13T21:45:29Z",
           "duration": "17m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a340043203f90b39b13a_maysielive_314875927891_1763070323//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1225
+          "viewCount": 1229
         },
         {
           "id": "2617327409",
@@ -1725,7 +1934,7 @@
           "createdAt": "2025-11-13T14:21:59Z",
           "duration": "7h22m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5b715031ab452c1966db_maysielive_314871622739_1763043713//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 20127
+          "viewCount": 20140
         },
         {
           "id": "2616738000",
@@ -1733,7 +1942,7 @@
           "createdAt": "2025-11-12T20:14:32Z",
           "duration": "3h26m56s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ce4f5789b04e78ebf2ab_maysielive_314866749011_1762978466//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13317
+          "viewCount": 13325
         },
         {
           "id": "2616472982",
@@ -1741,7 +1950,7 @@
           "createdAt": "2025-11-12T14:09:56Z",
           "duration": "4h5m45s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1d0094ba4703400770e5_maysielive_314823028305_1762956589//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 30356
+          "viewCount": 30362
         },
         {
           "id": "2615846853",
@@ -1749,7 +1958,7 @@
           "createdAt": "2025-11-11T20:25:06Z",
           "duration": "3h32m14s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2e76fc647342a3c451b7_maysielive_314839706066_1762892700//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6472
+          "viewCount": 6473
         },
         {
           "id": "2615590704",
@@ -1757,7 +1966,7 @@
           "createdAt": "2025-11-11T14:37:14Z",
           "duration": "5h43m59s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/258ed5bc876431c22615_maysielive_314836339026_1762871828//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11655
+          "viewCount": 11663
         },
         {
           "id": "2613998782",
@@ -1765,7 +1974,7 @@
           "createdAt": "2025-11-09T17:00:17Z",
           "duration": "6h2m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fb1fa6381d7bcac96c87_maysielive_314820146898_1762707611//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7347
+          "viewCount": 7351
         }
       ]
     },
@@ -1778,9 +1987,9 @@
           "id": "2618192207",
           "title": "🔥CREATOR SMP🔥|!meta !schema !discord !socials",
           "createdAt": "2025-11-14T14:57:28Z",
-          "duration": "1h19m29s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 1
+          "duration": "8h21m48s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4b2e9574ad4f15e37987_merretje_314880318675_1763132242//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 14166
         },
         {
           "id": "2616418834",
@@ -1788,7 +1997,7 @@
           "createdAt": "2025-11-12T12:30:44Z",
           "duration": "8h15m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1120fdfb134bf1ef4007_merretje_314844398290_1762950638//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 22392
+          "viewCount": 22401
         },
         {
           "id": "2614723280",
@@ -1796,7 +2005,7 @@
           "createdAt": "2025-11-10T14:33:04Z",
           "duration": "4h2m29s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/91afd29ebc098ec10b1d_merretje_314827573842_1762785178//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9400
+          "viewCount": 9401
         },
         {
           "id": "2614132550",
@@ -1804,7 +2013,7 @@
           "createdAt": "2025-11-09T19:44:51Z",
           "duration": "1h15m59s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b29aff7dac6e13f38d4c_merretje_314799620561_1762717485//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1545
+          "viewCount": 1547
         },
         {
           "id": "2613990846",
@@ -1812,7 +2021,7 @@
           "createdAt": "2025-11-09T16:50:24Z",
           "duration": "2h53m15s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d298e57cce41f479d86c_merretje_314820047698_1762707018//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5479
+          "viewCount": 5480
         }
       ]
     },
@@ -1822,12 +2031,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2617193429",
+          "title": "(Drops) Arc 'n Chillin",
+          "createdAt": "2025-11-13T08:53:33Z",
+          "duration": "5h12m56s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/035c95fc3187cc5dc0ab_mokka_314829882449_1763024003//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 12713
+        },
+        {
           "id": "2616323330",
           "title": "Wakker worden met Arc en @jpa1r",
           "createdAt": "2025-11-12T08:30:05Z",
           "duration": "7h23m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/25a9da271b3db6d96f8d_mokka_314861075411_1762936194//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11769
+          "viewCount": 11783
         },
         {
           "id": "2615408431",
@@ -1853,12 +2070,28 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618392393",
+          "title": "Nu enge giveaway met Lenovo Legion - Daarna SMP Chaos tijd.. - #ad",
+          "createdAt": "2025-11-14T19:33:31Z",
+          "duration": "4h9m49s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1a06ffca18eb96487cc4_morrog_314882933843_1763148805//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 25586
+        },
+        {
+          "id": "2618302897",
+          "title": "Creator-toernooi in Counter-Strike met Lenovo Legion! - !toernooi #ad",
+          "createdAt": "2025-11-14T17:41:33Z",
+          "duration": "1h49m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/60ff977d9b5fd13b8d48_morrog_314881719635_1763142087//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 7878
+        },
+        {
           "id": "2618095884",
           "title": "[DROPS] UUUUUF.. Nieuwe Map in Arc lets gooo! - !boegbeeld",
           "createdAt": "2025-11-14T11:46:24Z",
           "duration": "3h6m16s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/71b613126619a87e5612_morrog_314860926802_1763120778//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 241
+          "viewCount": 16799
         },
         {
           "id": "2617260333",
@@ -1866,7 +2099,7 @@
           "createdAt": "2025-11-13T12:02:38Z",
           "duration": "4h11m56s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/171f72e5c8bcede651ce_morrog_314870901203_1763035352//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 43864
+          "viewCount": 43956
         },
         {
           "id": "2616671394",
@@ -1874,7 +2107,7 @@
           "createdAt": "2025-11-12T18:52:41Z",
           "duration": "4h7m26s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b7eb33476dc70bff68fa_morrog_314865802195_1762973555//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 32402
+          "viewCount": 32434
         },
         {
           "id": "2616422820",
@@ -1882,7 +2115,7 @@
           "createdAt": "2025-11-12T12:38:35Z",
           "duration": "2h13m51s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d0068289e11122d41e7c_morrog_314822481617_1762951109//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 32107
+          "viewCount": 32128
         },
         {
           "id": "2615754637",
@@ -1890,7 +2123,7 @@
           "createdAt": "2025-11-11T18:34:51Z",
           "duration": "4h54m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/979f219ac7a7050bbf1c_morrog_314855934163_1762886085//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 45544
+          "viewCount": 45586
         },
         {
           "id": "2614654664",
@@ -1898,7 +2131,7 @@
           "createdAt": "2025-11-10T12:07:05Z",
           "duration": "4h23m52s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d82d933eb8fea4fe4e0b_morrog_314804481873_1762776419//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 49895
+          "viewCount": 49903
         },
         {
           "id": "2614008768",
@@ -1906,7 +2139,7 @@
           "createdAt": "2025-11-09T17:12:43Z",
           "duration": "6h47m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a64a09fc7a3e2bd5011b_morrog_314837549267_1762708357//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 69721
+          "viewCount": 69755
         }
       ]
     },
@@ -1921,7 +2154,7 @@
           "createdAt": "2025-11-13T15:13:41Z",
           "duration": "7h49m38s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/28777af36a1357d3dbe8_natvlees_314853564114_1763046812//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 15943
+          "viewCount": 16010
         },
         {
           "id": "2616505247",
@@ -1929,7 +2162,7 @@
           "createdAt": "2025-11-12T15:04:34Z",
           "duration": "7h58m3s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2dea873cc76c73c9ba84_natvlees_314845334482_1762959863//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 23201
+          "viewCount": 23214
         },
         {
           "id": "2615552310",
@@ -1937,7 +2170,7 @@
           "createdAt": "2025-11-11T13:31:52Z",
           "duration": "1h28m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e11342eaa24520563143_natvlees_314835899474_1762867897//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13001
+          "viewCount": 13004
         },
         {
           "id": "2614843973",
@@ -1945,7 +2178,7 @@
           "createdAt": "2025-11-10T17:49:05Z",
           "duration": "6h41m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/52b95f374292a4eaad43_natvlees_314829075666_1762796935//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13289
+          "viewCount": 13292
         },
         {
           "id": "2613986140",
@@ -1953,7 +2186,7 @@
           "createdAt": "2025-11-09T16:43:27Z",
           "duration": "6h44m24s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/89354b887cfd2fb43389_natvlees_314819977682_1762706597//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 12603
+          "viewCount": 12605
         }
       ]
     },
@@ -1966,9 +2199,9 @@
           "id": "2618078087",
           "title": "12 UUR SPECIAL: HARDCORE CREATOR SMP | DAG 6 💖| TEAM NOORD | !discord",
           "createdAt": "2025-11-14T11:00:40Z",
-          "duration": "5h16m30s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 16
+          "duration": "12h5m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b755052fe0acd7f1fc56_noanoella_314838848209_1763118034//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 30716
         },
         {
           "id": "2617255733",
@@ -1976,7 +2209,7 @@
           "createdAt": "2025-11-13T11:53:36Z",
           "duration": "6h37m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f30787f93967865ac41c_noanoella_314830638289_1763034810//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 20944
+          "viewCount": 20951
         },
         {
           "id": "2616392743",
@@ -1984,7 +2217,7 @@
           "createdAt": "2025-11-12T11:35:52Z",
           "duration": "5h25m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/66a3f3fe796f4f39eb43_noanoella_314862092371_1762947346//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 29547
+          "viewCount": 29548
         },
         {
           "id": "2615505706",
@@ -2016,7 +2249,7 @@
           "createdAt": "2025-11-09T16:04:30Z",
           "duration": "7h8m56s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/700868283597ac9598f3_noanoella_314819609170_1762704264//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11507
+          "viewCount": 11509
         }
       ]
     },
@@ -2031,7 +2264,7 @@
           "createdAt": "2025-11-11T17:44:19Z",
           "duration": "5h47m8s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7d039a425418d4acd9f0_noeldekkers_314815817681_1762883053//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7980
+          "viewCount": 8113
         },
         {
           "id": "2614131596",
@@ -2039,7 +2272,7 @@
           "createdAt": "2025-11-09T19:43:38Z",
           "duration": "2h19m55s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/341750ca82fb21325d90_noeldekkers_314839345747_1762717411//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3721
+          "viewCount": 3724
         },
         {
           "id": "2614036337",
@@ -2047,7 +2280,7 @@
           "createdAt": "2025-11-09T17:50:13Z",
           "duration": "1h52m22s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/16c30dbf7534ede70708_noeldekkers_314820640466_1762710608//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5614
+          "viewCount": 5615
         }
       ]
     },
@@ -2060,9 +2293,9 @@
           "id": "2618141415",
           "title": "[NL] DOOMSDAY BUNKER BOUWEN, KEIZER WORDEN lol 😈 - Creator SMP",
           "createdAt": "2025-11-14T13:22:10Z",
-          "duration": "2h55m22s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 104
+          "duration": "6h29m4s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7b2c57cc23d9aca708b2_pangi_314861397074_1763126524//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 105725
         },
         {
           "id": "2617315948",
@@ -2070,7 +2303,7 @@
           "createdAt": "2025-11-13T14:00:22Z",
           "duration": "9h18m35s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3c939876ea29fc4b1387_pangi_314831277905_1763042417//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 116897
+          "viewCount": 117112
         },
         {
           "id": "2616673074",
@@ -2078,7 +2311,7 @@
           "createdAt": "2025-11-12T18:54:22Z",
           "duration": "2h56m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/a587986bd29f46a1f630_pangi_314847429586_1762973656//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 23192
+          "viewCount": 23294
         },
         {
           "id": "2615584834",
@@ -2086,7 +2319,7 @@
           "createdAt": "2025-11-11T14:27:37Z",
           "duration": "8h45m5s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/37e56ee765ad0a2e205a_pangi_314853645011_1762871250//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 89258
+          "viewCount": 89365
         },
         {
           "id": "2614901553",
@@ -2094,7 +2327,7 @@
           "createdAt": "2025-11-10T19:05:11Z",
           "duration": "2h51m56s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2dfe6c4307fc88ec772e_pangi_314829916754_1762801505//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 20770
+          "viewCount": 20786
         },
         {
           "id": "2614724605",
@@ -2102,7 +2335,7 @@
           "createdAt": "2025-11-10T14:35:41Z",
           "duration": "3h52m55s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0732065e379fcbf70efd_pangi_314844895571_1762785335//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 38486
+          "viewCount": 38522
         },
         {
           "id": "2614041557",
@@ -2110,7 +2343,7 @@
           "createdAt": "2025-11-09T17:56:48Z",
           "duration": "5h12m44s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/7d1107892605382f127a_pangi_314820717266_1762711002//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 54736
+          "viewCount": 54801
         },
         {
           "id": "2613874422",
@@ -2118,7 +2351,7 @@
           "createdAt": "2025-11-09T13:55:06Z",
           "duration": "2h27m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/267879cec7512da02534_pangi_314795965265_1762696502//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 12543
+          "viewCount": 12550
         }
       ]
     },
@@ -2128,12 +2361,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618451854",
+          "title": "TERUG OP SMP GRIND TEAM UNCIE KLAARMAKEN VOOR MUUR SMELTINGS",
+          "createdAt": "2025-11-14T20:46:39Z",
+          "duration": "2h10m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ff7a433b20e78be747e4_papaneus_314865549266_1763153193//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2150
+        },
+        {
           "id": "2617395752",
           "title": "SMP SEIZOEN 3 DAG ELKE DAG TEAM UNCIE SIDEQUESTS DOEN",
           "createdAt": "2025-11-13T16:21:11Z",
           "duration": "4h30m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e6bdfb57700c4ee39086_papaneus_314872479315_1763050865//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7358
+          "viewCount": 7408
         },
         {
           "id": "2616448900",
@@ -2141,7 +2382,7 @@
           "createdAt": "2025-11-12T13:27:19Z",
           "duration": "8h28m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/76aa83eb090387e1e577_papaneus_314844719570_1762954032//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 15569
+          "viewCount": 15571
         },
         {
           "id": "2615587322",
@@ -2149,7 +2390,7 @@
           "createdAt": "2025-11-11T14:31:34Z",
           "duration": "8h41m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/310838e6a467a4093cf5_papaneus_314853671507_1762871487//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8826
+          "viewCount": 8829
         },
         {
           "id": "2614969932",
@@ -2157,7 +2398,7 @@
           "createdAt": "2025-11-10T20:31:47Z",
           "duration": "2h34m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/39fdf3db31350efc3aef_papaneus_314848377683_1762806701//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3507
+          "viewCount": 3509
         },
         {
           "id": "2614967808",
@@ -2165,7 +2406,7 @@
           "createdAt": "2025-11-10T20:29:09Z",
           "duration": "2m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ac08431225d545240435_papaneus_314848347731_1762806543//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 56
+          "viewCount": 57
         },
         {
           "id": "2614724420",
@@ -2181,7 +2422,7 @@
           "createdAt": "2025-11-09T16:43:40Z",
           "duration": "6h5m53s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/36ea9fd61448faaf0dbf_papaneus_314797516625_1762706614//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6884
+          "viewCount": 6887
         }
       ]
     },
@@ -2191,12 +2432,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618330509",
+          "title": "🔴WIN DIT DUO POTJE en WIN GELD!",
+          "createdAt": "2025-11-14T18:16:03Z",
+          "duration": "2h15m25s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c4746b03dd81c2bf78d9_paraduze_314882075219_1763144157//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 463
+        },
+        {
           "id": "2615744351",
           "title": "🔴CHILL AVOND (kom checken)",
           "createdAt": "2025-11-11T18:21:13Z",
           "duration": "1h53m22s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/2ded2ee9f8659f249a35_paraduze_315122763751_1762885268//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 707
+          "viewCount": 714
         },
         {
           "id": "2615742427",
@@ -2204,7 +2453,7 @@
           "createdAt": "2025-11-11T18:18:42Z",
           "duration": "18s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8a72a0226aafbc8b2d2f_paraduze_314816192721_1762885111//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 31
+          "viewCount": 33
         },
         {
           "id": "2615740989",
@@ -2212,7 +2461,7 @@
           "createdAt": "2025-11-11T18:16:37Z",
           "duration": "27s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/e82931e0e65b2f24605b_paraduze_315388318310_1762884991//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 21
+          "viewCount": 23
         },
         {
           "id": "2615739243",
@@ -2228,7 +2477,7 @@
           "createdAt": "2025-11-10T18:18:50Z",
           "duration": "2h15m52s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/f4a0c571bd5126a8237d_paraduze_315932691673_1762798726//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5966
+          "viewCount": 5969
         },
         {
           "id": "2614022696",
@@ -2236,7 +2485,7 @@
           "createdAt": "2025-11-09T17:31:50Z",
           "duration": "3h37m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/fe0ea5950cc9f7ce86be_paraduze_315915250905_1762709505//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1580
+          "viewCount": 1581
         }
       ]
     },
@@ -2246,12 +2495,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618341236",
+          "title": "CREATORSMP S3 🔥 DAG 6 🔥 !noord !meta !server",
+          "createdAt": "2025-11-14T18:30:42Z",
+          "duration": "2h13m50s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b9a7296897de2c180bf6_peerkietv_315410452838_1763145035//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 939
+        },
+        {
           "id": "2615749393",
           "title": "CREATORSMP S3 🔥 DAG 3 🔥 !noord !meta !server",
           "createdAt": "2025-11-11T18:28:02Z",
           "duration": "2h14m50s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/de378d46f5ce7b5015ae_peerkietv_314855854419_1762885676//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1160
+          "viewCount": 1173
         },
         {
           "id": "2614022803",
@@ -2259,7 +2516,7 @@
           "createdAt": "2025-11-09T17:31:57Z",
           "duration": "2h48m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fac1a9c111efa18d82d0_peerkietv_314837748051_1762709511//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1472
+          "viewCount": 1473
         }
       ]
     },
@@ -2269,12 +2526,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618364590",
+          "title": "🟢 CREATOR SMP 🟢 VANAVOND LIVE I.P.V. ZATERDAG 🟢 35% KORTING OP 5 SUBS OF MEER GIFTEN 🟢 GEEN !META 🟢 !TANGIA 🟢 !DISCORD 🟢",
+          "createdAt": "2025-11-14T19:00:19Z",
+          "duration": "3h20m43s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/116781a0b80785f2b6e0_peezynl_314882533459_1763146812//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 4106
+        },
+        {
           "id": "2617505597",
           "title": "🟢 CREATOR SMP 🟢 MORGEN LIVE I.P.V. ZATERDAG 🟢 35% KORTING OP 5 SUBS OF MEER GIFTEN 🟢 GEEN !META 🟢 !TANGIA 🟢 !DISCORD 🟢",
           "createdAt": "2025-11-13T18:56:58Z",
           "duration": "5h41m24s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e433b19510eb30c8d551_peezynl_314855637970_1763060210//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2700
+          "viewCount": 2713
         },
         {
           "id": "2615775143",
@@ -2282,7 +2547,7 @@
           "createdAt": "2025-11-11T19:00:25Z",
           "duration": "4h23m46s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/97e39531104fbeaed88d_peezynl_314838760530_1762887618//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1161
+          "viewCount": 1164
         },
         {
           "id": "2614017202",
@@ -2300,12 +2565,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618246972",
+          "title": "🟡SMP3 - ZUID - TRAPS fixen 🟡",
+          "createdAt": "2025-11-14T16:22:28Z",
+          "duration": "5h10m53s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bff02da67304bb2c0e43_puddingb00m_314840849617_1763137342//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 17771
+        },
+        {
           "id": "2617400237",
           "title": "🟡SMP3 - TRAPS & PREPS 🟡",
           "createdAt": "2025-11-13T16:28:35Z",
           "duration": "6h36m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/895773efcaed3a9a85ed_puddingb00m_314872536403_1763051309//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 21248
+          "viewCount": 21338
         },
         {
           "id": "2615740270",
@@ -2313,7 +2586,7 @@
           "createdAt": "2025-11-11T18:15:38Z",
           "duration": "5h31m28s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4e3ed29f67503d04cfb5_puddingb00m_314816160081_1762884932//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 19821
+          "viewCount": 19845
         },
         {
           "id": "2614872408",
@@ -2321,7 +2594,7 @@
           "createdAt": "2025-11-10T18:27:29Z",
           "duration": "4h35m23s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/973a377f8654a3089720_puddingb00m_315112491367_1762799242//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14728
+          "viewCount": 14744
         },
         {
           "id": "2614016924",
@@ -2329,7 +2602,7 @@
           "createdAt": "2025-11-09T17:24:01Z",
           "duration": "6h23m59s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ba5ef3c7a5b9124b1ca8_puddingb00m_314837664211_1762709035//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 22100
+          "viewCount": 22108
         }
       ]
     },
@@ -2344,7 +2617,7 @@
           "createdAt": "2025-11-13T17:45:00Z",
           "duration": "6h26m26s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6e3a1a78f02f23b1a983_puqlive_314854821714_1763055894//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9905
+          "viewCount": 9924
         },
         {
           "id": "2615755937",
@@ -2352,7 +2625,7 @@
           "createdAt": "2025-11-11T18:36:33Z",
           "duration": "5h24m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d90755221dafb7637eb3_puqlive_314855950675_1762886187//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9268
+          "viewCount": 9273
         },
         {
           "id": "2614894010",
@@ -2360,7 +2633,7 @@
           "createdAt": "2025-11-10T18:57:26Z",
           "duration": "3h31m37s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0118f4b506fc14aa0ede_puqlive_314829812818_1762801040//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6122
+          "viewCount": 6125
         },
         {
           "id": "2613986869",
@@ -2383,7 +2656,7 @@
           "createdAt": "2025-11-13T10:59:30Z",
           "duration": "6h22m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/02c5b892123189b63649_puxque_314852222290_1763031564//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14847
+          "viewCount": 14906
         },
         {
           "id": "2616404765",
@@ -2423,7 +2696,16 @@
       "name": "Qucee",
       "twitchUsername": "qucee",
       "team": 1,
-      "vods": []
+      "vods": [
+        {
+          "id": "2618318041",
+          "title": "Minecraft CreatorSMP Hardcore 3 ( TEAM ZUID)",
+          "createdAt": "2025-11-14T18:00:45Z",
+          "duration": "3h7m52s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fb352e3bc94789acba36_qucee_314841765969_1763143234//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 26035
+        }
+      ]
     },
     {
       "name": "QuintenVms",
@@ -2431,12 +2713,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618216560",
+          "title": "🔴 DAG 6 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
+          "createdAt": "2025-11-14T15:36:32Z",
+          "duration": "6h57m49s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c878546abb775b5114fb_quintenvms_314880607187_1763134586//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3460
+        },
+        {
           "id": "2617595977",
           "title": "🔴 RUZIE MAKEN MET NOORD | DAG 5 | MINECRAFT CREATORSMP HARDCORE 3! 🔥 | KAMP ZUID DINGEN 🧭 !team",
           "createdAt": "2025-11-13T20:53:45Z",
           "duration": "2h18m51s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/680b040dde96e7e6d8b7_quintenvms_314835231697_1763067219//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1731
+          "viewCount": 1744
         },
         {
           "id": "2617472985",
@@ -2444,7 +2734,7 @@
           "createdAt": "2025-11-13T18:11:08Z",
           "duration": "2h26m2s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/079479bf9f90daee2112_quintenvms_314833304145_1763057462//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 823
+          "viewCount": 825
         },
         {
           "id": "2617336396",
@@ -2452,7 +2742,7 @@
           "createdAt": "2025-11-13T14:40:08Z",
           "duration": "1h15m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f1ff58c0ae528b07af80_quintenvms_314831515985_1763044802//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 578
+          "viewCount": 579
         },
         {
           "id": "2616605107",
@@ -2460,7 +2750,7 @@
           "createdAt": "2025-11-12T17:29:30Z",
           "duration": "4h37m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c7cf29662b7cf8262b4e_quintenvms_314864804563_1762968564//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1942
+          "viewCount": 1943
         },
         {
           "id": "2615714685",
@@ -2484,7 +2774,7 @@
           "createdAt": "2025-11-09T17:14:56Z",
           "duration": "5h52m21s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/298e98494304e028cb92_quintenvms_314820285778_1762708490//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3904
+          "viewCount": 3905
         }
       ]
     },
@@ -2494,12 +2784,20 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618158965",
+          "title": "Brug bouwen naar noord🌫️🌫️ CreatorSMP 3  | !merch",
+          "createdAt": "2025-11-14T13:57:16Z",
+          "duration": "3h48m14s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9fab73be7eccbfb6bff6_roedie_314879923667_1763128630//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13592
+        },
+        {
           "id": "2617459033",
           "title": "ANNO 117 STRIJD TEGEN @gamemeneer @georgefaralley @sejecem !ad #anno117  | !merch",
           "createdAt": "2025-11-13T17:54:36Z",
           "duration": "3h56m57s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6f3f96f537537dbcc2b9_roedie_314833091665_1763056469//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5638
+          "viewCount": 5654
         },
         {
           "id": "2616610256",
@@ -2507,7 +2805,7 @@
           "createdAt": "2025-11-12T17:36:16Z",
           "duration": "5h24m13s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/aeb93c62230c841aee0d_roedie_316056917851_1762968970//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11933
+          "viewCount": 11949
         },
         {
           "id": "2615593405",
@@ -2515,7 +2813,7 @@
           "createdAt": "2025-11-11T14:41:59Z",
           "duration": "5h57m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f3429c72b412a7e45fc0_roedie_314853747795_1762872114//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 16725
+          "viewCount": 16738
         },
         {
           "id": "2614871990",
@@ -2523,7 +2821,7 @@
           "createdAt": "2025-11-10T18:26:51Z",
           "duration": "1h38m41s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/289eec9ce6baa5606dbc_roedie_315974624346_1762799206//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3875
+          "viewCount": 3885
         },
         {
           "id": "2614043572",
@@ -2531,7 +2829,7 @@
           "createdAt": "2025-11-09T17:59:03Z",
           "duration": "5h6m9s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/5ffed374cee376631395_roedie_314798307921_1762711137//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14204
+          "viewCount": 14206
         }
       ]
     },
@@ -2544,9 +2842,9 @@
           "id": "2618196676",
           "title": "CREATOR SMP SEIZOEN 3: DAG 6 - RONALD (meldingen werken eindelijk!!!!)",
           "createdAt": "2025-11-14T15:03:24Z",
-          "duration": "1h13m50s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 0
+          "duration": "2h23m13s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1b064f63c8bce40c133e_ronald_314840195793_1763132598//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2095
         },
         {
           "id": "2617463719",
@@ -2554,7 +2852,7 @@
           "createdAt": "2025-11-13T18:00:15Z",
           "duration": "2h37m35s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/793f9be40b2f6b0d459e_ronald_314833157841_1763056808//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2127
+          "viewCount": 2134
         },
         {
           "id": "2615727420",
@@ -2562,7 +2860,7 @@
           "createdAt": "2025-11-11T18:00:12Z",
           "duration": "2h42m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/85632976bae3bc2027de_ronald_314838104530_1762884006//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1883
+          "viewCount": 1884
         },
         {
           "id": "2614831744",
@@ -2578,7 +2876,7 @@
           "createdAt": "2025-11-09T17:44:01Z",
           "duration": "3h35m27s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bfd7a44e264538fb7d62_ronald_314837880147_1762710235//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6180
+          "viewCount": 6193
         }
       ]
     },
@@ -2591,9 +2889,9 @@
           "id": "2618160364",
           "title": "🔴 DAG 6 | MINECRAFT CREATOR SMP 3! 🔥 | Kamp Noord 🧭 - Timestream 108",
           "createdAt": "2025-11-14T13:59:49Z",
-          "duration": "2h17m24s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 44
+          "duration": "11h46m54s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ccdc11f40ac59fe21dda_royalistiq_314879940435_1763128784//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 414
         },
         {
           "id": "2617307653",
@@ -2601,7 +2899,7 @@
           "createdAt": "2025-11-13T13:44:10Z",
           "duration": "6h36m44s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/b7c09b0bb8407a3c98bd_royalistiq_316072093787_1763041445//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 63424
+          "viewCount": 63450
         },
         {
           "id": "2616863895",
@@ -2609,7 +2907,7 @@
           "createdAt": "2025-11-12T23:12:16Z",
           "duration": "2m3s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/53dd2f41384a2dfd960d_royalistiq_316062123611_1762989132//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 1152
+          "viewCount": 1159
         },
         {
           "id": "2616564835",
@@ -2617,7 +2915,7 @@
           "createdAt": "2025-11-12T16:36:14Z",
           "duration": "6h35m42s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/a62e5ce4f4bea88fb5af_royalistiq_316056044635_1762965370//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 58098
+          "viewCount": 58103
         },
         {
           "id": "2615591716",
@@ -2625,7 +2923,7 @@
           "createdAt": "2025-11-11T14:39:01Z",
           "duration": "8h4m24s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/832844daafca7a8fb2a6_royalistiq_315990761050_1762871937//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 72668
+          "viewCount": 72672
         },
         {
           "id": "2614698183",
@@ -2633,7 +2931,7 @@
           "createdAt": "2025-11-10T13:43:16Z",
           "duration": "9h9m11s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/35803fa48590daf3f982_royalistiq_315972420698_1762782191//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 87650
+          "viewCount": 87652
         },
         {
           "id": "2614111554",
@@ -2641,7 +2939,7 @@
           "createdAt": "2025-11-09T19:19:26Z",
           "duration": "3h43m37s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/cc13874504330523c542_royalistiq_315958363866_1762715962//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 27054
+          "viewCount": 27056
         },
         {
           "id": "2613987299",
@@ -2649,7 +2947,7 @@
           "createdAt": "2025-11-09T16:45:08Z",
           "duration": "2h27m3s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/57cdd8b1d530b07dcf25_royalistiq_315955733082_1762706703//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 29268
+          "viewCount": 29269
         }
       ]
     },
@@ -2659,12 +2957,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618296292",
+          "title": "[NL] ❄️ Meest betrouwbare persoon op NOORD -> CSMP day 6! -> !csmp !meta -> !113",
+          "createdAt": "2025-11-14T17:32:13Z",
+          "duration": "9h10m0s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/f382bbf485f0f0844034_sandramatis_314841480785_1763141527//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 10
+        },
+        {
           "id": "2617273853",
           "title": "[NL] ❄️ CSMP day 4! in de middag? -> !csmp !meta -> !113",
           "createdAt": "2025-11-13T12:33:12Z",
           "duration": "4h49m40s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/20e59b65fea254b4aacd_sandramatis_314830839505_1763037186//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 12897
+          "viewCount": 12938
         },
         {
           "id": "2616673667",
@@ -2672,7 +2978,7 @@
           "createdAt": "2025-11-12T18:55:00Z",
           "duration": "6h22m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0b2d1d4a0824e0d3d484_sandramatis_314865829715_1762973693//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 6146
+          "viewCount": 6154
         },
         {
           "id": "2615699467",
@@ -2680,7 +2986,7 @@
           "createdAt": "2025-11-11T17:22:00Z",
           "duration": "7h2m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/c4a20932a052c7d9a8ab_sandramatis_314855160531_1762881713//thumb/thumb1-%{width}x%{height}.jpg",
-          "viewCount": 5821
+          "viewCount": 5827
         },
         {
           "id": "2614014838",
@@ -2688,7 +2994,7 @@
           "createdAt": "2025-11-09T17:21:06Z",
           "duration": "7h24m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fbd90b5ba542f13a07d8_sandramatis_314797892689_1762708860//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 4490
+          "viewCount": 4493
         }
       ]
     },
@@ -2703,7 +3009,7 @@
           "createdAt": "2025-11-12T17:56:04Z",
           "duration": "4h53m55s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6ad0c02bcb0d0c4e94a9_sanddayhd_314846783442_1762970158//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 12918
+          "viewCount": 12961
         },
         {
           "id": "2616438687",
@@ -2711,7 +3017,7 @@
           "createdAt": "2025-11-12T13:07:47Z",
           "duration": "2h55m16s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cb17a81a094f6eaf4e84_sanddayhd_314822658769_1762952861//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6301
+          "viewCount": 6302
         },
         {
           "id": "2615800216",
@@ -2719,7 +3025,7 @@
           "createdAt": "2025-11-11T19:29:48Z",
           "duration": "3h35m59s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b5f1e017155e0a59efa2_sanddayhd_315286628965_1762889382//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2033
+          "viewCount": 2037
         },
         {
           "id": "2615563462",
@@ -2743,7 +3049,7 @@
           "createdAt": "2025-11-10T13:29:57Z",
           "duration": "3h1m55s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/7d4995b72d23fa771f58_sanddayhd_315378214886_1762781391//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2421
+          "viewCount": 2422
         },
         {
           "id": "2614040763",
@@ -2751,7 +3057,7 @@
           "createdAt": "2025-11-09T17:55:54Z",
           "duration": "5h19m45s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/074bcccbe46dc76d5302_sanddayhd_314798268241_1762710948//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 2856
+          "viewCount": 2859
         }
       ]
     },
@@ -2766,7 +3072,7 @@
           "createdAt": "2025-11-14T11:08:07Z",
           "duration": "3h53m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6a638cc1e637b6894b63_sejecem_314879062227_1763118480//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 22
+          "viewCount": 8342
         },
         {
           "id": "2617464004",
@@ -2774,7 +3080,7 @@
           "createdAt": "2025-11-13T18:00:26Z",
           "duration": "3h45m19s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/757395c660f7f479bf9c_sejecem_314873378003_1763056820//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 4816
+          "viewCount": 4820
         },
         {
           "id": "2616385467",
@@ -2782,7 +3088,7 @@
           "createdAt": "2025-11-12T11:17:57Z",
           "duration": "5h44m17s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/80876d249e4e833b53bb_sejecem_314822072785_1762946271//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 19352
+          "viewCount": 19354
         },
         {
           "id": "2616378867",
@@ -2790,7 +3096,7 @@
           "createdAt": "2025-11-12T11:01:50Z",
           "duration": "15m47s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/021ec4ec9428cea7b659_sejecem_314861903827_1762945303//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 988
+          "viewCount": 989
         },
         {
           "id": "2614677981",
@@ -2798,7 +3104,7 @@
           "createdAt": "2025-11-10T13:00:44Z",
           "duration": "4h21m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/9d90a03ae60b8085d24e_sejecem_314804730449_1762779637//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 25983
+          "viewCount": 25985
         },
         {
           "id": "2614023310",
@@ -2806,7 +3112,7 @@
           "createdAt": "2025-11-09T17:32:40Z",
           "duration": "7h0m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/70e509002ed86c86e537_sejecem_314837754323_1762709554/thumb/custom-e0f7c5d4-dfc2-47e6-a071-e2433114d0f5-%{width}x%{height}.png",
-          "viewCount": 15513
+          "viewCount": 15514
         }
       ]
     },
@@ -2816,12 +3122,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618271087",
+          "title": "💎🏠⛏️SMP DAG 3: BELANGRIJKE ZAKEN!! (en beetje Skyrim...)⚔️🐉🔮",
+          "createdAt": "2025-11-14T16:58:33Z",
+          "duration": "7h23m51s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/8e1359142d1ae75dfe04_serpent_314863015890_1763139507//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 125
+        },
+        {
           "id": "2618051399",
           "title": "🌐⚠️BREAKING NEWS: Ik hoop dat je een mooie dag gaat hebben🥰💖",
           "createdAt": "2025-11-14T09:41:40Z",
           "duration": "1h28m43s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/24fd1c722fae96a258ad_serpent_314838496209_1763113294//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7459
+          "viewCount": 7485
         },
         {
           "id": "2617635206",
@@ -2829,7 +3143,7 @@
           "createdAt": "2025-11-13T21:50:20Z",
           "duration": "2h41m54s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d26b00166170fbf861a0_serpent_314875967571_1763070614//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9912
+          "viewCount": 9919
         },
         {
           "id": "2614948961",
@@ -2837,7 +3151,7 @@
           "createdAt": "2025-11-10T20:04:32Z",
           "duration": "3h1m17s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/af1578911b2597d62851_serpent_314848053843_1762805066//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 21319
+          "viewCount": 21320
         }
       ]
     },
@@ -2847,12 +3161,20 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618297801",
+          "title": "!Trust",
+          "createdAt": "2025-11-14T17:34:22Z",
+          "duration": "5h27m39s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/dd88469b4a57a2fa73d3_shappo0_314881656915_1763141655//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 62664
+        },
+        {
           "id": "2617338236",
           "title": "!Trust",
           "createdAt": "2025-11-13T14:43:54Z",
           "duration": "5h28m27s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/66f6bc5fb5c576db142a_shappo0_314853357138_1763045028//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 71395
+          "viewCount": 71989
         },
         {
           "id": "2616597129",
@@ -2860,7 +3182,7 @@
           "createdAt": "2025-11-12T17:18:43Z",
           "duration": "5h27m58s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/590421530629a6b5d07c_shappo0_314824506833_1762967916//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 76272
+          "viewCount": 76355
         },
         {
           "id": "2615631075",
@@ -2868,7 +3190,7 @@
           "createdAt": "2025-11-11T15:44:00Z",
           "duration": "6h26m7s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e377683c595e38a9c5e9_shappo0_314836848594_1762875834//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 75810
+          "viewCount": 75846
         },
         {
           "id": "2614746275",
@@ -2876,7 +3198,7 @@
           "createdAt": "2025-11-10T15:14:34Z",
           "duration": "7h3m1s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ccd058e2bf04d848aacb_shappo0_314845172179_1762787668//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 92605
+          "viewCount": 92652
         },
         {
           "id": "2614050070",
@@ -2884,7 +3206,7 @@
           "createdAt": "2025-11-09T18:05:33Z",
           "duration": "4h47m58s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6d0e154da8467e23c8d0_shappo0_314838157779_1762711527//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 50713
+          "viewCount": 50744
         },
         {
           "id": "2614008483",
@@ -2892,7 +3214,7 @@
           "createdAt": "2025-11-09T17:12:23Z",
           "duration": "46m58s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/ba42da452810b9c8c249_shappo0_314837546451_1762708337//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9625
+          "viewCount": 9632
         }
       ]
     },
@@ -2902,12 +3224,36 @@
       "team": 1,
       "vods": [
         {
+          "id": "2618423643",
+          "title": "🔴ZUID CREATORSMP🔴!Toetsenbord !Muismat !Meta !Team",
+          "createdAt": "2025-11-14T20:10:33Z",
+          "duration": "2h59m37s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/780af9d6d68489843219_skeptriq_314883380051_1763151026//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 23216
+        },
+        {
+          "id": "2617273750",
+          "title": "🔴ZUID CREATORSMP🔴!Toetsenbord !Muismat !Meta !Team",
+          "createdAt": "2025-11-13T12:33:00Z",
+          "duration": "4h46m16s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/33e1941e92357987b9a4_skeptriq_314830838737_1763037173//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 9893
+        },
+        {
+          "id": "2616746323",
+          "title": "🔴KAMP ZUID CHAOS VEROORZAKEN CREATORSMP🔴!Toetsenbord !Muismat !Meta !Team",
+          "createdAt": "2025-11-12T20:26:16Z",
+          "duration": "2h40m11s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/4a418be8b53f2dee1fc9_skeptriq_314866878803_1762979170//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 3925
+        },
+        {
           "id": "2614854878",
           "title": "🔴CREATORSMP ZUID🔴!Toetsenbord !Muismat !Meta !Team",
           "createdAt": "2025-11-10T18:02:52Z",
           "duration": "4h22m33s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/96f9498dbed24a445fa1_skeptriq_314829230674_1762797766//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5323
+          "viewCount": 5397
         },
         {
           "id": "2614664638",
@@ -2915,7 +3261,7 @@
           "createdAt": "2025-11-10T12:31:07Z",
           "duration": "4h23m6s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/e82f382ddd2db29b9f92_skeptriq_314826907986_1762777861//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11963
+          "viewCount": 11974
         },
         {
           "id": "2614038271",
@@ -2923,7 +3269,7 @@
           "createdAt": "2025-11-09T17:52:50Z",
           "duration": "5h14m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/960e53417ae28ac3f775_skeptriq_314837978579_1762710764//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5231
+          "viewCount": 5234
         }
       ]
     },
@@ -2938,7 +3284,7 @@
           "createdAt": "2025-11-14T12:15:30Z",
           "duration": "1h45m20s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/d0ee4207603f4c5bcf9f_spacingunicorn_314839219409_1763122524//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 25
+          "viewCount": 7487
         },
         {
           "id": "2617261622",
@@ -2946,7 +3292,7 @@
           "createdAt": "2025-11-13T12:05:18Z",
           "duration": "1h44m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/095d8b6a7291087c5f95_spacingunicorn_314870916691_1763035512//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8245
+          "viewCount": 8252
         },
         {
           "id": "2614743864",
@@ -2954,7 +3300,7 @@
           "createdAt": "2025-11-10T15:10:00Z",
           "duration": "2h6m30s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/753392deefaea6096c6f_spacingunicorn_314805521105_1762787393//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5623
+          "viewCount": 5629
         },
         {
           "id": "2614031089",
@@ -2962,7 +3308,7 @@
           "createdAt": "2025-11-09T17:43:11Z",
           "duration": "2h43m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b4dc40ee94c78e2d6d2e_spacingunicorn_314837871571_1762710185//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11898
+          "viewCount": 11914
         }
       ]
     },
@@ -2975,9 +3321,9 @@
           "id": "2618170676",
           "title": "CreatorSMP & Yappings - XXL VRIJDAG STREAM 🧡 !Meta !Hue !Socials !Love",
           "createdAt": "2025-11-14T14:17:21Z",
-          "duration": "2h0m1s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 14
+          "duration": "5h4m30s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/680e46fa1069190533a0_streamwithlien_314861720786_1763129834//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 13223
         },
         {
           "id": "2617491122",
@@ -2985,7 +3331,7 @@
           "createdAt": "2025-11-13T18:36:33Z",
           "duration": "4h45m19s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/bb66508ae15425fef0d8_streamwithlien_314833584465_1763058986//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11183
+          "viewCount": 11190
         },
         {
           "id": "2616626927",
@@ -2993,7 +3339,7 @@
           "createdAt": "2025-11-12T17:57:45Z",
           "duration": "5h48m45s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/abc9d801bc4a192f524d_streamwithlien_314824891345_1762970259//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13987
+          "viewCount": 13992
         },
         {
           "id": "2615612769",
@@ -3001,7 +3347,7 @@
           "createdAt": "2025-11-11T15:12:09Z",
           "duration": "4h32m16s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/93022dc332d2959630a4_streamwithlien_314814409041_1762873922//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14843
+          "viewCount": 14845
         }
       ]
     },
@@ -3016,7 +3362,7 @@
           "createdAt": "2025-11-11T18:12:23Z",
           "duration": "3h39m58s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/1beb6ac41f6af97d9f48_tacobellatv_314816129105_1762884737//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3713
+          "viewCount": 3805
         },
         {
           "id": "2614005302",
@@ -3024,7 +3370,7 @@
           "createdAt": "2025-11-09T17:07:57Z",
           "duration": "3h47m49s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3ef9584cd68ad529e1ca_tacobellatv_314797759313_1762708071//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 6539
+          "viewCount": 6542
         }
       ]
     },
@@ -3037,9 +3383,9 @@
           "id": "2618163742",
           "title": "Minecraft CreatorSMP Hardcore 3 (DAG 6) - Zuid POV",
           "createdAt": "2025-11-14T14:04:50Z",
-          "duration": "2h12m44s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 1
+          "duration": "3h42m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/bc3df05237e71503879f_tiesgames_315146395495_1763129080//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 2158
         },
         {
           "id": "2618147595",
@@ -3047,7 +3393,7 @@
           "createdAt": "2025-11-14T13:34:21Z",
           "duration": "21m6s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/cf3d06cda050b2e77620_tiesgames_315408103398_1763127251//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 17
+          "viewCount": 511
         },
         {
           "id": "2616671658",
@@ -3071,7 +3417,7 @@
           "createdAt": "2025-11-10T13:54:55Z",
           "duration": "4h48m48s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/b596a6290c9c994df7ea_tiesgames_315275225573_1762782884//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3527
+          "viewCount": 3530
         },
         {
           "id": "2614032285",
@@ -3094,7 +3440,7 @@
           "createdAt": "2025-11-13T18:45:17Z",
           "duration": "1h18m33s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/3bd50653ad98ba58579c_vince_stick_314855501394_1763059511//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 13511
+          "viewCount": 13668
         },
         {
           "id": "2615754331",
@@ -3102,7 +3448,7 @@
           "createdAt": "2025-11-11T18:34:27Z",
           "duration": "3h39m34s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/fd9e6dc8cdbbfca3296d_vince_stick_314838476754_1762886061//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 10037
+          "viewCount": 10040
         },
         {
           "id": "2614897169",
@@ -3131,9 +3477,9 @@
           "id": "2618130482",
           "title": "DAG 5: CreatorSMP HARDCORE!🌳⛏️ (KLAARMAKEN VOOR MORGEN)",
           "createdAt": "2025-11-14T13:01:18Z",
-          "duration": "3h16m14s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 34
+          "duration": "10h29m5s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/23f01405da0f75a3147b_ikbenwela_314861283282_1763125267//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 40532
         },
         {
           "id": "2617337856",
@@ -3141,7 +3487,7 @@
           "createdAt": "2025-11-13T14:43:07Z",
           "duration": "6h41m31s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/6eae71f0039912a26e1a_ikbenwela_314853347538_1763044976//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 25670
+          "viewCount": 25689
         },
         {
           "id": "2616584381",
@@ -3149,7 +3495,7 @@
           "createdAt": "2025-11-12T17:02:21Z",
           "duration": "6h18m33s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/cd3df939f965d54ef75e_ikbenwela_314846257874_1762966931//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 18512
+          "viewCount": 18516
         },
         {
           "id": "2615637204",
@@ -3157,7 +3503,7 @@
           "createdAt": "2025-11-11T15:54:13Z",
           "duration": "7h9m15s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/374c3eaf013abc1af22d_ikbenwela_314836926930_1762876442//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 22370
+          "viewCount": 22377
         },
         {
           "id": "2614946361",
@@ -3183,12 +3529,28 @@
       "team": 0,
       "vods": [
         {
+          "id": "2618509270",
+          "title": "[NL] 🚨 CREATOR SMP 🚨 !creatorsmp for info",
+          "createdAt": "2025-11-14T21:59:31Z",
+          "duration": "3h14m10s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/2b15dd5822e1253093f5_wolfeei_314884668627_1763157564//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 145
+        },
+        {
+          "id": "2618330033",
+          "title": "[EN] 🚨 MCC PREDICTIONS -> event yap catch up 🚨 !creatorsmp dutch stream after [NL]",
+          "createdAt": "2025-11-14T18:15:25Z",
+          "duration": "3h43m20s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/29ca1ca09497d99f1c68_wolfeei_314882067539_1763144119//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 6030
+        },
+        {
           "id": "2617469950",
           "title": "[NL] de mol op noord 🚨 CREATOR SMP 🚨 !creatorsmp for info",
           "createdAt": "2025-11-13T18:07:02Z",
           "duration": "4h57m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/394d1ac1cb26cd4dc029_wolfeei_314873463123_1763057215//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7293
+          "viewCount": 7392
         },
         {
           "id": "2616712434",
@@ -3196,7 +3558,7 @@
           "createdAt": "2025-11-12T19:43:16Z",
           "duration": "3h23m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b94895f602e6ee023599_wolfeei_314826109649_1762976590//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 5608
+          "viewCount": 5676
         },
         {
           "id": "2615712130",
@@ -3204,7 +3566,7 @@
           "createdAt": "2025-11-11T17:39:44Z",
           "duration": "5h26m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/0a0ab762216717c96d77_wolfeei_314815766353_1762882775//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 7268
+          "viewCount": 7300
         },
         {
           "id": "2614892139",
@@ -3212,7 +3574,7 @@
           "createdAt": "2025-11-10T18:55:15Z",
           "duration": "4h8m0s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/b99a8daf9a95a8b1ff6a_wolfeei_314847194067_1762800909//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 8317
+          "viewCount": 8333
         },
         {
           "id": "2614039902",
@@ -3220,7 +3582,7 @@
           "createdAt": "2025-11-09T17:55:00Z",
           "duration": "4h6m10s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/68e1e97b611198c831f1_wolfeei_314820695378_1762710893//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 9835
+          "viewCount": 9840
         }
       ]
     },
@@ -3233,9 +3595,9 @@
           "id": "2618179160",
           "title": "De start van de COD grind! - Black Ops 7 Release-dag",
           "createdAt": "2025-11-14T14:33:20Z",
-          "duration": "1h43m35s",
-          "thumbnailUrl": "https://vod-secure.twitch.tv/_404/404_processing_%{width}x%{height}.png",
-          "viewCount": 3
+          "duration": "10h19m41s",
+          "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/f85b5199a709353805ec_yaraskygaming_315408473574_1763130790//thumb/thumb0-%{width}x%{height}.jpg",
+          "viewCount": 48
         },
         {
           "id": "2616626844",
@@ -3243,7 +3605,7 @@
           "createdAt": "2025-11-12T17:57:39Z",
           "duration": "3h52m31s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/560dbb755ebb2deb9b3e_yaraskygaming_315396045798_1762970248//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 11464
+          "viewCount": 11483
         },
         {
           "id": "2616440776",
@@ -3251,7 +3613,7 @@
           "createdAt": "2025-11-12T13:11:37Z",
           "duration": "3h52m51s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/24dcfaa7bae0bbf4fb7e_yaraskygaming_315130341863_1762953087//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 16721
+          "viewCount": 16726
         },
         {
           "id": "2615667030",
@@ -3259,7 +3621,7 @@
           "createdAt": "2025-11-11T16:38:17Z",
           "duration": "25m37s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/a4be9716b87ce7f85fa7_yaraskygaming_315284576357_1762879086//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 3105
+          "viewCount": 3106
         },
         {
           "id": "2615610835",
@@ -3275,7 +3637,7 @@
           "createdAt": "2025-11-11T12:37:00Z",
           "duration": "2h31m25s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/294a188b677ec6edb312_yaraskygaming_315282889061_1762864609//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 31614
+          "viewCount": 31615
         },
         {
           "id": "2614855246",
@@ -3291,7 +3653,7 @@
           "createdAt": "2025-11-09T17:48:59Z",
           "duration": "5h18m36s",
           "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d3fi1amfgojobc/6f03ca3007fe7883cb7f_yaraskygaming_315373139558_1762710529//thumb/thumb0-%{width}x%{height}.jpg",
-          "viewCount": 14536
+          "viewCount": 14537
         }
       ]
     }
