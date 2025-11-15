@@ -34,7 +34,7 @@ function App() {
         />
       </ResizablePanel>
 
-      <ResizableHandle withHandle />
+      <ResizableHandle />
 
       <ResizablePanel defaultSize={50} minSize={30}>
         <TwitchPlayer selectedVod={selectedVod} onTimeUpdate={setPlayerCurrentTimeMinutes} />
