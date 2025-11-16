@@ -1,11 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/wrangler.json",
   "name": "creator-loom",
-  "type": "service",
   "main": "@tanstack/react-start/server-entry",
   "compatibility_date": "2024-11-15",
-  "compatibility_flags": ["nodejs_compat"],
-
-  // Environment variables (optional)
-  "vars": {}
+  "compatibility_flags": ["nodejs_compat"]
 }

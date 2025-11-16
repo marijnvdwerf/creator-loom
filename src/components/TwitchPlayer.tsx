@@ -21,8 +21,7 @@ interface TwitchPlayerInstance {
 declare global {
   interface Window {
     Twitch?: {
-      Player: new (elementId: string, options: TwitchPlayerOptions) => TwitchPlayerInstance;
-      Player: {
+      Player: (new (elementId: string, options: TwitchPlayerOptions) => TwitchPlayerInstance) & {
         PLAYING: string;
         SEEK: string;
         PAUSE: string;

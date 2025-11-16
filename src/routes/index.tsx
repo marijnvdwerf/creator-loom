@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { useState, useMemo } from 'react'
 import { Timeline } from '@/components/Timeline'
 import { TwitchPlayer } from '@/components/TwitchPlayer'
-import { VOD, Creator, VODData } from '@/types/vod'
+import { VOD, Creator } from '@/types/vod'
 import {
   ResizablePanelGroup,
   ResizablePanel,
