@@ -11,6 +11,7 @@
 import type * as creators from "../creators.js";
 import type * as crons from "../crons.js";
 import type * as vods from "../vods.js";
+import type * as clips from "../clips.js";
 
 import type {
   ApiFromModules,
@@ -22,6 +23,7 @@ declare const fullApi: ApiFromModules<{
   creators: typeof creators;
   crons: typeof crons;
   vods: typeof vods;
+  clips: typeof clips;
 }>;
 
 /**
