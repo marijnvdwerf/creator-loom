@@ -27,6 +27,7 @@ interface TwitchUsersResponse {
 
 interface TwitchVideo {
   id: string;
+  stream_id?: string;
   user_id: string;
   user_login: string;
   user_name: string;
