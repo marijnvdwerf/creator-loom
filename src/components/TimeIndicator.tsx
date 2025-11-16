@@ -1,10 +1,13 @@
 interface TimeIndicatorProps {
   startMinute: number;
   endMinute: number;
-  playerCurrentTimeMinutes: number;
+  playerCurrentTimeSeconds: number;
 }
 
-export function TimeIndicator({ startMinute, endMinute, playerCurrentTimeMinutes }: TimeIndicatorProps) {
+export function TimeIndicator({ startMinute, endMinute, playerCurrentTimeSeconds }: TimeIndicatorProps) {
+  // Convert seconds to minutes for calculation
+  const playerCurrentTimeMinutes = playerCurrentTimeSeconds / 60;
+
   // Don't show if position is outside the range
   if (playerCurrentTimeMinutes < startMinute || playerCurrentTimeMinutes > endMinute) {
     return null;

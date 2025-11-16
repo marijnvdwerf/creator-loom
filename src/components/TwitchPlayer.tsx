@@ -1,25 +1,4 @@
 import { useEffect, useRef } from 'react';
-import type { VOD, Creator } from '@/types/vod';
-
-// TypeScript declarations for Twitch embed API
-declare global {
-  interface Window {
-    Twitch?: {
-      Player: TwitchPlayerConstructor;
-    };
-  }
-}
-
-interface TwitchPlayerConstructor {
-  new (elementId: string, options: TwitchPlayerOptions): TwitchPlayerInstance;
-  PLAYING: string;
-  SEEK: string;
-  PAUSE: string;
-  ENDED: string;
-  READY: string;
-  ONLINE: string;
-  OFFLINE: string;
-}
 
 interface TwitchPlayerOptions {
   video?: string;
@@ -39,50 +18,66 @@ interface TwitchPlayerInstance {
   addEventListener: (event: string, callback: () => void) => void;
 }
 
-interface TwitchPlayerProps {
-  selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
-  onTimeUpdate?: (realWorldTimeMinutes: number) => void;
+declare global {
+  interface Window {
+    Twitch?: {
+      Player: new (elementId: string, options: TwitchPlayerOptions) => TwitchPlayerInstance;
+      Player: {
+        PLAYING: string;
+        SEEK: string;
+        PAUSE: string;
+      };
+    };
+  }
 }
 
-export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
+interface TwitchPlayerProps {
+  video?: string;
+  timestamp?: number;
+  onTimeChange?: (seconds: number) => void;
+}
+
+export function TwitchPlayer({ video, timestamp, onTimeChange }: TwitchPlayerProps) {
   const playerRef = useRef<TwitchPlayerInstance | null>(null);
   const playerInitialized = useRef(false);
+  const timeIntervalRef = useRef<number | null>(null);
 
-  // Calculate real world time from player timestamp
-  const getRealWorldTimeMinutes = (playerSeconds: number): number | null => {
-    if (!selectedVod) return null;
-
-    const vodStartDate = new Date(selectedVod.vod.createdAt);
-    const vodStartDateAms = new Date(vodStartDate.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
-    const vodStartMinuteOfDay = vodStartDateAms.getHours() * 60 + vodStartDateAms.getMinutes();
-    
-    return vodStartMinuteOfDay + playerSeconds / 60;
-  };
-
-  // Update timeline position based on current player time
-  const updateTime = () => {
-    if (!playerRef.current || !onTimeUpdate || !selectedVod) return;
-
+  // Emit current player time
+  const emitTime = () => {
+    if (!playerRef.current || !onTimeChange) return;
     try {
-      const playerTime = playerRef.current.getCurrentTime();
-      const realWorldMinutes = getRealWorldTimeMinutes(playerTime);
-      
-      if (realWorldMinutes !== null) {
-        onTimeUpdate(realWorldMinutes);
-      }
+      const time = playerRef.current.getCurrentTime();
+      onTimeChange(time);
     } catch {
-      // Silently handle errors
+      // Silently ignore errors
     }
   };
 
-  // Initialize player and handle video changes
-  useEffect(() => {
-    if (!window.Twitch || !selectedVod) return;
+  // Start polling time during playback
+  const startTimeTracking = () => {
+    if (timeIntervalRef.current) return;
+    timeIntervalRef.current = window.setInterval(emitTime, 100);
+  };
 
-    // Initialize player on first use
+  // Stop polling time
+  const stopTimeTracking = () => {
+    if (timeIntervalRef.current) {
+      clearInterval(timeIntervalRef.current);
+      timeIntervalRef.current = null;
+    }
+  };
+
+  // Initialize or change video
+  useEffect(() => {
+    if (!window.Twitch || !video) {
+      stopTimeTracking();
+      return;
+    }
+
+    // Initialize player on first video
     if (!playerInitialized.current) {
       const options: TwitchPlayerOptions = {
-        video: selectedVod.vod.id,
+        video,
         width: '100%',
         height: '100%',
         parent: [window.location.hostname],
@@ -93,41 +88,39 @@ export function TwitchPlayer({ selectedVod, onTimeUpdate }: TwitchPlayerProps) {
         playerRef.current = new window.Twitch.Player('twitch-player', options);
         playerInitialized.current = true;
 
-        // Setup event listeners once
+        // Setup event listeners
         const { Player } = window.Twitch;
-        playerRef.current.addEventListener(Player.PLAYING, updateTime);
-        playerRef.current.addEventListener(Player.SEEK, updateTime);
-        playerRef.current.addEventListener(Player.PAUSE, updateTime);
+        playerRef.current.addEventListener(Player.PLAYING, startTimeTracking);
+        playerRef.current.addEventListener(Player.PAUSE, stopTimeTracking);
+        playerRef.current.addEventListener(Player.SEEK, emitTime);
 
         // Seek to timestamp if provided
-        if (selectedVod.timestamp > 0) {
+        if (timestamp && timestamp > 0) {
           setTimeout(() => {
-            playerRef.current?.seek(selectedVod.timestamp);
-            updateTime();
-          }, 1000);
+            playerRef.current?.seek(timestamp);
+            emitTime();
+          }, 500);
         }
       } catch {
-        // Silently handle player creation errors
+        // Silently ignore player creation errors
       }
     } else if (playerRef.current) {
       // Change video on existing player
-      playerRef.current.setVideo(selectedVod.vod.id, selectedVod.timestamp);
-      playerRef.current.play();
-      setTimeout(() => updateTime(), 500);
+      playerRef.current.setVideo(video, timestamp);
+      emitTime();
     }
-  }, [selectedVod]);
+  }, [video, timestamp]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      stopTimeTracking();
+    };
+  }, []);
 
   return (
     <div className="h-full bg-black relative overflow-hidden">
       <div id="twitch-player" className="w-full h-full" />
-      {!selectedVod && (
-        <div className="absolute inset-0 flex items-center justify-center bg-background">
-          <div className="text-center">
-            <div className="text-6xl mb-4">▶️</div>
-            <p className="text-muted-foreground">Click a VOD to start playback</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
