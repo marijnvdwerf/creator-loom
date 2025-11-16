@@ -39,7 +39,10 @@ The application uses a clean separation of concerns:
 ## Tech Stack
 
 - **React 18** + TypeScript
-- **Vite** (build tool)
+- **TanStack Start** (full-stack framework with file-based routing)
+- **TanStack Router** (type-safe routing)
+- **Vite** (build tool via TanStack Start)
+- **Nitro** (server runtime)
 - **Tailwind CSS v4** (styling)
 - **shadcn/ui** (component library)
 - **date-fns** (date utilities)
@@ -53,17 +56,20 @@ The application uses a clean separation of concerns:
 bun install
 ```
 
-2. Set up Twitch credentials in `scripts/fetch-vods.ts`:
+2. Set up Twitch credentials and fetch VODs (optional - `src/data/vods.json` is already committed):
 ```bash
 TWITCH_CLIENT_ID=your_id TWITCH_CLIENT_SECRET=your_secret bun run scripts/fetch-vods.ts
 ```
-
-This generates `src/data/vods.json` with all VOD metadata.
 
 3. Start dev server:
 ```bash
 bun run dev
 ```
+
+This starts the TanStack Start dev server on port 3000 with:
+- File-based routing from `src/routes/`
+- Server-side rendering with Nitro
+- Hot module reloading (HMR)
 
 ## Key Features
 
@@ -160,6 +166,9 @@ TimelineRow uses minutes for positioning (0-660 = 13:00-23:00).
 
 ```
 src/
+├── routes/
+│   ├── __root.tsx           # Root layout with HTML shell
+│   └── index.tsx            # Home page (main app component)
 ├── components/
 │   ├── DaySelector.tsx       # Date picker
 │   ├── Timeline.tsx          # Main timeline container
@@ -173,9 +182,10 @@ src/
 ├── utils/
 │   └── time.ts              # Time utilities
 ├── data/
-│   └── vods.json            # VOD metadata (generated)
-├── App.tsx                  # Main app component
-└── main.tsx                 # Entry point
+│   └── vods.json            # VOD metadata
+├── router.tsx               # TanStack Router configuration
+├── styles.css               # Global styles
+└── routeTree.gen.ts         # Auto-generated route tree
 
 scripts/
 └── fetch-vods.ts            # Twitch API scraper
