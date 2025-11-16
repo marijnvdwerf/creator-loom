@@ -34,7 +34,6 @@ export const Route = createRootRouteWithContext<{
 })
 
 function RootShell({ children }: { children: React.ReactNode }) {
-  console.log('RootShell rendering')
   return (
     <html lang="en">
       <head>
