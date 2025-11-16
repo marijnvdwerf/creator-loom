@@ -65,6 +65,8 @@ async function getAppAccessToken(
     grant_type: "client_credentials",
   });
 
+  console.log("Requesting Twitch token with client_id:", clientId);
+
   const response = await fetch(TWITCH_TOKEN_URL, {
     method: "POST",
     headers: {
@@ -73,11 +75,15 @@ async function getAppAccessToken(
     body: params.toString(),
   });
 
+  const body = await response.text();
+  console.log("Twitch response status:", response.status);
+  console.log("Twitch response body:", body);
+
   if (!response.ok) {
-    throw new Error(`Failed to get access token: ${response.statusText}`);
+    throw new Error(`Failed to get access token: ${response.statusText} - ${body}`);
   }
 
-  const data = (await response.json()) as TwitchTokenResponse;
+  const data = JSON.parse(body) as TwitchTokenResponse;
   return data.access_token;
 }
 
