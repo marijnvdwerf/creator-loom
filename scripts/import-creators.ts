@@ -71,20 +71,26 @@ function convertCreator(creator: CreatorSMPCreator) {
     }
   }
 
-  return {
+  const result: any = {
     name: creator.name,
     team: creator.team,
     state: creator.state,
-    avatarUrl: creator.avatarUrl,
-    lastSeen: creator.lastSeen,
-    deathTime: creator.deathTime,
-    deathMessage: creator.deathMessage,
-    deathClips,
-    twitch: cleanTwitchUrl(creator.social?.twitch),
-    youtube: creator.social?.youtube,
-    instagram: creator.social?.instagram,
-    tiktok: creator.social?.tiktok,
   };
+
+  // Only include optional fields if they have values
+  if (creator.avatarUrl) result.avatarUrl = creator.avatarUrl;
+  if (creator.lastSeen) result.lastSeen = creator.lastSeen;
+  if (creator.deathTime !== undefined && creator.deathTime !== null) result.deathTime = creator.deathTime;
+  if (creator.deathMessage !== undefined && creator.deathMessage !== null) result.deathMessage = creator.deathMessage;
+  if (deathClips && deathClips.length > 0) result.deathClips = deathClips;
+
+  const twitchUsername = cleanTwitchUrl(creator.social?.twitch);
+  if (twitchUsername) result.twitch = twitchUsername;
+  if (creator.social?.youtube) result.youtube = creator.social.youtube;
+  if (creator.social?.instagram) result.instagram = creator.social.instagram;
+  if (creator.social?.tiktok) result.tiktok = creator.social.tiktok;
+
+  return result;
 }
 
 async function main() {
