@@ -1,13 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { Timeline } from '@/components/Timeline'
 import { TwitchPlayer } from '@/components/TwitchPlayer'
-import { VOD, Creator } from '@/types/vod'
+import { Doc } from '../../convex/_generated/dataModel'
 import {
   ResizablePanelGroup,
   ResizablePanel,
   ResizableHandle,
 } from '@/components/ui/resizable'
+
+type Creator = Doc<'creators'>
+type TwitchVod = Doc<'twitch_vods'>
 
 export const Route = createFileRoute('/')({
   component: App,
@@ -20,10 +23,10 @@ function App() {
   const defaultDate = today >= eventStart ? today : eventStart
 
   const [selectedDate, setSelectedDate] = useState<Date>(defaultDate)
-  const [selectedVod, setSelectedVod] = useState<{ vod: VOD; creator: Creator; timestamp: number } | null>(null)
+  const [selectedVod, setSelectedVod] = useState<{ vod: TwitchVod; creator: Creator; timestamp: number } | null>(null)
   const [playerCurrentTimeSeconds, setPlayerCurrentTimeSeconds] = useState<number>(0)
 
-  const handleVodClick = (vod: VOD, creator: Creator, clickTimestamp: number) => {
+  const handleVodClick = (vod: TwitchVod, creator: Creator, clickTimestamp: number) => {
     setSelectedVod({ vod, creator, timestamp: clickTimestamp })
   }
 
@@ -34,7 +37,7 @@ function App() {
     }
 
     // Calculate VOD start time in seconds since midnight (Amsterdam timezone)
-    const vodStartDate = new Date(selectedVod.vod.createdAt)
+    const vodStartDate = new Date(selectedVod.vod.created_at)
     const amsDate = new Date(vodStartDate.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }))
     const vodStartSeconds = amsDate.getHours() * 3600 + amsDate.getMinutes() * 60
 
@@ -51,6 +54,8 @@ function App() {
           onVodClick={handleVodClick}
           playerCurrentTimeSeconds={playerCurrentTimeSeconds}
           selectedVod={selectedVod}
+          creators={[]}
+          vods={[]}
         />
       </ResizablePanel>
 

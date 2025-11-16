@@ -25,7 +25,7 @@ export default defineSchema({
     user_name: v.string(),
     title: v.string(),
     description: v.string(),
-    created_at: v.string(),
+    created_at: v.number(),
     published_at: v.string(),
     url: v.string(),
     thumbnail_url: v.string(),

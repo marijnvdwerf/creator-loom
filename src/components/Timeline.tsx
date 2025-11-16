@@ -3,19 +3,22 @@ import { DaySelector } from './DaySelector';
 import { TimeRuler } from './TimeRuler';
 import { TimelineRow } from './TimelineRow';
 import { TimeIndicator } from './TimeIndicator';
-import { VODData, Creator, VOD } from '@/types/vod';
-import vodData from '@/data/vods.json';
+import { Doc } from '../../convex/_generated/dataModel';
+
+type Creator = Doc<'creators'>
+type TwitchVod = Doc<'twitch_vods'>
 
 interface TimelineProps {
   selectedDate: Date;
   onDateSelect: (date: Date) => void;
-  onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
+  onVodClick?: (vod: TwitchVod, creator: Creator, clickTimestamp: number) => void;
   playerCurrentTimeSeconds: number;
-  selectedVod: { vod: VOD; creator: Creator; timestamp: number } | null;
+  selectedVod: { vod: TwitchVod; creator: Creator; timestamp: number } | null;
+  creators: Creator[];
+  vods: TwitchVod[];
 }
 
-export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTimeSeconds, selectedVod }: TimelineProps) {
-  const data = vodData as VODData;
+export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTimeSeconds, selectedVod, creators, vods }: TimelineProps) {
 
   // Server opens 13:00, closes 00:00 (next day)
   const startMinute = 13 * 60; // 780 minutes (13:00)
@@ -26,7 +29,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
     const team0Creators: Creator[] = [];
     const team1Creators: Creator[] = [];
 
-    data.creators.forEach((creator) => {
+    creators.forEach((creator) => {
       if (creator.team === 0) {
         team0Creators.push(creator);
       } else if (creator.team === 1) {
@@ -34,12 +37,12 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
       }
     });
 
-    // Sort: alive by name, dead by death date (oldest at bottom)
+    // Sort: alive (state=1) by name, dead (state=2) by death date (oldest at bottom)
     const sortCreators = (creators: Creator[]) => {
-      const alive = creators.filter(c => c.alive !== false).sort((a, b) => a.name.localeCompare(b.name));
-      const dead = creators.filter(c => c.alive === false).sort((a, b) => {
-        const dateA = a.deathDate ? new Date(a.deathDate).getTime() : 0;
-        const dateB = b.deathDate ? new Date(b.deathDate).getTime() : 0;
+      const alive = creators.filter(c => c.state === 1).sort((a, b) => a.name.localeCompare(b.name));
+      const dead = creators.filter(c => c.state === 2).sort((a, b) => {
+        const dateA = a.deathTime ? new Date(a.deathTime).getTime() : 0;
+        const dateB = b.deathTime ? new Date(b.deathTime).getTime() : 0;
         return dateA - dateB; // Oldest deaths first, will appear at bottom
       });
       return [...alive, ...dead];
@@ -49,7 +52,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
       team0: sortCreators(team0Creators),
       team1: sortCreators(team1Creators),
     };
-  }, [data.creators]);
+  }, [creators]);
 
   return (
     <div className="h-full bg-background text-foreground flex flex-col overflow-hidden">
@@ -70,13 +73,14 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
         <div className="mb-2">
           <div className="sticky top-6 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-blue-400/90">
-              NOORD ({team0.filter(c => c.alive !== false).length} alive, {team0.filter(c => c.alive === false).length} dead)
+              NOORD ({team0.filter(c => c.state === 1).length} alive, {team0.filter(c => c.state === 2).length} dead)
             </h3>
           </div>
           {team0.map((creator) => (
             <TimelineRow
-              key={creator.twitchUsername}
+              key={creator._id}
               creator={creator}
+              vods={vods.filter(v => v.creatorId === creator._id)}
               selectedDate={selectedDate}
               startMinute={startMinute}
               endMinute={endMinute}
@@ -91,13 +95,14 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
         <div>
           <div className="sticky top-6 z-10 px-4 py-0.5 bg-background border-b border-border/30">
             <h3 className="text-[11px] font-semibold text-red-400/90">
-              ZUID ({team1.filter(c => c.alive !== false).length} alive, {team1.filter(c => c.alive === false).length} dead)
+              ZUID ({team1.filter(c => c.state === 1).length} alive, {team1.filter(c => c.state === 2).length} dead)
             </h3>
           </div>
           {team1.map((creator) => (
             <TimelineRow
-              key={creator.twitchUsername}
+              key={creator._id}
               creator={creator}
+              vods={vods.filter(v => v.creatorId === creator._id)}
               selectedDate={selectedDate}
               startMinute={startMinute}
               endMinute={endMinute}

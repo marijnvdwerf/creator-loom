@@ -1,19 +1,24 @@
-import { Creator, VOD } from '@/types/vod';
+import { Doc } from '../../convex/_generated/dataModel';
 import { parseDuration, getMinutesSinceMidnight } from '@/utils/time';
 import { format, isSameDay } from 'date-fns';
 
+type Creator = Doc<'creators'>
+type TwitchVod = Doc<'twitch_vods'>
+
 interface TimelineRowProps {
   creator: Creator;
+  vods: TwitchVod[];
   selectedDate: Date;
   startMinute: number;
   endMinute: number;
   teamColor: string;
-  onVodClick?: (vod: VOD, creator: Creator, clickTimestamp: number) => void;
-  selectedVod?: { vod: VOD; creator: Creator; timestamp: number } | null;
+  onVodClick?: (vod: TwitchVod, creator: Creator, clickTimestamp: number) => void;
+  selectedVod?: { vod: TwitchVod; creator: Creator; timestamp: number } | null;
 }
 
 export function TimelineRow({
   creator,
+  vods,
   selectedDate,
   startMinute,
   endMinute,
@@ -24,8 +29,8 @@ export function TimelineRow({
   const totalMinutes = endMinute - startMinute;
 
   // Filter VODs for the selected day (in Amsterdam timezone)
-  const dayVods = creator.vods.filter((vod) => {
-    const vodDate = new Date(vod.createdAt);
+  const dayVods = vods.filter((vod) => {
+    const vodDate = new Date(vod.created_at);
     // Convert to Amsterdam timezone for comparison
     const amsterdamDate = new Date(vodDate.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' }));
     return isSameDay(amsterdamDate, selectedDate);
@@ -44,7 +49,7 @@ export function TimelineRow({
       {/* Timeline area */}
       <div className="flex-1 relative h-full">
         {dayVods.map((vod) => {
-          const vodStartDate = new Date(vod.createdAt);
+          const vodStartDate = new Date(vod.created_at);
           const vodStartMinute = getMinutesSinceMidnight(vodStartDate);
           const vodDurationSeconds = parseDuration(vod.duration);
           const vodDurationMinutes = vodDurationSeconds / 60;
@@ -72,7 +77,7 @@ export function TimelineRow({
             onVodClick(vod, creator, clickTimestamp);
           };
 
-          const isSelected = selectedVod?.vod.id === vod.id && selectedVod?.creator.twitchUsername === creator.twitchUsername;
+          const isSelected = selectedVod?.vod.id === vod.id && selectedVod?.creator.name === creator.name;
           const baseClasses = "absolute top-0.5 bottom-0.5 border rounded-sm cursor-pointer transition-all overflow-hidden";
           const selectedClasses = isSelected
             ? "bg-primary/80 border-primary/80 shadow-lg shadow-primary/40"
