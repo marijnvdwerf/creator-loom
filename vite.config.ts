@@ -1,17 +1,23 @@
-import path from "path"
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import viteTsConfigPaths from 'vite-tsconfig-paths'
+import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { devtools } from '@tanstack/devtools-vite'
+import { nitro } from 'nitro/vite'
 
-// https://vite.dev/config/
-export default defineConfig({
+const config = defineConfig({
   plugins: [
+    devtools(),
+    nitro(),
+    // this is the plugin that enables path aliases
+    viteTsConfigPaths({
+      projects: ['./tsconfig.json'],
+    }),
     tailwindcss(),
-    react(),
+    tanstackStart(),
+    viteReact(),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 })
+
+export default config
