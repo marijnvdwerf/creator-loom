@@ -29,19 +29,11 @@ export const Route = createRootRouteWithContext<{
     ],
   }),
 
-  component: RootComponent,
+  shellComponent: RootShell,
   ssr: false,
 })
 
-function RootComponent() {
-  return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
-  )
-}
-
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
