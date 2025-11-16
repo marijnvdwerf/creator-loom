@@ -1,5 +1,5 @@
 import { v } from "convex/values";
-import { internalAction, internalMutation } from "./_generated/server";
+import { internalAction, internalMutation, query } from "./_generated/server";
 import { internal } from "./_generated/api";
 
 interface CreatorSMPCreator {
@@ -76,6 +76,61 @@ function convertCreator(creator: CreatorSMPCreator) {
 
   return result;
 }
+
+export const getForDate = query({
+  args: { date: v.string() },
+  handler: async (ctx, args) => {
+    // Parse date string (YYYY-MM-DD format)
+    const date = new Date(args.date);
+
+    // Get start and end of day in Amsterdam timezone
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZone: 'Europe/Amsterdam',
+    });
+
+    // Get the current date in Amsterdam time to determine day boundaries
+    const amsParts = formatter.formatToParts(date);
+    const amsYear = parseInt(amsParts.find(p => p.type === 'year')!.value);
+    const amsMonth = parseInt(amsParts.find(p => p.type === 'month')!.value);
+    const amsDay = parseInt(amsParts.find(p => p.type === 'day')!.value);
+
+    // Create day boundaries in UTC
+    const dayStart = new Date(Date.UTC(amsYear, amsMonth - 1, amsDay));
+    const dayEnd = new Date(Date.UTC(amsYear, amsMonth - 1, amsDay + 1));
+
+    // Adjust for Amsterdam timezone offset (CEST +2 or CET +1)
+    const offset = date.toLocaleString('en-US', { timeZone: 'Europe/Amsterdam', timeZoneName: 'short' }).includes('CEST') ? -2 : -1;
+    const startMs = dayStart.getTime() + (offset * 60 * 60 * 1000);
+    const endMs = dayEnd.getTime() + (offset * 60 * 60 * 1000);
+
+    // Fetch all creators with minimal fields
+    const creators = await ctx.db.query("creators").collect();
+
+    // Fetch VODs for this date
+    const vods = await ctx.db
+      .query("twitch_vods")
+      .filter((q) =>
+        q.and(
+          q.gte(q.field("created_at"), startMs),
+          q.lt(q.field("created_at"), endMs)
+        )
+      )
+      .collect();
+
+    // Join: attach vods to creators
+    return creators.map(creator => ({
+      ...creator,
+      vods: vods.filter(v => v.creatorId === creator._id),
+    }));
+  },
+});
 
 export const sync = internalAction({
   args: {},

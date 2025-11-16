@@ -8,17 +8,18 @@ import { Doc } from '../../convex/_generated/dataModel';
 type Creator = Doc<'creators'>
 type TwitchVod = Doc<'twitch_vods'>
 
+type CreatorWithVods = Omit<Creator, 'avatarUrl' | 'lastSeen' | 'deathMessage' | 'deathClips' | 'twitch' | 'youtube' | 'instagram' | 'tiktok'> & { vods: TwitchVod[] }
+
 interface TimelineProps {
   selectedDate: Date;
   onDateSelect: (date: Date) => void;
   onVodClick?: (vod: TwitchVod, creator: Creator, clickTimestamp: number) => void;
   playerCurrentTimeSeconds: number;
   selectedVod: { vod: TwitchVod; creator: Creator; timestamp: number } | null;
-  creators: Creator[];
-  vods: TwitchVod[];
+  creators: CreatorWithVods[];
 }
 
-export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTimeSeconds, selectedVod, creators, vods }: TimelineProps) {
+export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTimeSeconds, selectedVod, creators }: TimelineProps) {
 
   // Server opens 13:00, closes 00:00 (next day)
   const startMinute = 13 * 60; // 780 minutes (13:00)
@@ -26,8 +27,8 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
 
   // Group and sort creators by team
   const { team0, team1 } = useMemo(() => {
-    const team0Creators: Creator[] = [];
-    const team1Creators: Creator[] = [];
+    const team0Creators: CreatorWithVods[] = [];
+    const team1Creators: CreatorWithVods[] = [];
 
     creators.forEach((creator) => {
       if (creator.team === 0) {
@@ -38,7 +39,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
     });
 
     // Sort: alive (state=1) by name, dead (state=2) by death date (oldest at bottom)
-    const sortCreators = (creators: Creator[]) => {
+    const sortCreators = (creators: CreatorWithVods[]) => {
       const alive = creators.filter(c => c.state === 1).sort((a, b) => a.name.localeCompare(b.name));
       const dead = creators.filter(c => c.state === 2).sort((a, b) => {
         const dateA = a.deathTime ? new Date(a.deathTime).getTime() : 0;
@@ -80,7 +81,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
             <TimelineRow
               key={creator._id}
               creator={creator}
-              vods={vods.filter(v => v.creatorId === creator._id)}
+              vods={creator.vods}
               selectedDate={selectedDate}
               startMinute={startMinute}
               endMinute={endMinute}
@@ -102,7 +103,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
             <TimelineRow
               key={creator._id}
               creator={creator}
-              vods={vods.filter(v => v.creatorId === creator._id)}
+              vods={creator.vods}
               selectedDate={selectedDate}
               startMinute={startMinute}
               endMinute={endMinute}
