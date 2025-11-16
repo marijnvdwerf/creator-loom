@@ -88,18 +88,12 @@ function convertCreator(creator: CreatorSMPCreator) {
 }
 
 async function main() {
-  console.log('Fetching creators from CreatorSMP API...');
   const creators = await fetchCreators();
-  console.log(`Fetched ${creators.length} creators`);
-
   const converted = creators.map(convertCreator);
-
-  // Output as JSON for inspection
-  console.log('\nConverted creators:');
   console.log(JSON.stringify(converted, null, 2));
-
-  // TODO: Import into Convex
-  console.log('\n⚠️  Convex import not yet implemented');
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
