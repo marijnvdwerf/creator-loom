@@ -9,7 +9,7 @@ const crons = cronJobs();
 crons.cron(
   "sync creators",
   "0 * * 11 *",
-  internal.syncCreators.sync,
+  internal.creators.sync,
   {}
 );
 
