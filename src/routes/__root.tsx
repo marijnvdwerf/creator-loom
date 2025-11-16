@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, Outlet, createRootRouteWithContext } from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { QueryClient } from '@tanstack/react-query'
@@ -34,6 +34,7 @@ export const Route = createRootRouteWithContext<{
 })
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  console.log('RootShell rendering')
   return (
     <html lang="en">
       <head>
