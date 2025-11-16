@@ -34,6 +34,7 @@ function App() {
 
   const handleVodClick = (vod: VOD, creator: Creator, clickTimestamp: number) => {
     setSelectedVod({ vod, creator, timestamp: clickTimestamp })
+    setPlayerCurrentTimeSeconds(0)
   }
 
   const handlePlayerTimeChange = (playerSeconds: number) => {
