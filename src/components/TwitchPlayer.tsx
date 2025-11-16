@@ -40,13 +40,19 @@ export function TwitchPlayer({ video, timestamp, onTimeChange }: TwitchPlayerPro
   const playerRef = useRef<TwitchPlayerInstance | null>(null);
   const playerInitialized = useRef(false);
   const timeIntervalRef = useRef<number | null>(null);
+  const onTimeChangeRef = useRef(onTimeChange);
+
+  // Update ref on every render to avoid stale closures
+  useEffect(() => {
+    onTimeChangeRef.current = onTimeChange;
+  }, [onTimeChange]);
 
   // Emit current player time
   const emitTime = () => {
-    if (!playerRef.current || !onTimeChange) return;
+    if (!playerRef.current || !onTimeChangeRef.current) return;
     try {
       const time = playerRef.current.getCurrentTime();
-      onTimeChange(time);
+      onTimeChangeRef.current(time);
     } catch {
       // Silently ignore errors
     }
