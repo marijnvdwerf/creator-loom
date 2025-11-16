@@ -33,6 +33,9 @@ function App() {
 
   const handlePlayerTimeChange = (playerSeconds: number) => {
     const realWorldSeconds = vodStartSeconds + playerSeconds;
+    console.log(
+      `[App] playerSeconds=${playerSeconds.toFixed(2)}, vodStartSeconds=${vodStartSeconds}, realWorldSeconds=${realWorldSeconds.toFixed(2)}`
+    );
     setPlayerCurrentTimeSeconds(realWorldSeconds);
   };
 

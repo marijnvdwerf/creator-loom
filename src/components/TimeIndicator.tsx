@@ -8,8 +8,13 @@ export function TimeIndicator({ startMinute, endMinute, playerCurrentTimeSeconds
   // Convert seconds to minutes for calculation
   const playerCurrentTimeMinutes = playerCurrentTimeSeconds / 60;
 
+  console.log(
+    `[TimeIndicator] playerCurrentTimeSeconds=${playerCurrentTimeSeconds}, playerCurrentTimeMinutes=${playerCurrentTimeMinutes.toFixed(2)}, startMinute=${startMinute}, endMinute=${endMinute}`
+  );
+
   // Don't show if position is outside the range
   if (playerCurrentTimeMinutes < startMinute || playerCurrentTimeMinutes > endMinute) {
+    console.log(`[TimeIndicator] Out of range, hiding`);
     return null;
   }
 
@@ -17,6 +22,10 @@ export function TimeIndicator({ startMinute, endMinute, playerCurrentTimeSeconds
 
   // Calculate percentage within the timeline area (13:00 to 00:00)
   const timelinePercent = ((playerCurrentTimeMinutes - startMinute) / totalMinutes) * 100;
+
+  console.log(
+    `[TimeIndicator] totalMinutes=${totalMinutes}, timelinePercent=${timelinePercent.toFixed(2)}%`
+  );
 
   return (
     <>
