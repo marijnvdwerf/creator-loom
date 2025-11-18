@@ -1,9 +1,6 @@
-import { Doc } from '../../convex/_generated/dataModel';
 import { parseDuration, getMinutesSinceMidnight } from '@/utils/time';
 import { format, isSameDay } from 'date-fns';
-
-type Creator = Doc<'creators'>
-type TwitchVod = Doc<'twitch_vods'>
+import type { Creator, TwitchVod } from '@/types'
 
 interface TimelineRowProps {
   creator: Creator;

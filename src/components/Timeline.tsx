@@ -3,12 +3,7 @@ import { DaySelector } from './DaySelector';
 import { TimeRuler } from './TimeRuler';
 import { TimelineRow } from './TimelineRow';
 import { TimeIndicator } from './TimeIndicator';
-import { Doc } from '../../convex/_generated/dataModel';
-
-type Creator = Doc<'creators'>
-type TwitchVod = Doc<'twitch_vods'>
-
-type CreatorWithVods = Omit<Creator, 'avatarUrl' | 'lastSeen' | 'deathMessage' | 'deathClips' | 'twitch' | 'youtube' | 'instagram' | 'tiktok'> & { vods: TwitchVod[] }
+import type { Creator, TwitchVod } from '@/types'
 
 interface TimelineProps {
   selectedDate: Date;
@@ -16,7 +11,7 @@ interface TimelineProps {
   onVodClick?: (vod: TwitchVod, creator: Creator, clickTimestamp: number) => void;
   playerCurrentTimeSeconds: number;
   selectedVod: { vod: TwitchVod; creator: Creator; timestamp: number } | null;
-  creators: CreatorWithVods[];
+  creators: Creator[];
 }
 
 export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrentTimeSeconds, selectedVod, creators }: TimelineProps) {
@@ -27,8 +22,8 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
 
   // Group and sort creators by team
   const { team0, team1 } = useMemo(() => {
-    const team0Creators: CreatorWithVods[] = [];
-    const team1Creators: CreatorWithVods[] = [];
+    const team0Creators: Creator[] = [];
+    const team1Creators: Creator[] = [];
 
     creators.forEach((creator) => {
       if (creator.team === 0) {
@@ -39,7 +34,7 @@ export function Timeline({ selectedDate, onDateSelect, onVodClick, playerCurrent
     });
 
     // Sort: alive (state=1) by name, dead (state=2) by death date (oldest at bottom)
-    const sortCreators = (creators: CreatorWithVods[]) => {
+    const sortCreators = (creators: Creator[]) => {
       const alive = creators.filter(c => c.state === 1).sort((a, b) => a.name.localeCompare(b.name));
       const dead = creators.filter(c => c.state === 2).sort((a, b) => {
         const dateA = a.deathTime ? new Date(a.deathTime).getTime() : 0;
