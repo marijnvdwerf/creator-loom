@@ -447,7 +447,7 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-md overflow-y-auto flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-md overflow-y-auto flex justify-center p-4"
       onClick={onClose}
     >
       {/* Close Button */}
@@ -460,7 +460,7 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
 
       {/* Grid */}
       <div
-        className="max-w-7xl w-full"
+        className="max-w-7xl w-full my-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
