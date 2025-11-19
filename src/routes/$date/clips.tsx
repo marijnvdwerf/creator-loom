@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { getDb } from '@/db/client'
 import { twitchClips, twitchVods, creators } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -352,6 +352,104 @@ function Calendar({ selectedDate, datesWithClips, onDateSelect }: CalendarProps)
   )
 }
 
+interface ClusterProps {
+  cluster: ClipCluster
+  formatTime: (timestamp: number) => string
+}
+
+function Cluster({ cluster, formatTime }: ClusterProps) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  // Get filtered clips (top per creator when not expanded)
+  const visibleClips = useMemo(() => {
+    if (isExpanded) {
+      return cluster.clips
+    }
+
+    // Show only the highest view count clip per creator
+    const topClipsPerCreator = new Map<number, typeof cluster.clips[0]>()
+
+    cluster.clips.forEach(clip => {
+      const creatorId = clip.creator?.id
+      if (!creatorId) return
+
+      const existing = topClipsPerCreator.get(creatorId)
+      if (!existing || clip.clip.viewCount > existing.clip.viewCount) {
+        topClipsPerCreator.set(creatorId, clip)
+      }
+    })
+
+    return Array.from(topClipsPerCreator.values()).sort((a, b) =>
+      b.clip.viewCount - a.clip.viewCount
+    )
+  }, [cluster.clips, isExpanded])
+
+  const hasMore = cluster.clips.length > 1
+
+  return (
+    <div>
+      {/* Cluster Header */}
+      <div className="mb-4">
+        <h2 className="text-lg font-semibold">
+          {formatTime(cluster.startTime)} - {formatTime(cluster.endTime)}
+        </h2>
+        <p className="text-sm text-muted-foreground">
+          {cluster.clips.length} clips · {cluster.totalViewCount.toLocaleString()} views
+        </p>
+      </div>
+
+      {/* Clips Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {visibleClips.map((item) => (
+          <a
+            key={item.clip.clipId}
+            href={item.clip.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cursor-pointer"
+          >
+            {/* Thumbnail */}
+            <div className="relative aspect-video bg-muted overflow-hidden mb-2">
+              <img
+                src={item.clip.thumbnailUrl}
+                alt={item.clip.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+              {/* Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                <div className="flex items-center justify-between text-white text-xs">
+                  <span>{formatTime(item.realWorldTime)}</span>
+                  <span>{item.clip.viewCount.toLocaleString()} views</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Clip Info */}
+            <div>
+              <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+                {item.clip.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                {item.creator?.name || 'Unknown creator'}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Meer/Minder Button */}
+      {hasMore && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="w-full mt-4 px-4 py-2 text-sm border border-border rounded-md hover:bg-accent transition-colors"
+        >
+          {isExpanded ? 'minder' : 'meer...'}
+        </button>
+      )}
+    </div>
+  )
+}
+
 function ClipsPage() {
   const { clips, datesWithClips } = Route.useLoaderData()
   const navigate = Route.useNavigate()
@@ -454,52 +552,11 @@ function ClipsPage() {
 
             <div className="space-y-12">
               {clusters.map((cluster, clusterIndex) => (
-                <div key={clusterIndex}>
-                  {/* Cluster Header */}
-                  <div className="mb-4">
-                    <h2 className="text-lg font-semibold">
-                      {formatTime(cluster.startTime)} - {formatTime(cluster.endTime)}
-                    </h2>
-                    <p className="text-sm text-muted-foreground">
-                      {cluster.clips.length} clips · {cluster.totalViewCount.toLocaleString()} views
-                    </p>
-                  </div>
-
-                  {/* Clips Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {cluster.clips.map((item) => (
-                      <a
-                        key={item.clip.clipId}
-                        href={item.clip.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group cursor-pointer"
-                      >
-                        {/* Thumbnail */}
-                        <div className="relative aspect-video bg-muted rounded-lg overflow-hidden mb-2">
-                          <img
-                            src={item.clip.thumbnailUrl}
-                            alt={item.clip.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                          />
-                        </div>
-
-                        {/* Clip Info */}
-                        <div>
-                          <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
-                            {item.clip.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground mt-1">
-                            {item.creator?.name || 'Unknown creator'}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {formatTime(item.realWorldTime)} · {item.clip.viewCount.toLocaleString()} views
-                          </p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                <Cluster
+                  key={clusterIndex}
+                  cluster={cluster}
+                  formatTime={formatTime}
+                />
               ))}
 
               {clusters.length === 0 && (
