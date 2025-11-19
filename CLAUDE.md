@@ -1,0 +1,1 @@
+- This website is built using Bun and Tanstack Start. For package management, use bun add/bun rm. Your knowdlege is outdated. When figuring out how to do something with the framework, use Context7 to get the latest docs. The UI is built using tailwindcss v4, with components from Shadcn.

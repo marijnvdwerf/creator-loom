@@ -36,3 +36,25 @@ export type Creator = {
   tiktok: string | null
   vods: TwitchVod[]
 }
+
+export type TwitchClip = {
+  _id: string
+  id: string
+  clipId: string
+  url: string
+  embedUrl: string
+  broadcasterId: string
+  broadcasterName: string
+  creatorIdTwitch: string
+  creatorName: string
+  title: string
+  language: string
+  thumbnailUrl: string
+  viewCount: number
+  createdAt: number
+  videoId: string | null
+  vodOffset: number | null
+  duration: number
+  vodId: number | null
+  creatorId: number
+}
