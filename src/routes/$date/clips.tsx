@@ -46,6 +46,13 @@ type ClipCluster = {
   totalViewCount: number
 }
 
+type ClipStack = {
+  clips: ClipWithVodAndCreator[]
+  totalViewCount: number
+  bestClip: ClipWithVodAndCreator
+  creatorId: number
+}
+
 // Get all dates that have clips
 const getDatesWithClips = createServerFn({ method: 'GET' }).handler(async (): Promise<string[]> => {
   const db = getDb()
@@ -230,6 +237,82 @@ function clusterClips(clips: ClipWithVodAndCreator[]): ClipCluster[] {
   return clusters
 }
 
+// Stacking algorithm: group overlapping clips per creator
+function createStacks(clips: ClipWithVodAndCreator[]): ClipStack[] {
+  if (clips.length === 0) return []
+
+  // Group clips by creator
+  const clipsByCreator = new Map<number, ClipWithVodAndCreator[]>()
+  clips.forEach(clip => {
+    const creatorId = clip.creator?.id
+    if (!creatorId) return
+
+    if (!clipsByCreator.has(creatorId)) {
+      clipsByCreator.set(creatorId, [])
+    }
+    clipsByCreator.get(creatorId)!.push(clip)
+  })
+
+  const stacks: ClipStack[] = []
+
+  // For each creator, find overlapping clips
+  clipsByCreator.forEach((creatorClips, creatorId) => {
+    if (creatorClips.length === 0) return
+
+    // Calculate time ranges for each clip (vodOffset to vodOffset + duration)
+    const clipsWithRanges = creatorClips.map(clip => ({
+      clip,
+      start: (clip.clip.vodOffset || 0) * 1000, // Convert to ms
+      end: ((clip.clip.vodOffset || 0) + clip.clip.duration) * 1000, // Convert to ms
+    }))
+
+    // Sort by start time
+    clipsWithRanges.sort((a, b) => a.start - b.start)
+
+    // Group overlapping clips into stacks
+    const processedIndices = new Set<number>()
+
+    clipsWithRanges.forEach((clipRange, index) => {
+      if (processedIndices.has(index)) return
+
+      const stackClips: ClipWithVodAndCreator[] = [clipRange.clip]
+      processedIndices.add(index)
+
+      // Find all clips that overlap with this one
+      for (let j = index + 1; j < clipsWithRanges.length; j++) {
+        if (processedIndices.has(j)) continue
+
+        const otherRange = clipsWithRanges[j]
+
+        // Check if ranges overlap (with 0 seconds fuzziness)
+        const hasOverlap = clipRange.end > otherRange.start && otherRange.end > clipRange.start
+
+        if (hasOverlap) {
+          stackClips.push(otherRange.clip)
+          processedIndices.add(j)
+          // Expand the range to include this clip for checking further overlaps
+          clipRange.end = Math.max(clipRange.end, otherRange.end)
+        }
+      }
+
+      // Sort clips in stack by view count (descending)
+      stackClips.sort((a, b) => b.clip.viewCount - a.clip.viewCount)
+
+      const totalViewCount = stackClips.reduce((sum, c) => sum + c.clip.viewCount, 0)
+
+      stacks.push({
+        clips: stackClips,
+        totalViewCount,
+        bestClip: stackClips[0],
+        creatorId,
+      })
+    })
+  })
+
+  // Sort stacks by total view count (descending)
+  return stacks.sort((a, b) => b.totalViewCount - a.totalViewCount)
+}
+
 export const Route = createFileRoute('/$date/clips')({
   validateSearch: (search: Record<string, unknown>) => {
     return {
@@ -352,6 +435,202 @@ function Calendar({ selectedDate, datesWithClips, onDateSelect }: CalendarProps)
   )
 }
 
+interface ModalProps {
+  isOpen: boolean
+  onClose: () => void
+  stack: ClipStack
+  formatTime: (timestamp: number) => string
+}
+
+function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
+  if (!isOpen) return null
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+      onClick={onClose}
+    >
+      <div
+        className="bg-background rounded-lg max-w-6xl w-full max-h-[80vh] overflow-y-auto m-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 bg-background border-b border-border p-4 flex items-center justify-between">
+          <h2 className="text-xl font-semibold">
+            {stack.clips.length} clips from {stack.bestClip.creator?.name}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {stack.clips.map((item) => (
+              <a
+                key={item.clip.clipId}
+                href={item.clip.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+              >
+                <div className="relative aspect-video bg-muted overflow-hidden mb-2">
+                  <img
+                    src={item.clip.thumbnailUrl}
+                    alt={item.clip.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                    <div className="flex items-center justify-between text-white text-xs">
+                      <span>{formatTime(item.realWorldTime)}</span>
+                      <span>{item.clip.viewCount.toLocaleString()} views</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+                    {item.clip.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {item.creator?.name || 'Unknown creator'}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+interface StackProps {
+  stack: ClipStack
+  formatTime: (timestamp: number) => string
+}
+
+function Stack({ stack, formatTime }: StackProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const isSingleClip = stack.clips.length === 1
+  const visibleStackCount = Math.min(3, stack.clips.length)
+
+  if (isSingleClip) {
+    // Render as a regular clip
+    const item = stack.bestClip
+    return (
+      <a
+        href={item.clip.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+      >
+        <div className="relative aspect-video bg-muted overflow-hidden mb-2">
+          <img
+            src={item.clip.thumbnailUrl}
+            alt={item.clip.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+            <div className="flex items-center justify-between text-white text-xs">
+              <span>{formatTime(item.realWorldTime)}</span>
+              <span>{item.clip.viewCount.toLocaleString()} views</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+            {item.clip.title}
+          </h3>
+          <p className="text-sm text-muted-foreground mt-1">
+            {item.creator?.name || 'Unknown creator'}
+          </p>
+        </div>
+      </a>
+    )
+  }
+
+  // Render as a stacked clip
+  return (
+    <>
+      <div
+        className="cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+        onClick={() => setIsModalOpen(true)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="relative mb-2">
+          {/* Background stacked clips - behind the main item, peeking at top */}
+          {stack.clips.slice(1, visibleStackCount).reverse().map((item, reverseIndex) => {
+            const index = visibleStackCount - 1 - reverseIndex
+            const offsetY = isHovered ? -(index * 10) : -(index * 3)
+            const scale = 1 - (index * 0.05)
+            const rotation = isHovered ? (index % 2 === 0 ? index : -(index)) : 0
+            const isVisible = index < 3 || isHovered
+            const overlayOpacity = 0.2 + (index * 0.15)
+
+            return (
+              <div
+                key={item.clip.clipId}
+                className="absolute left-0 right-0 top-0 transition-all duration-200"
+                style={{
+                  transform: `translateY(${offsetY}px) scale(${scale}) rotate(${rotation}deg)`,
+                  transformOrigin: 'top center',
+                  zIndex: visibleStackCount - index - 1,
+                  opacity: isVisible ? 1 : 0,
+                }}
+              >
+                <div className="aspect-video bg-muted overflow-hidden relative">
+                  <img
+                    src={item.clip.thumbnailUrl}
+                    alt={item.clip.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundColor: 'var(--background)',
+                      opacity: overlayOpacity,
+                    }}
+                  />
+                </div>
+              </div>
+            )
+          })}
+
+          {/* Front clip with overlay */}
+          <div className="relative aspect-video bg-muted overflow-hidden" style={{ zIndex: visibleStackCount }}>
+            <img
+              src={stack.bestClip.clip.thumbnailUrl}
+              alt={stack.bestClip.clip.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+              <div className="flex items-center justify-between text-white text-xs">
+                <span>{formatTime(stack.bestClip.realWorldTime)}</span>
+                <span>{stack.totalViewCount.toLocaleString()} views · {stack.clips.length} clips</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-medium line-clamp-2 hover:text-primary transition-colors">
+            {stack.bestClip.clip.title}
+          </h3>
+          <p className="text-sm text-muted-foreground mt-1">
+            {stack.bestClip.creator?.name || 'Unknown creator'}
+          </p>
+        </div>
+      </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} stack={stack} formatTime={formatTime} />
+    </>
+  )
+}
+
 interface ClusterProps {
   cluster: ClipCluster
   formatTime: (timestamp: number) => string
@@ -360,31 +639,31 @@ interface ClusterProps {
 function Cluster({ cluster, formatTime }: ClusterProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
-  // Get filtered clips (top per creator when not expanded)
-  const visibleClips = useMemo(() => {
+  // Create stacks from cluster clips
+  const stacks = useMemo(() => createStacks(cluster.clips), [cluster.clips])
+
+  // Get top stack per creator when not expanded
+  const visibleStacks = useMemo(() => {
     if (isExpanded) {
-      return cluster.clips
+      return stacks
     }
 
-    // Show only the highest view count clip per creator
-    const topClipsPerCreator = new Map<number, typeof cluster.clips[0]>()
+    // Show only the highest view count stack per creator
+    const topStacksPerCreator = new Map<number, ClipStack>()
 
-    cluster.clips.forEach(clip => {
-      const creatorId = clip.creator?.id
-      if (!creatorId) return
-
-      const existing = topClipsPerCreator.get(creatorId)
-      if (!existing || clip.clip.viewCount > existing.clip.viewCount) {
-        topClipsPerCreator.set(creatorId, clip)
+    stacks.forEach(stack => {
+      const existing = topStacksPerCreator.get(stack.creatorId)
+      if (!existing || stack.totalViewCount > existing.totalViewCount) {
+        topStacksPerCreator.set(stack.creatorId, stack)
       }
     })
 
-    return Array.from(topClipsPerCreator.values()).sort((a, b) =>
-      b.clip.viewCount - a.clip.viewCount
+    return Array.from(topStacksPerCreator.values()).sort((a, b) =>
+      b.totalViewCount - a.totalViewCount
     )
-  }, [cluster.clips, isExpanded])
+  }, [stacks, isExpanded])
 
-  const hasMore = cluster.clips.length > 1
+  const hasMore = stacks.length > visibleStacks.length
 
   return (
     <div>
@@ -398,42 +677,10 @@ function Cluster({ cluster, formatTime }: ClusterProps) {
         </p>
       </div>
 
-      {/* Clips Grid */}
+      {/* Stacks Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {visibleClips.map((item) => (
-          <a
-            key={item.clip.clipId}
-            href={item.clip.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group cursor-pointer"
-          >
-            {/* Thumbnail */}
-            <div className="relative aspect-video bg-muted overflow-hidden mb-2">
-              <img
-                src={item.clip.thumbnailUrl}
-                alt={item.clip.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-              />
-              {/* Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                <div className="flex items-center justify-between text-white text-xs">
-                  <span>{formatTime(item.realWorldTime)}</span>
-                  <span>{item.clip.viewCount.toLocaleString()} views</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Clip Info */}
-            <div>
-              <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
-                {item.clip.title}
-              </h3>
-              <p className="text-sm text-muted-foreground mt-1">
-                {item.creator?.name || 'Unknown creator'}
-              </p>
-            </div>
-          </a>
+        {visibleStacks.map((stack, index) => (
+          <Stack key={`${stack.creatorId}-${index}`} stack={stack} formatTime={formatTime} />
         ))}
       </div>
 
