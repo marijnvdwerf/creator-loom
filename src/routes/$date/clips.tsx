@@ -447,58 +447,54 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-md overflow-y-auto flex items-center justify-center p-4"
       onClick={onClose}
     >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="fixed top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-background/90 rounded-full hover:bg-accent transition-colors text-foreground"
+      >
+        ✕
+      </button>
+
+      {/* Grid */}
       <div
-        className="bg-background rounded-lg max-w-6xl w-full max-h-[80vh] overflow-y-auto m-4"
+        className="max-w-7xl w-full"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 bg-background border-b border-border p-4 flex items-center justify-between">
-          <h2 className="text-xl font-semibold">
-            {stack.clips.length} clips from {stack.bestClip.creator?.name}
-          </h2>
-          <button
-            onClick={onClose}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            ✕
-          </button>
-        </div>
-        <div className="p-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {stack.clips.map((item) => (
-              <a
-                key={item.clip.clipId}
-                href={item.clip.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
-              >
-                <div className="relative aspect-video bg-muted overflow-hidden mb-2">
-                  <img
-                    src={item.clip.thumbnailUrl}
-                    alt={item.clip.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                    <div className="flex items-center justify-between text-white text-xs">
-                      <span>{formatTime(item.realWorldTime)}</span>
-                      <span>{item.clip.viewCount.toLocaleString()} views</span>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stack.clips.map((item) => (
+            <a
+              key={item.clip.clipId}
+              href={item.clip.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+            >
+              <div className="relative aspect-video bg-muted overflow-hidden mb-2">
+                <img
+                  src={item.clip.thumbnailUrl}
+                  alt={item.clip.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                  <div className="flex items-center justify-between text-white text-xs">
+                    <span>{formatTime(item.realWorldTime)}</span>
+                    <span>{item.clip.viewCount.toLocaleString()} views</span>
                   </div>
                 </div>
-                <div>
-                  <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
-                    {item.clip.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {item.creator?.name || 'Unknown creator'}
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
+              </div>
+              <div>
+                <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+                  {item.clip.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {item.creator?.name || 'Unknown creator'}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </div>
