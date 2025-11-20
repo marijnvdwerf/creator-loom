@@ -3,7 +3,7 @@ import { createServerFn } from '@tanstack/react-start'
 import { useMemo, useState } from 'react'
 import { getDb } from '@/db/client'
 import { twitchClips, twitchVods, creators } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { eq, sql, and, gte, lt } from 'drizzle-orm'
 import { TrendingUp, Clock } from 'lucide-react'
 
 // Event date range
@@ -127,8 +127,10 @@ const getClipsForDate = createServerFn({ method: 'GET' })
     const startMs = dayStart.getTime() + (offset * 60 * 60 * 1000) + (5 * 60 * 60 * 1000)
     const endMs = dayEnd.getTime() + (offset * 60 * 60 * 1000) + (5 * 60 * 60 * 1000)
 
-    // Fetch all clips with their VODs and creators
-    // We'll filter by calculated real-world time in memory
+    // Fetch clips filtered by calculated real-world time at the database level
+    // Real-world time = vod.createdAt + (clip.vodOffset * 1000)
+    const realWorldTimeExpr = sql`${twitchVods.createdAt} + (COALESCE(${twitchClips.vodOffset}, 0) * 1000)`
+
     const clipsData = await db
       .select({
         clip: twitchClips,
@@ -138,9 +140,15 @@ const getClipsForDate = createServerFn({ method: 'GET' })
       .from(twitchClips)
       .innerJoin(twitchVods, eq(twitchClips.vodId, twitchVods.id))
       .leftJoin(creators, eq(twitchClips.creatorId, creators.id))
+      .where(
+        and(
+          sql`${realWorldTimeExpr} >= ${startMs}`,
+          sql`${realWorldTimeExpr} < ${endMs}`
+        )
+      )
       .all()
 
-    // Calculate real-world time and filter by date
+    // Transform to include calculated real-world time
     const clipsWithRealTime: ClipWithVodAndCreator[] = clipsData
       .map(row => {
         const realWorldTime = row.vod.createdAt + ((row.clip.vodOffset || 0) * 1000)
@@ -173,7 +181,6 @@ const getClipsForDate = createServerFn({ method: 'GET' })
           realWorldTime,
         }
       })
-      .filter(item => item.realWorldTime >= startMs && item.realWorldTime < endMs)
 
     return clipsWithRealTime
   })
