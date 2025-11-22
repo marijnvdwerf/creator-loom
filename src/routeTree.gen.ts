@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as LiveRouteImport } from './routes/live'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DateTimelineRouteImport } from './routes/$date/timeline'
 import { Route as DateClipsRouteImport } from './routes/$date/clips'
 
+const LiveRoute = LiveRouteImport.update({
+  id: '/live',
+  path: '/live',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,36 +37,47 @@ const DateClipsRoute = DateClipsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/live': typeof LiveRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/live': typeof LiveRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/live': typeof LiveRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$date/clips' | '/$date/timeline'
+  fullPaths: '/' | '/live' | '/$date/clips' | '/$date/timeline'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$date/clips' | '/$date/timeline'
-  id: '__root__' | '/' | '/$date/clips' | '/$date/timeline'
+  to: '/' | '/live' | '/$date/clips' | '/$date/timeline'
+  id: '__root__' | '/' | '/live' | '/$date/clips' | '/$date/timeline'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LiveRoute: typeof LiveRoute
   DateClipsRoute: typeof DateClipsRoute
   DateTimelineRoute: typeof DateTimelineRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/live': {
+      id: '/live'
+      path: '/live'
+      fullPath: '/live'
+      preLoaderRoute: typeof LiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LiveRoute: LiveRoute,
   DateClipsRoute: DateClipsRoute,
   DateTimelineRoute: DateTimelineRoute,
 }
