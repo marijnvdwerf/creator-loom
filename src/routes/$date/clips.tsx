@@ -5,6 +5,7 @@ import { getDb } from '@/db/client'
 import { twitchClips, twitchVods, creators } from '@/db/schema'
 import { eq, sql, and, gte, lt } from 'drizzle-orm'
 import { TrendingUp, Clock } from 'lucide-react'
+import { Database } from 'bun:sqlite'
 
 // Event date range
 const EVENT_START = new Date('2025-11-09T00:00:00Z')
@@ -55,40 +56,35 @@ type ClipStack = {
 
 // Get all dates that have clips
 const getDatesWithClips = createServerFn({ method: 'GET' }).handler(async (): Promise<string[]> => {
-  const db = getDb()
+  console.time('getDatesWithClips')
 
-  // Fetch all clips with VODs
-  const clipsData = await db
-    .select({
-      clip: twitchClips,
-      vod: twitchVods,
-    })
-    .from(twitchClips)
-    .innerJoin(twitchVods, eq(twitchClips.vodId, twitchVods.id))
-    .all()
+  const sqlite = new Database('./smp-timeline.db')
 
-  // Calculate real-world time for each clip and group by date
-  // Day ends at 05:00, so subtract 5 hours before determining the date
-  const datesSet = new Set<string>()
+  // Calculate dates in SQLite:
+  // 1. Real-world time = vod.created_at + (clip.vod_offset * 1000)
+  // 2. Subtract 5 hours to shift day boundary
+  // 3. Convert to date in Amsterdam timezone (UTC+1 for CET, UTC+2 for CEST)
+  // For November 2025, we use CET (UTC+1)
+  const query = `
+    SELECT DISTINCT
+      DATE(
+        ("twitch_vods"."created_at" + (COALESCE("twitch_clips"."vod_offset", 0) * 1000) - (5 * 60 * 60 * 1000)) / 1000,
+        'unixepoch',
+        '+1 hour'
+      ) as date
+    FROM "twitch_clips"
+    INNER JOIN "twitch_vods" ON "twitch_clips"."vod_id" = "twitch_vods"."id"
+    ORDER BY date
+  `
 
-  clipsData.forEach(row => {
-    const realWorldTime = row.vod.createdAt + ((row.clip.vodOffset || 0) * 1000)
-    // Subtract 5 hours (in ms) to shift the day boundary
-    const adjustedTime = realWorldTime - (5 * 60 * 60 * 1000)
-    const date = new Date(adjustedTime)
+  const stmt = sqlite.prepare(query)
+  const results = stmt.values() as [string][]
+  const dates = results.map(row => row[0])
 
-    // Convert to Amsterdam timezone date string
-    const dateString = date.toLocaleDateString('en-CA', {
-      timeZone: 'Europe/Amsterdam',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-    })
+  sqlite.close()
+  console.timeEnd('getDatesWithClips')
 
-    datesSet.add(dateString)
-  })
-
-  return Array.from(datesSet).sort()
+  return dates
 })
 
 // Fetch clips for a specific date with VOD and creator data
@@ -129,24 +125,103 @@ const getClipsForDate = createServerFn({ method: 'GET' })
 
     // Fetch clips filtered by calculated real-world time at the database level
     // Real-world time = vod.createdAt + (clip.vodOffset * 1000)
-    const realWorldTimeExpr = sql`${twitchVods.createdAt} + (COALESCE(${twitchClips.vodOffset}, 0) * 1000)`
+    console.time('getClipsForDate:dbQuery')
+    let clipsData: any[]
 
-    const clipsData = await db
-      .select({
-        clip: twitchClips,
-        vod: twitchVods,
-        creator: creators,
-      })
-      .from(twitchClips)
-      .innerJoin(twitchVods, eq(twitchClips.vodId, twitchVods.id))
-      .leftJoin(creators, eq(twitchClips.creatorId, creators.id))
-      .where(
-        and(
-          sql`${realWorldTimeExpr} >= ${startMs}`,
-          sql`${realWorldTimeExpr} < ${endMs}`
+    if (false) {
+      const realWorldTimeExpr = sql`${twitchVods.createdAt} + (COALESCE(${twitchClips.vodOffset}, 0) * 1000)`
+
+      clipsData = await db
+        .select({
+          clip: twitchClips,
+          vod: twitchVods,
+          creator: creators,
+        })
+        .from(twitchClips)
+        .innerJoin(twitchVods, eq(twitchClips.vodId, twitchVods.id))
+        .leftJoin(creators, eq(twitchClips.creatorId, creators.id))
+        .where(
+          and(
+            sql`${realWorldTimeExpr} >= ${startMs}`,
+            sql`${realWorldTimeExpr} < ${endMs}`
+          )
         )
-      )
-      .all()
+        .all()
+    } else {
+      const sqlite = new Database('./smp-timeline.db')
+      const rawQuery = `
+        select "twitch_clips"."id", "twitch_clips"."clip_id", "twitch_clips"."url", "twitch_clips"."embed_url", "twitch_clips"."broadcaster_id", "twitch_clips"."broadcaster_name", "twitch_clips"."creator_id_twitch", "twitch_clips"."creator_name", "twitch_clips"."title", "twitch_clips"."language", "twitch_clips"."thumbnail_url", "twitch_clips"."view_count", "twitch_clips"."created_at", "twitch_clips"."video_id", "twitch_clips"."vod_offset", "twitch_clips"."duration", "twitch_clips"."vod_id", "twitch_clips"."creator_id", "twitch_vods"."id", "twitch_vods"."vod_id", "twitch_vods"."stream_id", "twitch_vods"."user_id", "twitch_vods"."user_login", "twitch_vods"."user_name", "twitch_vods"."title", "twitch_vods"."description", "twitch_vods"."created_at", "twitch_vods"."published_at", "twitch_vods"."url", "twitch_vods"."thumbnail_url", "twitch_vods"."viewable", "twitch_vods"."view_count", "twitch_vods"."language", "twitch_vods"."type", "twitch_vods"."duration", "twitch_vods"."creator_id", "creators"."id", "creators"."name", "creators"."team", "creators"."state", "creators"."avatar_url", "creators"."last_seen", "creators"."death_time", "creators"."death_message", "creators"."death_clips", "creators"."twitch", "creators"."youtube", "creators"."instagram", "creators"."tiktok"
+        from "twitch_clips"
+        inner join "twitch_vods" on "twitch_clips"."vod_id" = "twitch_vods"."id"
+        left join "creators" on "twitch_clips"."creator_id" = "creators"."id"
+        where ("twitch_vods"."created_at" + (COALESCE("twitch_clips"."vod_offset", 0) * 1000) >= ?1 and "twitch_vods"."created_at" + (COALESCE("twitch_clips"."vod_offset", 0) * 1000) < ?2)
+      `
+      const stmt = sqlite.prepare(rawQuery)
+      const rawResults = stmt.values(startMs, endMs) as any[]
+
+      // Map raw results to drizzle format
+      clipsData = rawResults.map(row => ({
+        clip: {
+          id: row[0],
+          clipId: row[1],
+          url: row[2],
+          embedUrl: row[3],
+          broadcasterId: row[4],
+          broadcasterName: row[5],
+          creatorIdTwitch: row[6],
+          creatorName: row[7],
+          title: row[8],
+          language: row[9],
+          thumbnailUrl: row[10],
+          viewCount: row[11],
+          createdAt: row[12],
+          videoId: row[13],
+          vodOffset: row[14],
+          duration: row[15],
+          vodId: row[16],
+          creatorId: row[17],
+        },
+        vod: {
+          id: row[18],
+          vodId: row[19],
+          streamId: row[20],
+          userId: row[21],
+          userLogin: row[22],
+          userName: row[23],
+          title: row[24],
+          description: row[25],
+          createdAt: row[26],
+          publishedAt: row[27],
+          url: row[28],
+          thumbnailUrl: row[29],
+          viewable: row[30],
+          viewCount: row[31],
+          language: row[32],
+          type: row[33],
+          duration: row[34],
+          creatorId: row[35],
+        },
+        creator: row[36] !== null ? {
+          id: row[36],
+          name: row[37],
+          team: row[38],
+          state: row[39],
+          avatarUrl: row[40],
+          lastSeen: row[41],
+          deathTime: row[42],
+          deathMessage: row[43],
+          deathClips: row[44],
+          twitch: row[45],
+          youtube: row[46],
+          instagram: row[47],
+          tiktok: row[48],
+        } : null,
+      }))
+
+      sqlite.close()
+    }
+
+    console.timeEnd('getClipsForDate:dbQuery')
 
     // Transform to include calculated real-world time
     const clipsWithRealTime: ClipWithVodAndCreator[] = clipsData
@@ -327,10 +402,12 @@ export const Route = createFileRoute('/$date/clips')({
     }
   },
   loader: async ({ params }) => {
+    console.time('loader')
     const [clips, datesWithClips] = await Promise.all([
       getClipsForDate({ data: params.date }),
       getDatesWithClips(),
     ])
+    console.timeEnd('loader')
     return { clips, datesWithClips }
   },
   component: ClipsPage,
@@ -488,7 +565,7 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
                   <div className="flex items-center justify-between text-white text-xs">
                     <span>{formatTime(item.realWorldTime)}</span>
-                    <span>{item.clip.viewCount.toLocaleString()} views</span>
+                    <span>{item.clip.viewCount.toLocaleString('en-US')} views</span>
                   </div>
                 </div>
               </div>
@@ -539,7 +616,7 @@ function Stack({ stack, formatTime }: StackProps) {
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
             <div className="flex items-center justify-between text-white text-xs">
               <span>{formatTime(item.realWorldTime)}</span>
-              <span>{item.clip.viewCount.toLocaleString()} views</span>
+              <span>{item.clip.viewCount.toLocaleString('en-US')} views</span>
             </div>
           </div>
         </div>
@@ -613,7 +690,7 @@ function Stack({ stack, formatTime }: StackProps) {
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
               <div className="flex items-center justify-between text-white text-xs">
                 <span>{formatTime(stack.bestClip.realWorldTime)}</span>
-                <span>{stack.totalViewCount.toLocaleString()} views · {stack.clips.length} clips</span>
+                <span>{stack.totalViewCount.toLocaleString('en-US')} views · {stack.clips.length} clips</span>
               </div>
             </div>
           </div>
@@ -676,7 +753,7 @@ function Cluster({ cluster, formatTime }: ClusterProps) {
           {formatTime(cluster.startTime)} - {formatTime(cluster.endTime)}
         </h2>
         <p className="text-sm text-muted-foreground">
-          {cluster.clips.length} clips · {cluster.totalViewCount.toLocaleString()} views
+          {cluster.clips.length} clips · {cluster.totalViewCount.toLocaleString('en-US')} views
         </p>
       </div>
 
