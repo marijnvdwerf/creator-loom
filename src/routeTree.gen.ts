@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DateTimelineRouteImport } from './routes/$date/timeline'
 import { Route as DateClipsRouteImport } from './routes/$date/clips'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DateTimelineRoute = DateTimelineRouteImport.update({
+  id: '/$date/timeline',
+  path: '/$date/timeline',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DateClipsRoute = DateClipsRouteImport.update({
@@ -26,27 +32,31 @@ const DateClipsRoute = DateClipsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$date/clips': typeof DateClipsRoute
+  '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$date/clips': typeof DateClipsRoute
+  '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$date/clips': typeof DateClipsRoute
+  '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$date/clips'
+  fullPaths: '/' | '/$date/clips' | '/$date/timeline'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$date/clips'
-  id: '__root__' | '/' | '/$date/clips'
+  to: '/' | '/$date/clips' | '/$date/timeline'
+  id: '__root__' | '/' | '/$date/clips' | '/$date/timeline'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DateClipsRoute: typeof DateClipsRoute
+  DateTimelineRoute: typeof DateTimelineRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$date/timeline': {
+      id: '/$date/timeline'
+      path: '/$date/timeline'
+      fullPath: '/$date/timeline'
+      preLoaderRoute: typeof DateTimelineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$date/clips': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DateClipsRoute: DateClipsRoute,
+  DateTimelineRoute: DateTimelineRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
