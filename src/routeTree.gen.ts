@@ -9,14 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as LiveRouteImport } from './routes/live'
+import { Route as TimelineRouteImport } from './routes/timeline'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DateTimelineRouteImport } from './routes/$date/timeline'
 import { Route as DateClipsRouteImport } from './routes/$date/clips'
 
-const LiveRoute = LiveRouteImport.update({
-  id: '/live',
-  path: '/live',
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,45 +37,45 @@ const DateClipsRoute = DateClipsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/live': typeof LiveRoute
+  '/timeline': typeof TimelineRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/live': typeof LiveRoute
+  '/timeline': typeof TimelineRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/live': typeof LiveRoute
+  '/timeline': typeof TimelineRoute
   '/$date/clips': typeof DateClipsRoute
   '/$date/timeline': typeof DateTimelineRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/live' | '/$date/clips' | '/$date/timeline'
+  fullPaths: '/' | '/timeline' | '/$date/clips' | '/$date/timeline'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/live' | '/$date/clips' | '/$date/timeline'
-  id: '__root__' | '/' | '/live' | '/$date/clips' | '/$date/timeline'
+  to: '/' | '/timeline' | '/$date/clips' | '/$date/timeline'
+  id: '__root__' | '/' | '/timeline' | '/$date/clips' | '/$date/timeline'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LiveRoute: typeof LiveRoute
+  TimelineRoute: typeof TimelineRoute
   DateClipsRoute: typeof DateClipsRoute
   DateTimelineRoute: typeof DateTimelineRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/live': {
-      id: '/live'
-      path: '/live'
-      fullPath: '/live'
-      preLoaderRoute: typeof LiveRouteImport
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,7 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LiveRoute: LiveRoute,
+  TimelineRoute: TimelineRoute,
   DateClipsRoute: DateClipsRoute,
   DateTimelineRoute: DateTimelineRoute,
 }
