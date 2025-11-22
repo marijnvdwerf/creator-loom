@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
+import { useQuery } from '@tanstack/react-query'
 import { getDb } from '@/db/client'
 import { creators } from '@/db/schema'
 import { isNotNull } from 'drizzle-orm'
@@ -250,7 +251,17 @@ export const Route = createFileRoute('/')({
 })
 
 function LivePage() {
-  const liveCreators = Route.useLoaderData()
+  const initialData = Route.useLoaderData()
+
+  // TanStack Query with auto-refresh every minute
+  const { data: liveCreators = initialData, isFetching } = useQuery({
+    queryKey: ['live-creators'],
+    queryFn: () => getLiveCreators(),
+    initialData,
+    refetchInterval: 60000, // 1 minute
+    refetchIntervalInBackground: true,
+    staleTime: 60 * 1000,
+  })
 
   if (liveCreators.length === 0) {
     return (
@@ -262,6 +273,14 @@ function LivePage() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Subtle loading indicator */}
+      {isFetching && (
+        <div className="fixed top-4 right-4 z-50">
+          <div className="bg-zinc-800 px-3 py-1 rounded text-xs text-zinc-400 animate-pulse">
+            Updating...
+          </div>
+        </div>
+      )}
       {/* Background split effect */}
       <div className="fixed inset-0 flex">
         {/* Ice side */}
