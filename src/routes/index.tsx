@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
+import { useState, useEffect } from 'react'
 import { getDb } from '@/db/client'
 import { creators } from '@/db/schema'
 import { isNotNull } from 'drizzle-orm'
@@ -263,6 +264,32 @@ function LivePage() {
   // Use suspense query with auto-refresh
   const { data: liveCreators, isFetching } = useSuspenseQuery(liveCreatorsQueryOptions)
 
+  // Thumbnail refresh timestamp (only when tab is active)
+  const [thumbnailRefresh, setThumbnailRefresh] = useState(Date.now())
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        // Refresh thumbnails when tab becomes active
+        setThumbnailRefresh(Date.now())
+      }
+    }
+
+    // Update thumbnails every minute when tab is active
+    const interval = setInterval(() => {
+      if (!document.hidden) {
+        setThumbnailRefresh(Date.now())
+      }
+    }, 60000)
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      clearInterval(interval)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
+
   if (liveCreators.length === 0) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -319,8 +346,8 @@ function LivePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {liveCreators.map((creator, index) => {
               const thumbnailUrl = creator.stream.thumbnail_url
-                .replace('{width}', '1920')
-                .replace('{height}', '1080')
+                .replace('{width}', '720')
+                .replace('{height}', '405') + `?t=${thumbnailRefresh}`
 
               const isMinecraft = creator.stream.game_name.toLowerCase().includes('minecraft')
               const isNoord = creator.team === 0 && isMinecraft // Ice
