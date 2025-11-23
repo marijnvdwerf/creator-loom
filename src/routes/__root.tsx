@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
+import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 import { TanStackDevtools } from '@tanstack/react-devtools';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -6,7 +6,9 @@ import React from 'react';
 
 import appCss from '../styles.css?url';
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient
+}>()({
   head: () => ({
     meta: [
       {
@@ -32,18 +34,8 @@ export const Route = createRootRoute({
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
-  // Create QueryClient with SSR-friendly defaults
-  const [queryClient] = React.useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            // With SSR, we set some default staleTime to avoid refetching immediately on the client
-            staleTime: 60 * 1000, // 1 minute
-          },
-        },
-      }),
-  );
+  // Get queryClient from router context
+  const queryClient = Route.useRouteContext().queryClient;
 
   return (
     <html lang="en" className="dark">

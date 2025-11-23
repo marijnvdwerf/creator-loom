@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { useQuery } from '@tanstack/react-query'
+import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
 import { getDb } from '@/db/client'
 import { creators } from '@/db/schema'
 import { isNotNull } from 'drizzle-orm'
@@ -242,26 +242,26 @@ const getLiveCreators = createServerFn({ method: 'GET' }).handler(
   }
 )
 
+// Query options with auto-refresh
+export const liveCreatorsQueryOptions = queryOptions({
+  queryKey: ['live-creators'],
+  queryFn: () => getLiveCreators(),
+  refetchInterval: 60000, // 1 minute
+  refetchIntervalInBackground: true,
+  staleTime: 60 * 1000,
+})
+
 // Route definition
 export const Route = createFileRoute('/')({
-  loader: async () => {
-    return await getLiveCreators()
+  loader: async ({ context }) => {
+    return await context.queryClient.ensureQueryData(liveCreatorsQueryOptions)
   },
   component: LivePage,
 })
 
 function LivePage() {
-  const initialData = Route.useLoaderData()
-
-  // TanStack Query with auto-refresh every minute
-  const { data: liveCreators = initialData, isFetching } = useQuery({
-    queryKey: ['live-creators'],
-    queryFn: () => getLiveCreators(),
-    initialData,
-    refetchInterval: 60000, // 1 minute
-    refetchIntervalInBackground: true,
-    staleTime: 60 * 1000,
-  })
+  // Use suspense query with auto-refresh
+  const { data: liveCreators, isFetching } = useSuspenseQuery(liveCreatorsQueryOptions)
 
   if (liveCreators.length === 0) {
     return (
