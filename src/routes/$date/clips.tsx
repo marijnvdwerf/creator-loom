@@ -397,8 +397,14 @@ function createStacks(clips: ClipWithVodAndCreator[]): ClipStack[] {
 
 export const Route = createFileRoute('/$date/clips')({
   validateSearch: (search: Record<string, unknown>) => {
+    const creators = search.creators
     return {
       sort: (search.sort as 'viewCount' | 'time') || 'viewCount',
+      creators: Array.isArray(creators)
+        ? creators.filter((c): c is string => typeof c === 'string')
+        : typeof creators === 'string'
+        ? [creators]
+        : undefined,
     }
   },
   loader: async ({ params }) => {
@@ -412,6 +418,13 @@ export const Route = createFileRoute('/$date/clips')({
   },
   component: ClipsPage,
 })
+
+type CreatorStats = {
+  id: number
+  name: string
+  clusterCount: number
+  totalViews: number
+}
 
 interface CalendarProps {
   selectedDate: string
@@ -519,15 +532,92 @@ function Calendar({ selectedDate, datesWithClips, onDateSelect }: CalendarProps)
   )
 }
 
+interface CreatorFilterProps {
+  creators: CreatorStats[]
+  selectedCreators: string[] | undefined
+  onCreatorToggle: (creatorName: string) => void
+}
+
+function CreatorFilter({ creators, selectedCreators, onCreatorToggle }: CreatorFilterProps) {
+  const [showAll, setShowAll] = useState(false)
+
+  const selectedSet = useMemo(
+    () => new Set(selectedCreators || []),
+    [selectedCreators]
+  )
+
+  const visibleCreators = useMemo(() => {
+    if (showAll) return creators
+
+    // Top 7 creators
+    const top7 = creators.slice(0, 7)
+    const top7Names = new Set(top7.map(c => c.name))
+
+    // Selected creators not in top 7
+    const selectedNotInTop7 = creators.filter(
+      c => selectedSet.has(c.name) && !top7Names.has(c.name)
+    )
+
+    return [...top7, ...selectedNotInTop7]
+  }, [creators, showAll, selectedSet])
+
+  const hasMore = creators.length > visibleCreators.length
+
+  return (
+    <div>
+      <label className="text-sm font-medium text-muted-foreground mb-2 block">Creators</label>
+      <div className="space-y-1">
+        {/* Individual creators with checkboxes */}
+        {visibleCreators.map(creator => {
+          const isSelected = selectedSet.has(creator.name)
+          return (
+            <label
+              key={creator.id}
+              className="flex items-center gap-3 px-3 py-2 text-sm rounded-md hover:bg-accent cursor-pointer transition-colors"
+            >
+              <input
+                type="checkbox"
+                checked={isSelected}
+                onChange={() => onCreatorToggle(creator.name)}
+                className="h-4 w-4 rounded border-border text-primary focus:ring-primary"
+              />
+              <span className="flex-1 truncate">{creator.name}</span>
+              <span className="text-xs text-muted-foreground">
+                {creator.totalViews.toLocaleString('en-US')} views
+              </span>
+            </label>
+          )
+        })}
+
+        {/* More/Less Button */}
+        {hasMore && (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="w-full px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {showAll ? 'less' : 'more...'}
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
 interface ModalProps {
   isOpen: boolean
   onClose: () => void
   stack: ClipStack
   formatTime: (timestamp: number) => string
+  selectedCreators?: string[]
 }
 
-function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
+function Modal({ isOpen, onClose, stack, formatTime, selectedCreators }: ModalProps) {
   if (!isOpen) return null
+
+  const isHighlighted = (creatorName: string | undefined) => {
+    if (!selectedCreators || selectedCreators.length === 0 || !creatorName) return false
+    return selectedCreators.includes(creatorName)
+  }
 
   return (
     <div
@@ -548,37 +638,47 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stack.clips.map((item) => (
-            <a
-              key={item.clip.clipId}
-              href={item.clip.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
-            >
-              <div className="relative aspect-video bg-muted overflow-hidden mb-2">
-                <img
-                  src={item.clip.thumbnailUrl}
-                  alt={item.clip.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
-                  <div className="flex items-center justify-between text-white text-xs">
-                    <span>{formatTime(item.realWorldTime)}</span>
-                    <span>{item.clip.viewCount.toLocaleString('en-US')} views</span>
+          {stack.clips.map((item) => {
+            const highlighted = isHighlighted(item.creator?.name)
+            return (
+              <a
+                key={item.clip.clipId}
+                href={item.clip.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+                style={highlighted ? {
+                  filter: 'drop-shadow(0 0 8px hsl(var(--primary) / 0.4))',
+                } : undefined}
+              >
+                <div className={`relative aspect-video bg-muted overflow-hidden mb-2 ${highlighted ? 'ring-2 ring-yellow-500' : ''}`}
+                  style={highlighted ? {
+                    filter: 'drop-shadow(0 0 12px var(--color-yellow-500))',
+                  } : undefined}
+                >
+                  <img
+                    src={item.clip.thumbnailUrl}
+                    alt={item.clip.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                    <div className="flex items-center justify-between text-white text-xs">
+                      <span>{formatTime(item.realWorldTime)}</span>
+                      <span>{item.clip.viewCount.toLocaleString('en-US')} views</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
-                  {item.clip.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {item.creator?.name || 'Unknown creator'}
-                </p>
-              </div>
-            </a>
-          ))}
+                <div>
+                  <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+                    {item.clip.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {item.creator?.name || 'Unknown creator'}
+                  </p>
+                </div>
+              </a>
+            )
+          })}
         </div>
       </div>
     </div>
@@ -588,26 +688,40 @@ function Modal({ isOpen, onClose, stack, formatTime }: ModalProps) {
 interface StackProps {
   stack: ClipStack
   formatTime: (timestamp: number) => string
+  selectedCreators?: string[]
 }
 
-function Stack({ stack, formatTime }: StackProps) {
+function Stack({ stack, formatTime, selectedCreators }: StackProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
   const isSingleClip = stack.clips.length === 1
   const visibleStackCount = Math.min(3, stack.clips.length)
 
+  const isHighlighted = (creatorName: string | undefined) => {
+    if (!selectedCreators || selectedCreators.length === 0 || !creatorName) return false
+    return selectedCreators.includes(creatorName)
+  }
+
   if (isSingleClip) {
     // Render as a regular clip
     const item = stack.bestClip
+    const highlighted = isHighlighted(item.creator?.name)
     return (
       <a
         href={item.clip.url}
         target="_blank"
         rel="noopener noreferrer"
         className="group cursor-pointer block transition-transform duration-300 ease-in-out hover:-translate-y-0.5"
+        style={highlighted ? {
+          filter: 'drop-shadow(0 0 8px hsl(var(--primary) / 0.4))',
+        } : undefined}
       >
-        <div className="relative aspect-video bg-muted overflow-hidden mb-2">
+        <div className={`relative aspect-video bg-muted overflow-hidden mb-2 ${highlighted ? 'ring-2 ring-yellow-500 drop-shadow-yellow-500' : ''}`}
+          style={highlighted ? {
+            filter: 'drop-shadow(0 0 12px var(--color-yellow-500))',
+          } : undefined}
+        >
           <img
             src={item.clip.thumbnailUrl}
             alt={item.clip.title}
@@ -633,6 +747,8 @@ function Stack({ stack, formatTime }: StackProps) {
   }
 
   // Render as a stacked clip
+  // Check if any clip in the stack is highlighted
+  const hasHighlightedClip = stack.clips.some(clip => isHighlighted(clip.creator?.name))
   return (
     <>
       <div
@@ -640,6 +756,9 @@ function Stack({ stack, formatTime }: StackProps) {
         onClick={() => setIsModalOpen(true)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        style={hasHighlightedClip ? {
+          filter: 'drop-shadow(0 0 8px hsl(var(--primary) / 0.4))',
+        } : undefined}
       >
         <div className="relative mb-2">
           {/* Background stacked clips - behind the main item, peeking at top */}
@@ -650,6 +769,7 @@ function Stack({ stack, formatTime }: StackProps) {
             const rotation = isHovered ? (index % 2 === 0 ? index : -(index)) : 0
             const isVisible = index < 3 || isHovered
             const overlayOpacity = 0.2 + (index * 0.15)
+            const itemHighlighted = isHighlighted(item.creator?.name)
 
             return (
               <div
@@ -662,7 +782,11 @@ function Stack({ stack, formatTime }: StackProps) {
                   opacity: isVisible ? 1 : 0,
                 }}
               >
-                <div className="aspect-video bg-muted overflow-hidden relative">
+                <div className={`aspect-video bg-muted overflow-hidden relative ${itemHighlighted ? 'ring-2 ring-yellow-500' : ''}`}
+                  style={itemHighlighted ? {
+                    filter: 'drop-shadow(0 0 12px var(--color-yellow-500))',
+                  } : undefined}
+                >
                   <img
                     src={item.clip.thumbnailUrl}
                     alt={item.clip.title}
@@ -681,7 +805,14 @@ function Stack({ stack, formatTime }: StackProps) {
           })}
 
           {/* Front clip with overlay */}
-          <div className="relative aspect-video bg-muted overflow-hidden" style={{ zIndex: visibleStackCount }}>
+          <div className={`relative aspect-video bg-muted overflow-hidden ${isHighlighted(stack.bestClip.creator?.name) ? 'ring-2 ring-yellow-500' : ''}`}
+            style={{
+              zIndex: visibleStackCount,
+              ...(isHighlighted(stack.bestClip.creator?.name) ? {
+                filter: 'drop-shadow(0 0 12px var(--color-yellow-500))',
+              } : {})
+            }}
+          >
             <img
               src={stack.bestClip.clip.thumbnailUrl}
               alt={stack.bestClip.clip.title}
@@ -706,7 +837,7 @@ function Stack({ stack, formatTime }: StackProps) {
         </div>
       </div>
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} stack={stack} formatTime={formatTime} />
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} stack={stack} formatTime={formatTime} selectedCreators={selectedCreators} />
     </>
   )
 }
@@ -714,9 +845,10 @@ function Stack({ stack, formatTime }: StackProps) {
 interface ClusterProps {
   cluster: ClipCluster
   formatTime: (timestamp: number) => string
+  selectedCreators?: string[]
 }
 
-function Cluster({ cluster, formatTime }: ClusterProps) {
+function Cluster({ cluster, formatTime, selectedCreators }: ClusterProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   // Create stacks from cluster clips
@@ -760,7 +892,7 @@ function Cluster({ cluster, formatTime }: ClusterProps) {
       {/* Stacks Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {visibleStacks.map((stack, index) => (
-          <Stack key={`${stack.creatorId}-${index}`} stack={stack} formatTime={formatTime} />
+          <Stack key={`${stack.creatorId}-${index}`} stack={stack} formatTime={formatTime} selectedCreators={selectedCreators} />
         ))}
       </div>
 
@@ -781,9 +913,9 @@ function ClipsPage() {
   const { clips, datesWithClips } = Route.useLoaderData()
   const navigate = Route.useNavigate()
   const { date } = Route.useParams()
-  const { sort } = Route.useSearch()
+  const { sort, creators } = Route.useSearch()
 
-  // Cluster clips
+  // Cluster clips (unfiltered, for calculating creator stats)
   const clusters = useMemo(() => {
     const clustered = clusterClips(clips)
 
@@ -795,8 +927,81 @@ function ClipsPage() {
     }
   }, [clips, sort])
 
+  // Calculate creator statistics from all clusters
+  const creatorStats = useMemo(() => {
+    const statsMap = new Map<number, CreatorStats>()
+
+    clusters.forEach(cluster => {
+      // Get unique creators in this cluster
+      const creatorsInCluster = new Set<number>()
+      cluster.clips.forEach(clip => {
+        if (clip.creator?.id) {
+          creatorsInCluster.add(clip.creator.id)
+        }
+      })
+
+      // Update stats for each creator in this cluster
+      creatorsInCluster.forEach(creatorId => {
+        const creatorData = cluster.clips.find(c => c.creator?.id === creatorId)?.creator
+        if (!creatorData) return
+
+        const existing = statsMap.get(creatorId)
+        // Calculate total views for this creator's clips in this cluster
+        const creatorViewsInCluster = cluster.clips
+          .filter(c => c.creator?.id === creatorId)
+          .reduce((sum, c) => sum + c.clip.viewCount, 0)
+
+        if (existing) {
+          existing.clusterCount += 1
+          existing.totalViews += creatorViewsInCluster
+        } else {
+          statsMap.set(creatorId, {
+            id: creatorId,
+            name: creatorData.name,
+            clusterCount: 1,
+            totalViews: creatorViewsInCluster,
+          })
+        }
+      })
+    })
+
+    // Sort by total views descending
+    return Array.from(statsMap.values()).sort((a, b) => b.totalViews - a.totalViews)
+  }, [clusters])
+
+  // Filter clusters based on selected creators (must contain ALL selected creators)
+  const filteredClusters = useMemo(() => {
+    if (!creators || creators.length === 0) return clusters
+
+    return clusters.filter(cluster => {
+      // Get all unique creator names in this cluster
+      const clusterCreators = new Set(
+        cluster.clips
+          .map(clip => clip.creator?.name)
+          .filter((name): name is string => !!name)
+      )
+
+      // Check if all selected creators are present in this cluster
+      return creators.every(creator => clusterCreators.has(creator))
+    })
+  }, [clusters, creators])
+
   const handleDateSelect = (newDate: string) => {
-    navigate({ to: `/${newDate}/clips`, search: { sort } })
+    navigate({ to: `/${newDate}/clips`, search: { sort, creators } })
+  }
+
+  const handleCreatorToggle = (creatorName: string) => {
+    const currentCreators = creators || []
+    const newCreators = currentCreators.includes(creatorName)
+      ? currentCreators.filter(c => c !== creatorName)
+      : [...currentCreators, creatorName]
+
+    navigate({
+      search: {
+        sort,
+        creators: newCreators.length > 0 ? newCreators : undefined,
+      },
+    })
   }
 
   const formatTime = (timestamp: number) => {
@@ -824,7 +1029,7 @@ function ClipsPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="lg:sticky lg:top-8 space-y-6">
+            <div className="lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto space-y-6">
               {/* Title */}
               <div>
                 <h2 className="text-lg font-semibold">CreatorSMP3 Clips</h2>
@@ -842,7 +1047,7 @@ function ClipsPage() {
                 <label className="text-sm font-medium text-muted-foreground mb-2 block">Sort by</label>
                 <div className="inline-flex rounded-lg border border-border bg-muted p-1 w-full">
                   <button
-                    onClick={() => navigate({ search: { sort: 'viewCount' } })}
+                    onClick={() => navigate({ search: { sort: 'viewCount', creators } })}
                     className={`flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                       sort === 'viewCount'
                         ? 'bg-background text-foreground shadow-sm'
@@ -853,7 +1058,7 @@ function ClipsPage() {
                     Views
                   </button>
                   <button
-                    onClick={() => navigate({ search: { sort: 'time' } })}
+                    onClick={() => navigate({ search: { sort: 'time', creators } })}
                     className={`flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                       sort === 'time'
                         ? 'bg-background text-foreground shadow-sm'
@@ -865,6 +1070,13 @@ function ClipsPage() {
                   </button>
                 </div>
               </div>
+
+              {/* Creator Filter */}
+              <CreatorFilter
+                creators={creatorStats}
+                selectedCreators={creators}
+                onCreatorToggle={handleCreatorToggle}
+              />
             </div>
           </aside>
 
@@ -873,22 +1085,34 @@ function ClipsPage() {
             <div className="mb-8">
               <h1 className="text-3xl font-bold mb-2">Clips for {formatDate(date)}</h1>
               <p className="text-muted-foreground">
-                Found {clips.length} clips in {clusters.length} clusters
+                {creators && creators.length > 0 ? (
+                  <>
+                    Showing {filteredClusters.length} of {clusters.length} clusters for{' '}
+                    {creators.length === 1 ? creators[0] : `${creators.length} creators`}
+                  </>
+                ) : (
+                  <>Found {clips.length} clips in {clusters.length} clusters</>
+                )}
               </p>
             </div>
 
             <div className="space-y-12">
-              {clusters.map((cluster, clusterIndex) => (
+              {filteredClusters.map((cluster, clusterIndex) => (
                 <Cluster
                   key={clusterIndex}
                   cluster={cluster}
                   formatTime={formatTime}
+                  selectedCreators={creators}
                 />
               ))}
 
-              {clusters.length === 0 && (
+              {filteredClusters.length === 0 && (
                 <div className="text-center py-12 text-muted-foreground">
-                  No clips found for this date.
+                  {creators && creators.length > 0 ? (
+                    <>No clips found for the selected creators on this date.</>
+                  ) : (
+                    <>No clips found for this date.</>
+                  )}
                 </div>
               )}
             </div>
