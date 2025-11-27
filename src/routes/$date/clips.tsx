@@ -3,8 +3,8 @@ import { createServerFn } from '@tanstack/react-start'
 import { useMemo, useState } from 'react'
 import { getDb } from '@/db/client'
 import { twitchClips, twitchVods, creators } from '@/db/schema'
-import { eq, sql, and, gte, lt } from 'drizzle-orm'
-import { TrendingUp, Clock } from 'lucide-react'
+import { eq, sql, and } from 'drizzle-orm'
+import { TrendingUp, Clock, Filter } from 'lucide-react'
 import { Database } from 'bun:sqlite'
 
 // Event date range
@@ -842,6 +842,46 @@ function Stack({ stack, formatTime, selectedCreators }: StackProps) {
   )
 }
 
+interface FilterOverlayProps {
+  isOpen: boolean
+  onClose: () => void
+  creators: CreatorStats[]
+  selectedCreators: string[] | undefined
+  onCreatorToggle: (creatorName: string) => void
+}
+
+function FilterOverlay({ isOpen, onClose, creators, selectedCreators, onCreatorToggle }: FilterOverlayProps) {
+  if (!isOpen) return null
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md overflow-y-auto lg:hidden"
+      onClick={onClose}
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="fixed top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-background/90 rounded-full hover:bg-accent transition-colors text-foreground"
+      >
+        ✕
+      </button>
+
+      {/* Filter Content */}
+      <div
+        className="max-w-md mx-auto p-6 pt-16"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h2 className="text-xl font-semibold mb-6">Filter Creators</h2>
+        <CreatorFilter
+          creators={creators}
+          selectedCreators={selectedCreators}
+          onCreatorToggle={onCreatorToggle}
+        />
+      </div>
+    </div>
+  )
+}
+
 interface ClusterProps {
   cluster: ClipCluster
   formatTime: (timestamp: number) => string
@@ -914,6 +954,7 @@ function ClipsPage() {
   const navigate = Route.useNavigate()
   const { date } = Route.useParams()
   const { sort, creators } = Route.useSearch()
+  const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   // Cluster clips (unfiltered, for calculating creator stats)
   const clusters = useMemo(() => {
@@ -1071,17 +1112,36 @@ function ClipsPage() {
                 </div>
               </div>
 
-              {/* Creator Filter */}
-              <CreatorFilter
-                creators={creatorStats}
-                selectedCreators={creators}
-                onCreatorToggle={handleCreatorToggle}
-              />
+              {/* Creator Filter - Desktop only */}
+              <div className="hidden lg:block">
+                <CreatorFilter
+                  creators={creatorStats}
+                  selectedCreators={creators}
+                  onCreatorToggle={handleCreatorToggle}
+                />
+              </div>
             </div>
           </aside>
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
+            {/* Mobile Filter Button */}
+            <button
+              onClick={() => setIsFilterOpen(true)}
+              className={`lg:hidden mb-4 w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-lg border transition-colors ${
+                creators && creators.length > 0
+                  ? 'ring-2 ring-yellow-500 border-yellow-500 bg-yellow-500/10 text-foreground'
+                  : 'border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent'
+              }`}
+            >
+              <Filter className="h-4 w-4" />
+              {creators && creators.length > 0 ? (
+                <>Filter ({creators.length} selected)</>
+              ) : (
+                <>Filter Creators</>
+              )}
+            </button>
+
             <div className="mb-8">
               <h1 className="text-3xl font-bold mb-2">Clips for {formatDate(date)}</h1>
               <p className="text-muted-foreground">
@@ -1119,6 +1179,15 @@ function ClipsPage() {
           </main>
         </div>
       </div>
+
+      {/* Mobile Filter Overlay */}
+      <FilterOverlay
+        isOpen={isFilterOpen}
+        onClose={() => setIsFilterOpen(false)}
+        creators={creatorStats}
+        selectedCreators={creators}
+        onCreatorToggle={handleCreatorToggle}
+      />
     </div>
   )
 }
