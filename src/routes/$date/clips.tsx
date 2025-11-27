@@ -842,46 +842,6 @@ function Stack({ stack, formatTime, selectedCreators }: StackProps) {
   )
 }
 
-interface FilterOverlayProps {
-  isOpen: boolean
-  onClose: () => void
-  creators: CreatorStats[]
-  selectedCreators: string[] | undefined
-  onCreatorToggle: (creatorName: string) => void
-}
-
-function FilterOverlay({ isOpen, onClose, creators, selectedCreators, onCreatorToggle }: FilterOverlayProps) {
-  if (!isOpen) return null
-
-  return (
-    <div
-      className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md overflow-y-auto lg:hidden"
-      onClick={onClose}
-    >
-      {/* Close Button */}
-      <button
-        onClick={onClose}
-        className="fixed top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-background/90 rounded-full hover:bg-accent transition-colors text-foreground"
-      >
-        ✕
-      </button>
-
-      {/* Filter Content */}
-      <div
-        className="max-w-md mx-auto p-6 pt-16"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h2 className="text-xl font-semibold mb-6">Filter Creators</h2>
-        <CreatorFilter
-          creators={creators}
-          selectedCreators={selectedCreators}
-          onCreatorToggle={onCreatorToggle}
-        />
-      </div>
-    </div>
-  )
-}
-
 interface ClusterProps {
   cluster: ClipCluster
   formatTime: (timestamp: number) => string
@@ -954,7 +914,7 @@ function ClipsPage() {
   const navigate = Route.useNavigate()
   const { date } = Route.useParams()
   const { sort, creators } = Route.useSearch()
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [isMobileCreatorsExpanded, setIsMobileCreatorsExpanded] = useState(false)
 
   // Cluster clips (unfiltered, for calculating creator stats)
   const clusters = useMemo(() => {
@@ -1070,7 +1030,7 @@ function ClipsPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto space-y-6 lg:py-8">
+            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto space-y-6 lg:pb-8">
               {/* Calendar */}
               <Calendar
                 selectedDate={date}
@@ -1118,30 +1078,44 @@ function ClipsPage() {
                   />
                 </div>
 
-                {/* Mobile: token list with plus button */}
+                {/* Mobile: wrapping chip list with 'more' chip */}
                 <div className="lg:hidden">
                   <label className="text-sm font-medium text-muted-foreground mb-2 block">Creators</label>
-                  <div className="flex flex-wrap gap-2 items-center">
-                    {/* Selected creator tokens */}
-                    {creators && creators.length > 0 && creators.map((creator) => (
+                  <div className="flex flex-wrap gap-2">
+                    {/* Selected creator chips (yellow) */}
+                    {creators && creators.length > 0 && creators.map((creatorName) => (
                       <button
-                        key={creator}
-                        onClick={() => handleCreatorToggle(creator)}
+                        key={creatorName}
+                        onClick={() => handleCreatorToggle(creatorName)}
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full bg-yellow-500/10 border border-yellow-500 text-foreground hover:bg-yellow-500/20 transition-colors"
                       >
-                        {creator}
+                        {creatorName}
                         <span className="text-xs">×</span>
                       </button>
                     ))}
 
-                    {/* Plus button to add creators */}
-                    <button
-                      onClick={() => setIsFilterOpen(true)}
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                      title="Add creator filter"
-                    >
-                      +
-                    </button>
+                    {/* Unselected creator chips (when expanded) */}
+                    {isMobileCreatorsExpanded && creatorStats
+                      .filter(creator => !creators?.includes(creator.name))
+                      .map((creator) => (
+                        <button
+                          key={creator.id}
+                          onClick={() => handleCreatorToggle(creator.name)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                        >
+                          {creator.name}
+                        </button>
+                      ))}
+
+                    {/* "more" chip to toggle expansion */}
+                    {creatorStats.length > (creators?.length || 0) && (
+                      <button
+                        onClick={() => setIsMobileCreatorsExpanded(!isMobileCreatorsExpanded)}
+                        className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                      >
+                        {isMobileCreatorsExpanded ? 'less' : 'more...'}
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -1187,15 +1161,6 @@ function ClipsPage() {
           </main>
         </div>
       </div>
-
-      {/* Mobile Filter Overlay */}
-      <FilterOverlay
-        isOpen={isFilterOpen}
-        onClose={() => setIsFilterOpen(false)}
-        creators={creatorStats}
-        selectedCreators={creators}
-        onCreatorToggle={handleCreatorToggle}
-      />
     </div>
   )
 }
