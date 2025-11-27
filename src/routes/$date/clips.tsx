@@ -1078,44 +1078,75 @@ function ClipsPage() {
                   />
                 </div>
 
-                {/* Mobile: wrapping chip list with 'more' chip */}
+                {/* Mobile: chip list with top 7 + selected visible */}
                 <div className="lg:hidden">
                   <label className="text-sm font-medium text-muted-foreground mb-2 block">Creators</label>
-                  <div className="flex flex-wrap gap-2">
-                    {/* Selected creator chips (yellow) */}
-                    {creators && creators.length > 0 && creators.map((creatorName) => (
-                      <button
-                        key={creatorName}
-                        onClick={() => handleCreatorToggle(creatorName)}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full bg-yellow-500/10 border border-yellow-500 text-foreground hover:bg-yellow-500/20 transition-colors"
-                      >
-                        {creatorName}
-                        <span className="text-xs">×</span>
-                      </button>
-                    ))}
+                  <div className="inline-flex flex-wrap gap-1 border border-border bg-muted p-1 rounded-lg w-full">
+                    {(() => {
+                      const selectedSet = new Set(creators || [])
 
-                    {/* Unselected creator chips (when expanded) */}
-                    {isMobileCreatorsExpanded && creatorStats
-                      .filter(creator => !creators?.includes(creator.name))
-                      .map((creator) => (
-                        <button
-                          key={creator.id}
-                          onClick={() => handleCreatorToggle(creator.name)}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                        >
-                          {creator.name}
-                        </button>
-                      ))}
+                      // Top 7 creators
+                      const top7 = creatorStats.slice(0, 7)
+                      const top7Names = new Set(top7.map(c => c.name))
 
-                    {/* "more" chip to toggle expansion */}
-                    {creatorStats.length > (creators?.length || 0) && (
-                      <button
-                        onClick={() => setIsMobileCreatorsExpanded(!isMobileCreatorsExpanded)}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                      >
-                        {isMobileCreatorsExpanded ? 'less' : 'more...'}
-                      </button>
-                    )}
+                      // Selected creators not in top 7
+                      const selectedNotInTop7 = creatorStats.filter(
+                        c => selectedSet.has(c.name) && !top7Names.has(c.name)
+                      )
+
+                      // Visible creators (top 7 + selected outside top 7)
+                      const visibleCreators = [...top7, ...selectedNotInTop7]
+
+                      // Remaining creators (when expanded)
+                      const remainingCreators = creatorStats.filter(
+                        c => !top7Names.has(c.name) && !selectedSet.has(c.name)
+                      )
+
+                      const hasMore = remainingCreators.length > 0
+
+                      return (
+                        <>
+                          {visibleCreators.map((creator) => {
+                            const isSelected = selectedSet.has(creator.name)
+                            return (
+                              <button
+                                key={creator.id}
+                                onClick={() => handleCreatorToggle(creator.name)}
+                                className={`inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                                  isSelected
+                                    ? 'bg-background text-foreground shadow-sm'
+                                    : 'text-muted-foreground hover:text-foreground'
+                                }`}
+                              >
+                                {creator.name}
+                                {isSelected && <span className="text-xs">×</span>}
+                              </button>
+                            )
+                          })}
+
+                          {/* Show remaining creators when expanded */}
+                          {isMobileCreatorsExpanded && remainingCreators.map((creator) => (
+                            <button
+                              key={creator.id}
+                              onClick={() => handleCreatorToggle(creator.name)}
+                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:text-foreground"
+                            >
+                              {creator.name}
+                            </button>
+                          ))}
+
+                          {/* "more" button */}
+                          {hasMore && (
+                            <button
+                              onClick={() => setIsMobileCreatorsExpanded(!isMobileCreatorsExpanded)}
+                              className="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:text-foreground"
+                            >
+                              {isMobileCreatorsExpanded ? 'less' : 'more...'}
+                            </button>
+                          )}
+                        </>
+                      )
+                    })()}
                   </div>
                 </div>
               </div>
