@@ -1085,29 +1085,27 @@ function ClipsPage() {
                     {(() => {
                       const selectedSet = new Set(creators || [])
 
-                      // Top 7 creators
-                      const top7 = creatorStats.slice(0, 7)
-                      const top7Names = new Set(top7.map(c => c.name))
+                      // Top 7 creators by view count
+                      const top7Names = new Set(creatorStats.slice(0, 7).map(c => c.name))
 
-                      // Selected creators not in top 7
-                      const selectedNotInTop7 = creatorStats.filter(
-                        c => selectedSet.has(c.name) && !top7Names.has(c.name)
-                      )
+                      // Creators that should be visible when collapsed (top 7 + selected)
+                      const alwaysVisibleSet = new Set([
+                        ...top7Names,
+                        ...(creators || [])
+                      ])
 
-                      // Visible creators (top 7 + selected outside top 7)
-                      const visibleCreators = [...top7, ...selectedNotInTop7]
-
-                      // Remaining creators (when expanded)
-                      const remainingCreators = creatorStats.filter(
-                        c => !top7Names.has(c.name) && !selectedSet.has(c.name)
-                      )
-
-                      const hasMore = remainingCreators.length > 0
+                      // Check if there are any creators not in the always visible set
+                      const hasMore = creatorStats.some(c => !alwaysVisibleSet.has(c.name))
 
                       return (
                         <>
-                          {visibleCreators.map((creator) => {
+                          {creatorStats.map((creator) => {
                             const isSelected = selectedSet.has(creator.name)
+                            const isAlwaysVisible = alwaysVisibleSet.has(creator.name)
+                            const shouldShow = isAlwaysVisible || isMobileCreatorsExpanded
+
+                            if (!shouldShow) return null
+
                             return (
                               <button
                                 key={creator.id}
@@ -1122,17 +1120,6 @@ function ClipsPage() {
                               </button>
                             )
                           })}
-
-                          {/* Show remaining creators when expanded */}
-                          {isMobileCreatorsExpanded && remainingCreators.map((creator) => (
-                            <button
-                              key={creator.id}
-                              onClick={() => handleCreatorToggle(creator.name)}
-                              className="px-3 py-1.5 text-sm rounded-lg border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                            >
-                              {creator.name}
-                            </button>
-                          ))}
 
                           {/* "more" button */}
                           {hasMore && (
