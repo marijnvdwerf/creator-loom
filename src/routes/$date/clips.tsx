@@ -1081,7 +1081,7 @@ function ClipsPage() {
                 {/* Mobile: chip list with top 7 + selected visible */}
                 <div className="lg:hidden">
                   <label className="text-sm font-medium text-muted-foreground mb-2 block">Creators</label>
-                  <div className="inline-flex flex-wrap gap-1 border border-border bg-muted p-1 rounded-lg w-full">
+                  <div className="flex flex-wrap gap-2">
                     {(() => {
                       const selectedSet = new Set(creators || [])
 
@@ -1112,14 +1112,13 @@ function ClipsPage() {
                               <button
                                 key={creator.id}
                                 onClick={() => handleCreatorToggle(creator.name)}
-                                className={`inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                                className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
                                   isSelected
-                                    ? 'bg-background text-foreground shadow-sm'
-                                    : 'text-muted-foreground hover:text-foreground'
+                                    ? 'bg-yellow-500/10 border-yellow-500 text-foreground'
+                                    : 'border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent'
                                 }`}
                               >
                                 {creator.name}
-                                {isSelected && <span className="text-xs">×</span>}
                               </button>
                             )
                           })}
@@ -1129,7 +1128,7 @@ function ClipsPage() {
                             <button
                               key={creator.id}
                               onClick={() => handleCreatorToggle(creator.name)}
-                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:text-foreground"
+                              className="px-3 py-1.5 text-sm rounded-lg border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                             >
                               {creator.name}
                             </button>
@@ -1139,7 +1138,7 @@ function ClipsPage() {
                           {hasMore && (
                             <button
                               onClick={() => setIsMobileCreatorsExpanded(!isMobileCreatorsExpanded)}
-                              className="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:text-foreground"
+                              className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                             >
                               {isMobileCreatorsExpanded ? 'less' : 'more...'}
                             </button>
