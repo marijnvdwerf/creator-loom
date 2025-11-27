@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react'
 import { getDb } from '@/db/client'
 import { twitchClips, twitchVods, creators } from '@/db/schema'
 import { eq, sql, and } from 'drizzle-orm'
-import { TrendingUp, Clock, Filter } from 'lucide-react'
+import { TrendingUp, Clock } from 'lucide-react'
 import { Database } from 'bun:sqlite'
 
 // Event date range
@@ -1070,12 +1070,7 @@ function ClipsPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto space-y-6">
-              {/* Title */}
-              <div>
-                <h2 className="text-lg font-semibold">CreatorSMP3 Clips</h2>
-              </div>
-
+            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto space-y-6 lg:py-8">
               {/* Calendar */}
               <Calendar
                 selectedDate={date}
@@ -1112,36 +1107,49 @@ function ClipsPage() {
                 </div>
               </div>
 
-              {/* Creator Filter - Desktop only */}
-              <div className="hidden lg:block">
-                <CreatorFilter
-                  creators={creatorStats}
-                  selectedCreators={creators}
-                  onCreatorToggle={handleCreatorToggle}
-                />
+              {/* Creator Filter - Desktop: full list, Mobile: tokens */}
+              <div>
+                {/* Desktop: full creator list */}
+                <div className="hidden lg:block">
+                  <CreatorFilter
+                    creators={creatorStats}
+                    selectedCreators={creators}
+                    onCreatorToggle={handleCreatorToggle}
+                  />
+                </div>
+
+                {/* Mobile: token list with plus button */}
+                <div className="lg:hidden">
+                  <label className="text-sm font-medium text-muted-foreground mb-2 block">Creators</label>
+                  <div className="flex flex-wrap gap-2 items-center">
+                    {/* Selected creator tokens */}
+                    {creators && creators.length > 0 && creators.map((creator) => (
+                      <button
+                        key={creator}
+                        onClick={() => handleCreatorToggle(creator)}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full bg-yellow-500/10 border border-yellow-500 text-foreground hover:bg-yellow-500/20 transition-colors"
+                      >
+                        {creator}
+                        <span className="text-xs">×</span>
+                      </button>
+                    ))}
+
+                    {/* Plus button to add creators */}
+                    <button
+                      onClick={() => setIsFilterOpen(true)}
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                      title="Add creator filter"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </aside>
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            {/* Mobile Filter Button */}
-            <button
-              onClick={() => setIsFilterOpen(true)}
-              className={`lg:hidden mb-4 w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-lg border transition-colors ${
-                creators && creators.length > 0
-                  ? 'ring-2 ring-yellow-500 border-yellow-500 bg-yellow-500/10 text-foreground'
-                  : 'border-border bg-muted text-muted-foreground hover:text-foreground hover:bg-accent'
-              }`}
-            >
-              <Filter className="h-4 w-4" />
-              {creators && creators.length > 0 ? (
-                <>Filter ({creators.length} selected)</>
-              ) : (
-                <>Filter Creators</>
-              )}
-            </button>
-
             <div className="mb-8">
               <h1 className="text-3xl font-bold mb-2">Clips for {formatDate(date)}</h1>
               <p className="text-muted-foreground">
