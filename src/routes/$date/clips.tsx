@@ -515,7 +515,7 @@ function Calendar({ selectedDate, datesWithClips, onDateSelect }: CalendarProps)
               onClick={() => isClickable && onDateSelect(dayInfo.date)}
               disabled={!isClickable}
               className={`
-                aspect-square flex items-center justify-center text-sm rounded-md
+                aspect-square max-h-12 flex items-center justify-center text-sm rounded-md lg:max-h-none
                 ${isSelected ? 'bg-primary text-primary-foreground font-semibold' : ''}
                 ${!isSelected && isClickable ? 'hover:bg-accent cursor-pointer' : ''}
                 ${!isClickable ? 'text-muted-foreground/30 cursor-not-allowed' : 'text-foreground'}
@@ -1025,12 +1025,12 @@ function ClipsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background py-8">
+    <div className="min-h-screen bg-background lg:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto space-y-6 lg:pb-8">
+            <div className="lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto space-y-6 py-8">
               {/* Calendar */}
               <Calendar
                 selectedDate={date}
