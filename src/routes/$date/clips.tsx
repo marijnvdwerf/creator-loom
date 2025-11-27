@@ -54,6 +54,42 @@ type ClipStack = {
   creatorId: number
 }
 
+const sanitizeBaseUrl = (value?: string | null) =>
+  value && value.length > 0 ? value.replace(/\/$/, '') : undefined
+
+const formatDateForMeta = (isoDate?: string) => {
+  if (!isoDate) return null
+  const date = new Date(isoDate)
+  if (Number.isNaN(date.getTime())) {
+    return null
+  }
+
+  return date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+  })
+}
+
+const describeClipSummary = (
+  clipCount: number,
+  totalViews: number,
+  dateLabel: string | null,
+) => {
+  if (!clipCount) {
+    return dateLabel
+      ? `No CreatorSMP clips were captured on ${dateLabel}.`
+      : 'No CreatorSMP clips were captured for this date.'
+  }
+
+  const viewCopy = totalViews
+    ? `${totalViews.toLocaleString('en-US')} total views`
+    : 'fresh highlights'
+  const dateCopy = dateLabel ? ` on ${dateLabel}` : ''
+
+  return `Watch ${clipCount} CreatorSMP clips${dateCopy} (${viewCopy}).`
+}
+
 // Get all dates that have clips
 const getDatesWithClips = createServerFn({ method: 'GET' }).handler(async (): Promise<string[]> => {
   console.time('getDatesWithClips')
@@ -407,6 +443,39 @@ export const Route = createFileRoute('/$date/clips')({
         : undefined,
     }
   },
+  head: ({ params, loaderData }) => {
+    const baseUrl = sanitizeBaseUrl(loaderData?.baseUrl)
+    const dateLabel = formatDateForMeta(params.date)
+    const clipCount = loaderData?.clips?.length ?? 0
+    const totalViews = loaderData?.clips?.reduce((sum, entry) => sum + entry.clip.viewCount, 0) ?? 0
+    const canonicalPath = `/${params.date}/clips`
+    const canonicalUrl = baseUrl ? `${baseUrl}${canonicalPath}` : undefined
+    const ogUrl = canonicalUrl ?? canonicalPath
+    const pageTitle = dateLabel
+      ? `CreatorSMP Clips for ${dateLabel}`
+      : 'CreatorSMP Clips'
+    const description = describeClipSummary(clipCount, totalViews, dateLabel)
+
+    const meta = [
+      { title: pageTitle },
+      { name: 'description', content: description },
+      { property: 'og:site_name', content: 'SMP' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: pageTitle },
+      { property: 'og:description', content: description },
+      { property: 'og:url', content: ogUrl },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: pageTitle },
+      { name: 'twitter:description', content: description },
+    ].filter((entry): entry is Record<string, string> => Boolean(entry))
+
+    const links = canonicalUrl ? [{ rel: 'canonical', href: canonicalUrl }] : undefined
+
+    return {
+      meta,
+      links,
+    }
+  },
   loader: async ({ params }) => {
     console.time('loader')
     const [clips, datesWithClips] = await Promise.all([
@@ -414,7 +483,8 @@ export const Route = createFileRoute('/$date/clips')({
       getDatesWithClips(),
     ])
     console.timeEnd('loader')
-    return { clips, datesWithClips }
+    const baseUrl = sanitizeBaseUrl(process.env.BASE_URL)
+    return { clips, datesWithClips, baseUrl }
   },
   component: ClipsPage,
 })
